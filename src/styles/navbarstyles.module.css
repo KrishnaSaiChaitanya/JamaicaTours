@@ -1,0 +1,49 @@
+
+.navContainer{
+    display: flex;
+    width: 100%;
+    margin-inline:auto;
+    /* align-items: center; */
+    gap: 2rem;
+    background-color: black;
+    padding-inline: 2rem;
+}
+
+.navContainer > img{
+    /* margin-left: 1rem; */
+    border-radius: 50%;
+    padding-block:.5rem;
+}
+
+.navList{
+    display: flex;
+    gap: 1rem;
+}
+
+.navList>li{
+    min-height: inherit;
+    /* background-color: ; */
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-inline: 1rem;
+}
+
+.navList>li>svg{
+    fill: rgb(172, 172, 172);
+}
+
+.navList>li:hover{
+    cursor: pointer;
+    background-color: rgb(1, 124, 165);
+    color: white;
+}
+
+.navList>li:hover svg{
+    fill: white;
+}
+
+.navList>li.buttons:hover{
+    background-color: black;
+}
