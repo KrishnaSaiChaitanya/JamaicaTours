@@ -1,91 +1,104 @@
 import React from "react";
 
-function LoginPage() {
+function Login() {
   return (
-    <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-        <img
-          className="mx-auto h-10 w-auto"
-          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-          alt="Your Company"
-        />
-        <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-          Sign in to your account
-        </h2>
-      </div>
-
-      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form className="space-y-6" action="#" method="POST">
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium leading-6 text-gray-900"
-            >
-              Email address
-            </label>
-            <div className="mt-2">
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autoComplete="email"
-                required
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
-
-          <div>
-            <div className="flex items-center justify-between">
-              <label
-                htmlFor="password"
-                className="block text-sm font-medium leading-6 text-gray-900"
-              >
-                Password
-              </label>
-              <div className="text-sm">
-                <a
-                  href="#"
-                  className="font-semibold text-indigo-600 hover:text-indigo-500"
-                >
-                  Forgot password?
+    <section className="layout-pt-lg layout-pb-lg">
+      <div className="container">
+        <div className="row justify-center">
+          <div className="col-xl-6 col-lg-7 col-md-9">
+            <div className="text-center mb-60 md:mb-30">
+              <h1 className="text-30">Log In</h1>
+              <div className="text-18 fw-500 mt-20 md:mt-15">
+                We're glad to see you again!
+              </div>
+              <div className="mt-5">
+                Don't have an account?{" "}
+                <a href="register.html" className="text-accent-1">
+                  Sign Up!
                 </a>
               </div>
             </div>
-            <div className="mt-2">
-              <input
-                id="password"
-                name="password"
-                type="password"
-                autoComplete="current-password"
-                required
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
+
+            <div className="contactForm border-1 rounded-12 px-60 py-60 md:px-25 md:py-30">
+              <div className="form-input">
+                <input type="email" required />
+                <label className="lh-1 text-16 text-light-1">
+                  Email Address
+                </label>
+              </div>
+
+              <div className="form-input mt-30">
+                <input type="password" required />
+                <label className="lh-1 text-16 text-light-1">Password</label>
+              </div>
+
+              <div className="row y-ga-10 justify-between items-center pt-30">
+                <div className="col-auto">
+                  <div className="d-flex items-center">
+                    <div className="form-checkbox">
+                      <input
+                        type="checkbox"
+                        name="rememberMe"
+                        id="rememberMe"
+                      />
+                      <div className="form-checkbox__mark">
+                        <div className="form-checkbox__icon">
+                          <svg
+                            width="10"
+                            height="8"
+                            viewBox="0 0 10 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M9.29082 0.971021C9.01235 0.692189 8.56018 0.692365 8.28134 0.971021L3.73802 5.51452L1.71871 3.49523C1.43988 3.21639 0.987896 3.21639 0.709063 3.49523C0.430231 3.77406 0.430231 4.22604 0.709063 4.50487L3.23309 7.0289C3.37242 7.16823 3.55512 7.23807 3.73783 7.23807C3.92054 7.23807 4.10341 7.16841 4.24274 7.0289L9.29082 1.98065C9.56965 1.70201 9.56965 1.24984 9.29082 0.971021Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <label htmlFor="rememberMe" className="lh-11 ml-10">
+                      Remember me
+                    </label>
+                  </div>
+                </div>
+
+                <div className="col-auto">
+                  <a href="">Lost your password?</a>
+                </div>
+              </div>
+
+              <button className="button -md -dark-1 bg-accent-1 text-white col-12 mt-30">
+                Log In
+                <i className="icon-arrow-top-right ml-10"></i>
+              </button>
+
+              <div className="relative line mt-50 mb-30">
+                <div className="line__word fw-500">OR</div>
+              </div>
+
+              <div className="row y-gap-15">
+                <div className="col">
+                  <button className="button -md -outline-blue-1 text-blue-1 col-12">
+                    {/* <i className="icon-facebook"></i> */}
+                    Continue with Facebook
+                  </button>
+                </div>
+
+                <div className="col">
+                  <button className="button -md -outline-red-1 text-red-1 col-12">
+                    <i className="icon-google "></i>
+                    Continue with Google
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div>
-            <button
-              type="submit"
-              className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Sign in
-            </button>
-          </div>
-        </form>
-
-        <p className="mt-10 text-center text-sm text-gray-500">
-          Not a member?{" "}
-          <a
-            href="#"
-            className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
-          >
-            Start a 14 day free trial
-          </a>
-        </p>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
-export default LoginPage;
+export default Login;
