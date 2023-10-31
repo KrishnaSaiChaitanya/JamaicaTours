@@ -11,6 +11,19 @@ export default function Document() {
           crossorigin="anonymous"
           referrerpolicy="no-referrer"
         />
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.js"
+          integrity="sha512-alUs/9QWS9TdxYygQKopHrjMK9T+Tun55+1EKgiG8lCSHSL2Br7p69RsCFCycu2T2I707/8Y0vkyjTVGHdfHUw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        ></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+          integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        ></script>
+
         {/* <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

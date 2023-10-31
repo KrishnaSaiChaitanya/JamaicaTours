@@ -1,12 +1,173 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  function dropdown() {
+    const targets = document.querySelectorAll(".js-dropdown");
+    if (!targets.length) return;
+
+    targets.forEach((target) => {
+      const title = target.querySelector(".js-title");
+      const button = target.querySelector(".js-button");
+      const menuItems = target.querySelectorAll(".js-menu-items > *");
+
+      if (button) {
+        button.addEventListener("click", () => {
+          closeAllDropdowns();
+          target.classList.toggle("is-active");
+        });
+      }
+
+      menuItems.forEach((el) => {
+        el.addEventListener("click", () => {
+          if (!target.classList.contains("js-dont-close")) {
+            target.classList.toggle("is-active");
+            title.innerHTML = el.innerHTML;
+          }
+        });
+      });
+    });
+  }
+  const Events = (function () {
+    function init() {
+      const targets = document.querySelectorAll("[data-x-click]");
+      if (!targets) return;
+
+      targets.forEach((eventTarget) => {
+        const attributes = eventTarget.getAttribute("data-x-click").split(", ");
+
+        attributes.forEach((el) => {
+          const target = document.querySelector(`[data-x=${el}]`);
+
+          eventTarget.addEventListener("click", () => {
+            const toggleClass = target.getAttribute("data-x-toggle");
+            if (!target.classList.contains(toggleClass)) {
+              closeAllDropdowns();
+            }
+            target.classList.toggle(toggleClass);
+          });
+        });
+      });
+    }
+
+    function ddInit() {
+      const targets = document.querySelectorAll(".js-form-dd");
+      if (!targets) return;
+
+      targets.forEach((el) => {
+        const eventTarget = el.querySelector("[data-x-dd-click]");
+        const attributes = eventTarget
+          .getAttribute("data-x-dd-click")
+          .split(", ");
+
+        attributes.forEach((el2) => {
+          const target = el.querySelector(`[data-x-dd=${el2}]`);
+          const toggleClass = target.getAttribute("data-x-dd-toggle");
+
+          eventTarget.addEventListener("click", () => {
+            if (eventTarget.querySelector(".js-dd-focus"))
+              eventTarget.querySelector(".js-dd-focus").focus();
+
+            if (target.classList.contains(toggleClass)) {
+              target.classList.remove(toggleClass);
+              el.classList.remove("-is-dd-wrap-active");
+            } else {
+              closeAllDropdowns();
+              target.classList.add(toggleClass);
+              el.classList.add("-is-dd-wrap-active");
+            }
+          });
+        });
+      });
+    }
+
+    return {
+      ddInit: ddInit,
+      closeAllDropdowns: closeAllDropdowns,
+      init: init,
+    };
+  })();
   const toggleSidebar = () => {
+    console.log("hello");
     setIsOpen(!isOpen);
+    if (open) {
+      const menuDiv = document.getElementById("menu");
+      if (menuDiv) {
+        menuDiv.style.opacity = 1;
+        menuDiv.classList.add("is-active");
+      }
+    } else {
+      const menuDiv = document.getElementById("menu");
+      if (menuDiv) {
+        menuDiv.style.opacity = "0";
+        menuDiv.classList.remove("is-active");
+      }
+    }
   };
+  function closeAllDropdowns() {
+    const targets = document.querySelectorAll(".js-form-dd");
+    if (!targets) return;
+
+    targets.forEach((el) => {
+      if (el.querySelector(".is-active")) {
+        el.querySelector(".is-active").classList.remove("is-active");
+      }
+    });
+
+    const alldds = document.querySelectorAll(".js-dropdown.is-active");
+
+    alldds.forEach((el) => {
+      el.classList.remove("is-active");
+    });
+  }
+
+  function menuEvents() {
+    let isMenuOpen = false;
+    const menuButtons = document.querySelectorAll(".js-menu-button");
+
+    menuButtons.forEach((el) => {
+      el.addEventListener("click", (e) => {
+        if (!isMenuOpen) {
+          menuOpen();
+          isMenuOpen = true;
+        } else {
+          menuClose();
+          isMenuOpen = false;
+        }
+      });
+    });
+  }
+
+  function menuOpen() {
+    const menu = document.querySelector(".js-menu");
+    const header = document.querySelector(".js-header");
+
+    gsap.timeline().to(menu, {
+      opacity: 1,
+      onStart: () => {
+        menu.classList.add("-is-active");
+        document.body.classList.add("overflow-hidden");
+        header.classList.add("-dark");
+      },
+    });
+  }
+
+  function menuClose() {
+    const menu = document.querySelector(".js-menu");
+    const header = document.querySelector(".js-header");
+
+    gsap.timeline().to(menu, {
+      opacity: 0,
+      onStart: () => {
+        menu.classList.remove("-is-active");
+        document.body.classList.remove("overflow-hidden");
+        header.classList.remove("-dark");
+      },
+    });
+  }
   useEffect(() => {
     function headerSticky() {
       const target = document.querySelector(".js-header");
@@ -20,7 +181,184 @@ export default function Navbar() {
         }
       });
     }
+    const Header = (function () {
+      let navList;
+      let navBtnListBack;
+      let menuDeepLevel;
+      let timeline = gsap.timeline();
+
+      function updateVars() {
+        navList = document.querySelector(".js-navList");
+        navBtnListBack = document.querySelectorAll(".js-nav-list-back");
+        menuDeepLevel = 0;
+      }
+
+      function init() {
+        updateVars();
+        menuListBindEvents();
+      }
+
+      function deepLevelCheck(level) {
+        return level;
+      }
+
+      function menuListBindEvents() {
+        const listItems = document.querySelectorAll(
+          ".js-navList .js-has-submenu"
+        );
+        if (!listItems.length) return;
+
+        navBtnListBack.forEach((el) => {
+          el.addEventListener("click", () => {
+            const visibleList = navList.querySelector("ul.-is-active");
+            const parentList = visibleList.parentElement.parentElement;
+
+            menuDeepLevel--;
+            menuListStepAnimate(visibleList, parentList, menuDeepLevel);
+          });
+        });
+
+        listItems.forEach((el) => {
+          const parenta = el.querySelector("li > a");
+          parenta.removeAttribute("href");
+
+          parenta.addEventListener("click", () => {
+            const parent = el.parentElement;
+            const subnavList = el.lastElementChild;
+
+            menuDeepLevel++;
+            menuListStepAnimate(
+              parent,
+              subnavList,
+              menuDeepLevel,
+              parenta.innerHTML
+            );
+          });
+        });
+      }
+
+      function menuListStepAnimate(hideList, showList, level) {
+        let hideListItems = hideList.children;
+        hideListItems = Array.from(hideListItems);
+        const hideListas = hideListItems.map((item) =>
+          item.querySelector("li > a")
+        );
+
+        let showListItems = showList.children;
+        showListItems = Array.from(showListItems);
+        const showListas = showListItems.map((item) =>
+          item.querySelector("li > a")
+        );
+
+        // let width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+        // if (width < 1199 || document.querySelector('.js-desktopMenu')) {}
+
+        timeline.clear();
+
+        if (!deepLevelCheck(level)) {
+          gsap.to(navBtnListBack, {
+            ease: "quart.inOut",
+            duration: 0.6,
+            opacity: 0,
+          });
+        }
+
+        timeline.to(hideListas, {
+          ease: "quart.out",
+          stagger: -0.04,
+          duration: 0.8,
+          y: "100%",
+          onStart: () => {
+            showList.classList.add("-is-active");
+          },
+          onComplete: () => {
+            hideList.classList.remove("-is-active");
+          },
+        });
+
+        if (deepLevelCheck(level)) {
+          timeline.to(
+            navBtnListBack,
+            {
+              ease: "quart.inOut",
+              duration: 0.6,
+              y: "0px",
+              opacity: 1,
+            },
+            ">-0.5"
+          );
+        }
+
+        timeline.to(
+          showListas,
+          {
+            ease: "quart.out",
+            stagger: 0.08,
+            duration: 0.9,
+            y: "0%",
+          },
+          ">-0.6"
+        );
+      }
+
+      function headerSticky() {
+        const header = document.querySelector(".js-header");
+        if (!header) return;
+
+        let classList = "";
+
+        if (header.getAttribute("data-add-bg")) {
+          classList = header.getAttribute("data-add-bg");
+        }
+
+        new ScrollMagic.Scene({ offset: "6px" })
+          .setClassToggle(header, classList)
+          .addTo(App.SMcontroller);
+
+        new ScrollMagic.Scene({ offset: "6px" })
+          .setClassToggle(header, "is-sticky")
+          .addTo(App.SMcontroller);
+      }
+
+      return {
+        headerSticky: headerSticky,
+        init: init,
+      };
+    })();
+    window.onclick = function (event) {
+      if (!event.target.closest(".js-form-dd")) {
+        console.log("test");
+        closeAllDropdowns();
+      }
+
+      if (!event.target.closest(".js-select")) {
+        const targets = document.querySelectorAll(".js-select");
+        if (!targets) return;
+
+        targets.forEach((el) => {
+          if (el.querySelector(".-is-visible")) {
+            el.querySelector(".-is-visible").classList.remove("-is-visible");
+          }
+        });
+      }
+
+      if (!event.target.closest(".js-multiple-select")) {
+        const targets = document.querySelectorAll(".js-multiple-select");
+        if (!targets) return;
+
+        targets.forEach((el) => {
+          if (el.querySelector(".-is-visible")) {
+            el.querySelector(".-is-visible").classList.remove("-is-visible");
+          }
+        });
+      }
+    };
+    Header.init();
     headerSticky();
+    menuEvents();
+    Events.init();
+
+    dropdown();
     return () => {
       window.removeEventListener("scroll", headerSticky);
     };
@@ -30,41 +368,44 @@ export default function Navbar() {
       <header className="header -type-10 js-header ">
         <div className="header__container">
           <div className="headerMobile__left">
-            <button className="header__menuBtn js-menu-button">
+            <button
+              className="header__menuBtn js-menu-button"
+              onClick={toggleSidebar}
+            >
               <i className="icon-main-menu text-white"></i>
             </button>
           </div>
 
           <div className="header__left">
             <div className="header__logo">
-              <a href="index" className="header__logo">
+              <a herf="index" className="header__logo">
                 <img src="img/general/logo-light.svg" alt="logo icon" />
               </a>
 
               <div className="xl:d-none ml-30">
                 <div className="desktopNav -light">
                   <div className="desktopNav__item">
-                    <a href="">
+                    <a>
                       Home <i className="icon-chevron-down"></i>
                     </a>
 
                     <div className="desktopNavSubnav">
                       <div className="desktopNavSubnav__content">
                         <div className="desktopNavSubnav__item">
-                          <a href="index">Home 01</a>
+                          <a herf="index">Home 01</a>
                         </div>
 
                         <div className="desktopNavSubnav__item">
-                          <a href="home-2">Home 02</a>
+                          <a herf="home-2">Home 02</a>
                         </div>
 
-                        {/* ... Add more home links here ... */}
+                        {/* ... Add more home as here ... */}
                       </div>
                     </div>
                   </div>
 
                   <div className="desktopNav__item">
-                    <a href="">
+                    <a>
                       Tour <i className="icon-chevron-down"></i>
                     </a>
 
@@ -78,15 +419,7 @@ export default function Navbar() {
                               </div>
 
                               <div className="desktopNavMega-list__list">
-                                <div className="desktopNavMega-list__link">
-                                  <a href="tour-list-1">Tour list 1</a>
-                                </div>
-
-                                <div className="desktopNavMega-list__link">
-                                  <a href="tour-list-2">Tour list 2</a>
-                                </div>
-
-                                {/* ... Add more tour list links here ... */}
+                                {/* ... Add more tour list as here ... */}
                               </div>
                             </div>
                           </div>
@@ -98,20 +431,20 @@ export default function Navbar() {
                               </div>
 
                               <div className="desktopNavMega-list__list">
-                                <div className="desktopNavMega-list__link">
-                                  <a href="tour-single-1">Tour single 1</a>
+                                <div className="desktopNavMega-list__a">
+                                  <a herf="tour-single-1">Tour single 1</a>
                                 </div>
 
-                                <div className="desktopNavMega-list__link">
-                                  <a href="tour-single-2">Tour single 2</a>
+                                <div className="desktopNavMega-list__a">
+                                  <a herf="tour-single-2">Tour single 2</a>
                                 </div>
 
-                                {/* ... Add more tour single links here ... */}
+                                {/* ... Add more tour single as here ... */}
                               </div>
                             </div>
                           </div>
 
-                          {/* ... Add more tour-related links here ... */}
+                          {/* ... Add more tour-related as here ... */}
                         </div>
 
                         <div className="desktopNavMega__info">
@@ -161,59 +494,47 @@ export default function Navbar() {
                   </div>
 
                   <div className="desktopNav__item">
-                    <a href="destinations">Destination</a>
+                    <a herf="destinations">Destination</a>
                   </div>
 
                   <div className="desktopNav__item">
-                    <a href="">Activities</a>
+                    <a>Activities</a>
                   </div>
 
                   <div className="desktopNav__item">
-                    <a href="">
+                    <a>
                       Pages <i className="icon-chevron-down"></i>
                     </a>
 
                     <div className="desktopNavSubnav">
                       <div className="desktopNavSubnav__content">
                         <div className="desktopNavSubnav__item">
-                          <a href="">
-                            Dashboard <i className="icon-chevron-right"></i>
-                          </a>
+                          <a herf="destinations">Destinations</a>
                         </div>
 
                         <div className="desktopNavSubnav__item">
-                          <a href="">
-                            Blog <i className="icon-chevron-right"></i>
-                          </a>
+                          <a herf="about">About</a>
                         </div>
 
                         <div className="desktopNavSubnav__item">
-                          <a href="destinations">Destinations</a>
+                          <a herf="help-center">Help center</a>
                         </div>
 
                         <div className="desktopNavSubnav__item">
-                          <a href="about">About</a>
+                          <a herf="terms">Terms</a>
                         </div>
 
                         <div className="desktopNavSubnav__item">
-                          <a href="help-center">Help center</a>
+                          <a herf="login">Login</a>
                         </div>
 
-                        <div className="desktopNavSubnav__item">
-                          <a href="terms">Terms</a>
-                        </div>
-
-                        <div className="desktopNavSubnav__item">
-                          <a href="login">Login</a>
-                        </div>
-
-                        {/* ... Add more page links here ... */}
+                        {/* ... Add more page as here ... */}
                       </div>
                     </div>
                   </div>
 
                   <div className="desktopNav__item">
-                    <a href="contact">Contact</a>
+                    <a herf="contact">Contact</a>
                   </div>
                 </div>
               </div>
@@ -245,19 +566,45 @@ export default function Navbar() {
                 data-x="header-currency"
                 data-x-toggle="is-active"
               >
-                <div className="headerDropdown">
-                  <div className="headerDropdown__container">
-                    <div className="headerDropdown__item">
-                      <button className="">U.S. Dollar</button>
+                <div class="headerDropdown">
+                  <div class="headerDropdown__container">
+                    <div class="headerDropdown__item">
+                      <button class="">U.S. Dollar</button>
                     </div>
 
-                    {/* ... Add more currency options here ... */}
+                    <div class="headerDropdown__item">
+                      <button class="">Euro</button>
+                    </div>
+
+                    <div class="headerDropdown__item">
+                      <button class="">British Pound</button>
+                    </div>
+
+                    <div class="headerDropdown__item">
+                      <button class="">Turkish Lira</button>
+                    </div>
+
+                    <div class="headerDropdown__item">
+                      <button class="">Canadian Dollar</button>
+                    </div>
+
+                    <div class="headerDropdown__item">
+                      <button class="">Australian Dollar</button>
+                    </div>
+
+                    <div class="headerDropdown__item">
+                      <button class="">Swiss Franc</button>
+                    </div>
+
+                    <div class="headerDropdown__item">
+                      <button class="">Singapore Dollar</button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <a href="register" className="text-white ml-10">
+            <a herf="register" className="text-white ml-10">
               Sign up
             </a>
 
@@ -303,57 +650,8 @@ export default function Navbar() {
 
           <div class="menu__content">
             <ul class="menuNav js-navList">
-              <li class="menuNav__item -has-submenu js-has-submenu">
-                <a>
-                  Home
-                  <i class="icon-chevron-right"></i>
-                </a>
-
-                <ul class="submenu">
-                  <li class="submenu__item js-nav-list-back">
-                    <a>Back</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="index.html">Home 01</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="home-2.html">Home 02</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="home-3.html">Home 03</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="home-4.html">Home 04</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="home-5.html">Home 05</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="home-6.html">Home 06</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="home-7.html">Home 07</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="home-8.html">Home 08</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="home-9.html">Home 09</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="home-10.html">Home 10</a>
-                  </li>
-                </ul>
+              <li class="menuNav__item">
+                <a href="Home">Home</a>
               </li>
 
               <li class="menuNav__item -has-submenu js-has-submenu">
@@ -366,139 +664,8 @@ export default function Navbar() {
                   <li class="submenu__item js-nav-list-back">
                     <a>Back</a>
                   </li>
-
                   <li class="submenu__item">
-                    <a href="tour-list-1.html">Tour list 1</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="tour-list-2.html">Tour list 2</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="tour-list-3.html">Tour list 3</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="tour-list-4.html">Tour list 4</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="tour-list-5.html">Tour list 5</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="tour-list-6.html">Tour list 6</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="tour-list-7.html">Tour list 7</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="tour-list-8.html">Tour list 8</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="tour-list-9.html">Tour list 9</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="tour-list-10.html">Tour list 10</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="tour-single-1.html">Tour single 1</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="tour-single-2.html">Tour single 2</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="tour-single-3.html">Tour single 3</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="tour-single-4.html">Tour single 4</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="tour-single-5.html">Tour single 5</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="booking-pages.html">Booking</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="menuNav__item -has-submenu js-has-submenu">
-                <a>
-                  Dashboard
-                  <i class="icon-chevron-right"></i>
-                </a>
-
-                <ul class="submenu">
-                  <li class="submenu__item js-nav-list-back">
-                    <a>Back</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="db-main.html">Dashboard</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="db-booking.html">Booking</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="db-listing.html">Listing</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="db-add-tour.html">Add tour</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="db-favorites.html">Favorites</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="db-messages.html">Messages</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="db-profile.html">Profile</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="menuNav__item -has-submenu js-has-submenu">
-                <a>
-                  Blog
-                  <i class="icon-chevron-right"></i>
-                </a>
-
-                <ul class="submenu">
-                  <li class="submenu__item js-nav-list-back">
-                    <a>Back</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="blog-list-1.html">Blog list 1</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="blog-list-2.html">Blog list 2</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="blog-list-3.html">Blog list 3</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="blog-single.html">Blog single</a>
+                    <a href="booking">Booking</a>
                   </li>
                 </ul>
               </li>
@@ -515,49 +682,45 @@ export default function Navbar() {
                   </li>
 
                   <li class="submenu__item">
-                    <a href="destinations.html">Destinations</a>
+                    <a herf="destinations">Destinations</a>
                   </li>
 
                   <li class="submenu__item">
-                    <a href="about.html">About</a>
+                    <a href="about">About</a>
                   </li>
 
                   <li class="submenu__item">
-                    <a href="contact.html">Contact</a>
+                    <a herf="contact">Contact</a>
                   </li>
 
                   <li class="submenu__item">
-                    <a href="help-center.html">Help center</a>
+                    <a herf="help-center">Help center</a>
                   </li>
 
                   <li class="submenu__item">
-                    <a href="terms.html">Terms</a>
+                    <a herf="terms">Terms</a>
                   </li>
 
                   <li class="submenu__item">
-                    <a href="login.html">Login</a>
+                    <a herf="login">Login</a>
                   </li>
 
                   <li class="submenu__item">
-                    <a href="register.html">Register</a>
+                    <a herf="register">Register</a>
                   </li>
 
                   <li class="submenu__item">
-                    <a href="404.html">404 Page</a>
+                    <a herf="404">404 Page</a>
                   </li>
 
                   <li class="submenu__item">
-                    <a href="invoice.html">Invoice</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a href="ui-elements.html">UI elements</a>
+                    <a herf="invoice">Invoice</a>
                   </li>
                 </ul>
               </li>
 
               <li class="menuNav__item">
-                <a href="contact.html">Contact</a>
+                <a herf="contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -591,7 +754,7 @@ export default function Navbar() {
 
               <div>
                 <a class="d-block">
-                  <i class="icon-linkedin"></i>
+                  <i class="icon-aedin"></i>
                 </a>
               </div>
             </div>

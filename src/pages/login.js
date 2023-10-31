@@ -13,7 +13,7 @@ function Login() {
               </div>
               <div className="mt-5">
                 Don't have an account?{" "}
-                <a href="register.html" className="text-accent-1">
+                <a href="register" className="text-accent-1">
                   Sign Up!
                 </a>
               </div>

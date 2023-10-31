@@ -91,8 +91,8 @@ export default function Home() {
           <div className="row y-gap-10 justify-between items-center y-gap-10">
             <div className="col-auto">
               <h2 className="text-30 md:text-24">
-                Best of
-                <div
+                Best of London
+                {/* <div
                   className="dropdown -type-list js-dropdown js-form-dd"
                   data-main-value="london"
                 >
@@ -114,7 +114,7 @@ export default function Home() {
                       Paris
                     </div>
                   </div>
-                </div>
+                </div> */}
               </h2>
             </div>
           </div>
