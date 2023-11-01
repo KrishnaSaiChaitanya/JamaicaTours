@@ -123,7 +123,6 @@ export default function Navbar() {
       el.classList.remove("is-active");
     });
   }
-
   function menuEvents() {
     let isMenuOpen = false;
     const menuButtons = document.querySelectorAll(".js-menu-button");
@@ -168,6 +167,7 @@ export default function Navbar() {
       },
     });
   }
+
   useEffect(() => {
     function headerSticky() {
       const target = document.querySelector(".js-header");
@@ -357,8 +357,8 @@ export default function Navbar() {
     headerSticky();
     menuEvents();
     Events.init();
-
     dropdown();
+
     return () => {
       window.removeEventListener("scroll", headerSticky);
     };
