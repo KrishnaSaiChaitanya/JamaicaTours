@@ -60,7 +60,7 @@ export default function Home() {
 
                     <input
                       type="text"
-                      placeholder="Enter your Pickup location"
+                      placeholder="enter your pickup location .."
                     />
 
                     <button>
@@ -102,7 +102,7 @@ export default function Home() {
                     </svg>
                     <input
                       type="text"
-                      placeholder="Search a Tour name or tour Location"
+                      placeholder="search by tour name or location"
                     />
 
                     <button>
