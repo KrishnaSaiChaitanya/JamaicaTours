@@ -2,40 +2,232 @@ import TourList from "@/components/TourList";
 import React, { useEffect } from "react";
 
 const TourDetail = () => {
-  useEffect(() => {
-    const targets = document.querySelectorAll(".js-tabs");
+  const Accordion = (function () {
+    function init() {
+      const targets = document.querySelectorAll(".js-accordion");
+      if (!targets) return;
+
+      for (let i = 0; i < targets.length; i++) {
+        const items = targets[i].querySelectorAll(".accordion__item");
+
+        for (let l = 0; l < items.length; l++) {
+          const button = items[l].querySelector(".accordion__button");
+          const content = items[l].querySelector(".accordion__content");
+          const titleChange = items[l].querySelector(
+            "[data-open-change-title]"
+          );
+          let buttonOrigTitle;
+          let buttonNewTitle;
+
+          if (items[l].classList.contains("js-accordion-item-active")) {
+            items[l].classList.toggle("is-active");
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+
+          if (titleChange) {
+            buttonOrigTitle = titleChange.innerHTML;
+            buttonNewTitle = titleChange.getAttribute("data-open-change-title");
+          }
+
+          button.addEventListener("click", (e) => {
+            items[l].classList.toggle("is-active");
+
+            if (titleChange) {
+              if (items[l].classList.contains("is-active")) {
+                titleChange.innerHTML = buttonNewTitle;
+              } else {
+                titleChange.innerHTML = buttonOrigTitle;
+              }
+            }
+
+            if (content.style.maxHeight) {
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        }
+      }
+    }
+
+    return {
+      init: init,
+    };
+  })();
+
+  const Tabs = (function () {
+    function init() {
+      const targets = document.querySelectorAll(".js-tabs");
+      if (!targets) return;
+
+      targets.forEach((el) => {
+        singleTab(el);
+      });
+    }
+
+    function singleTab(target) {
+      const controls = target.querySelector(".js-tabs-controls");
+      const controlsItems = target.querySelectorAll(
+        ".js-tabs-controls .js-tabs-button"
+      );
+      const content = target.querySelector(".js-tabs-content");
+
+      for (let l = 0; l < controlsItems.length; l++) {
+        const el = controlsItems[l];
+
+        el.addEventListener("click", (e) => {
+          const selector = el.getAttribute("data-tab-target");
+
+          controls
+            .querySelector(".is-tab-el-active")
+            .classList.remove("is-tab-el-active");
+          content
+            .querySelector(".is-tab-el-active")
+            .classList.remove("is-tab-el-active");
+
+          el.classList.add("is-tab-el-active");
+          content.querySelector(selector).classList.add("is-tab-el-active");
+        });
+      }
+    }
+
+    return {
+      init: init,
+    };
+  })();
+  function calendarSlider() {
+    new Swiper(".js-calendar-slider", {
+      speed: 600,
+      autoHeight: true,
+      spaceBetween: 50,
+
+      slidesPerView: 1,
+      breakpoints: {
+        991: { slidesPerView: 2 },
+      },
+
+      navigation: {
+        prevEl: ".js-calendar-prev",
+        nextEl: ".js-calendar-next",
+      },
+    });
+
+    new Swiper(".js-calendar-slider-2", {
+      speed: 600,
+      autoHeight: true,
+      spaceBetween: 50,
+      slidesPerView: 1,
+      navigation: {
+        prevEl: ".js-calendar-prev",
+        nextEl: ".js-calendar-next",
+      },
+    });
+  }
+  function closeAllDropdowns() {
+    const targets = document.querySelectorAll(".js-form-dd");
     if (!targets) return;
 
     targets.forEach((el) => {
-      singleTab(el);
+      if (el.querySelector(".is-active")) {
+        el.querySelector(".is-active").classList.remove("is-active");
+      }
     });
-  }, []);
 
-  function singleTab(target) {
-    const controls = target.querySelector(".js-tabs-controls");
-    const controlsItems = target.querySelectorAll(
-      ".js-tabs-controls .js-tabs-button"
-    );
-    const content = target.querySelector(".js-tabs-content");
+    const alldds = document.querySelectorAll(".js-dropdown.is-active");
 
-    for (let l = 0; l < controlsItems.length; l++) {
-      const el = controlsItems[l];
+    alldds.forEach((el) => {
+      el.classList.remove("is-active");
+    });
+  }
 
-      el.addEventListener("click", (e) => {
-        const selector = el.getAttribute("data-tab-target");
+  function calendarInteraction() {
+    const target = document.querySelectorAll(".js-calendar");
+    if (!target) return;
 
-        controls
-          .querySelector(".is-tab-el-active")
-          .classList.remove("is-tab-el-active");
-        content
-          .querySelector(".is-tab-el-active")
-          .classList.remove("is-tab-el-active");
+    target.forEach((elTarget) => {
+      const gridCells = elTarget.querySelectorAll(".table-calendar__grid > *");
 
-        el.classList.add("is-tab-el-active");
-        content.querySelector(selector).classList.add("is-tab-el-active");
+      const firstDate = elTarget.querySelector(".js-first-date");
+      const lastDate = elTarget.querySelector(".js-last-date");
+
+      let completeState = false;
+      let firstItem = false;
+      let lastItem = false;
+
+      gridCells.forEach((el, i) => {
+        el.addEventListener("click", () => {
+          el.classList.add("-is-active");
+
+          if (firstItem && getIndex(firstItem) > getIndex(el)) {
+            lastItem = firstItem;
+            firstItem = el;
+          }
+
+          if (firstItem && !lastItem) {
+            lastItem = el;
+          }
+
+          if (!firstItem) {
+            firstItem = el;
+          }
+
+          if (completeState) {
+            firstItem = false;
+            lastItem = false;
+
+            const array = elTarget.querySelectorAll(".-is-active");
+            array.forEach((el2) => {
+              el2.classList.remove("-is-active");
+            });
+
+            const array2 = elTarget.querySelectorAll(".-is-in-path");
+            array2.forEach((el2) => {
+              el2.classList.remove("-is-in-path");
+            });
+
+            completeState = false;
+          } else if (firstItem && lastItem) {
+            const iterationCount = Math.abs(
+              getIndex(firstItem) - getIndex(lastItem)
+            );
+
+            for (let l = 1; l < iterationCount; l++) {
+              const item = elTarget.querySelector(
+                `[data-index="${getIndex(firstItem) + l}"]`
+              );
+              item.classList.add("-is-in-path");
+            }
+
+            if (firstDate) {
+              firstDate.innerHTML = `${
+                firstItem.querySelector(".js-date").innerHTML
+              } ${firstItem.getAttribute("data-month")} -`;
+            }
+
+            if (lastDate) {
+              lastDate.innerHTML = `${
+                lastItem.querySelector(".js-date").innerHTML
+              } ${lastItem.getAttribute("data-month")}`;
+            }
+
+            completeState = true;
+            closeAllDropdowns();
+          }
+        });
       });
+    });
+
+    function getIndex(element) {
+      return parseInt(element.getAttribute("data-index"));
     }
   }
+  useEffect(() => {
+    // Call the init function from the Accordion object
+    Accordion.init();
+    Tabs.init();
+    calendarSlider();
+    calendarInteraction();
+  }, []);
   return (
     <div>
       <div className="container">
