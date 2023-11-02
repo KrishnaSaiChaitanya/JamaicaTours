@@ -11,6 +11,25 @@
   /* z-index: 1; */
 }
 
+#google-map {
+  height: 100%;
+  width: 100%;
+}
+
+.google-map-infowindow-content {
+  padding: 0.4rem 1rem;
+  font-weight: 500;
+  font-size: 14px;
+  color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  line-height: 1.5;
+}
+
+.gm-style .gm-style-iw-t::after {
+  top: -1px;
+}
+
 /* Sidebar when it's open */
 .sidebar1.open {
   width: 100%; /* Adjust the width as needed */
@@ -4491,7 +4510,7 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  font-size: 15px;
+  font-size: 10px;
   color: white;
   background-color: var(--color-accent-1);
   z-index: 1;
