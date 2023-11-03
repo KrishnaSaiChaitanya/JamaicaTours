@@ -382,7 +382,7 @@ const Tours = () => {
                               </div>
                             </div>
 
-                            <div
+                            {/* <div
                               class="searchFormItemDropdown -calendar"
                               data-x="calendar"
                               data-x-toggle="is-active"
@@ -4482,7 +4482,7 @@ const Tours = () => {
                                   </div>
                                 </div>
                               </div>
-                            </div>
+                            </div> */}
                           </div>
                         </div>
                       </div>
