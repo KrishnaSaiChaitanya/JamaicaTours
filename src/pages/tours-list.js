@@ -267,8 +267,8 @@ const Tours = () => {
   useEffect(() => {
     // Call the init function from the Accordion object
     Accordion.init();
-    calendarSlider();
-    calendarInteraction();
+    // calendarSlider();
+    // calendarInteraction();
   }, []);
 
   return (

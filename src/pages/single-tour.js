@@ -1541,7 +1541,7 @@ const TourDetail = () => {
                           </div>
                         </div>
 
-                        <div
+                        {/* <div
                           class="searchFormItemDropdown -calendar"
                           data-x="calendar"
                           data-x-toggle="is-active"
@@ -5641,7 +5641,7 @@ const TourDetail = () => {
                               </div>
                             </div>
                           </div>
-                        </div>
+                        </div> */}
                       </div>
 
                       <div class="searchFormItem js-select-control js-form-dd">
