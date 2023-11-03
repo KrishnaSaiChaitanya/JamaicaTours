@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  // const baseUrl = window.location.origin;
   const destinations = "/destinations";
   function dropdown() {
     const targets = document.querySelectorAll(".js-dropdown");
@@ -725,83 +726,35 @@ export default function Navbar() {
                   </li>
 
                   <li class="submenu__item">
-                    <Link
-                      href={{
-                        pathname: "/destinations",
-                      }}
-                    >
-                      Destination
-                    </Link>
+                    <a href="/destinations">Destination</a>
                   </li>
 
                   <li class="submenu__item">
-                    <Link
-                      href={{
-                        pathname: "/about",
-                      }}
-                    >
-                      About
-                    </Link>
+                    <a href="/about">About</a>
                   </li>
 
                   <li class="submenu__item">
-                    <Link
-                      href={{
-                        pathname: "/contact",
-                      }}
-                    >
-                      Contact
-                    </Link>
+                    <a href="/contact">Contact</a>
                   </li>
 
                   <li class="submenu__item">
-                    <Link
-                      href={{
-                        pathname: "/help-center",
-                      }}
-                    >
-                      Help Center
-                    </Link>
+                    <a href="/help-center">Help Center</a>
                   </li>
 
                   <li class="submenu__item">
-                    <Link
-                      href={{
-                        pathname: "/terms",
-                      }}
-                    >
-                      Terms
-                    </Link>
+                    <a href="/terms">Terms</a>
                   </li>
 
                   <li class="submenu__item">
-                    <Link
-                      href={{
-                        pathname: "/login",
-                      }}
-                    >
-                      Login
-                    </Link>
+                    <a href="/login">Login</a>
                   </li>
 
                   <li class="submenu__item">
-                    <Link
-                      href={{
-                        pathname: "/register",
-                      }}
-                    >
-                      Register
-                    </Link>
+                    <a href="/register">Register</a>
                   </li>
 
                   <li class="submenu__item">
-                    <Link
-                      href={{
-                        pathname: "/invoice",
-                      }}
-                    >
-                      Invoice
-                    </Link>
+                    <a href="/invoice">Invoice</a>
                   </li>
                 </ul>
               </li>
