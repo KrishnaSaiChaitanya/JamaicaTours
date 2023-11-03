@@ -1,7 +1,108 @@
+import TourCard from "@/components/TourCard";
 import Accordion from "@/utils/functions";
 import React, { useEffect } from "react";
 
 const Tours = () => {
+  const tourData = [
+    {
+      location: "Paris, France",
+      title: "Centipede Tour - Guided Arizona Desert Tour by ATV",
+      rating: "4.8 (269)",
+      duration: "4 days",
+      price: "$189,25",
+      imageSrc: "../img/tourCards/1/1.png",
+    },
+    {
+      location: "New York, USA",
+      title: "Molokini and Turtle Town Snorkeling Adventure Aboard",
+      rating: "4.8 (269)",
+      duration: "4 days",
+      price: "$225,00",
+      imageSrc: "img/tourCards/1/2.png",
+    },
+    {
+      location: "London, UK",
+      title: "Westminster Walking Tour & Westminster Abbey Entry",
+      rating: "4.8 (269)",
+      duration: "4 days",
+      price: "$943,00",
+      imageSrc: "img/tourCards/1/3.png",
+    },
+    {
+      location: "Paris, France",
+      title: "Space Center Houston Admission Ticket",
+      rating: "4.8 (269)",
+      duration: "4 days",
+      price: "$189,25",
+      imageSrc: "img/tourCards/1/4.png",
+    },
+    {
+      location: "New York, USA",
+      title: "Clear Kayak Tour of Shell Key Preserve and Tampa Bay Area",
+      rating: "4.8 (269)",
+      duration: "4 days",
+      price: "$225,00",
+      imageSrc: "img/tourCards/1/5.png",
+    },
+    {
+      location: "London, UK",
+      title: "History and Hauntings of Salem Guided Walking Tour",
+      rating: "4.8 (269)",
+      duration: "4 days",
+      price: "$943,00",
+      imageSrc: "img/tourCards/1/6.png",
+    },
+    {
+      location: "Paris, France",
+      title: "All Inclusive Ultimate Circle Island Day Tour with Lunch",
+      rating: "4.8 (269)",
+      duration: "4 days",
+      price: "$189,25",
+      imageSrc: "img/tourCards/1/7.png",
+    },
+    {
+      location: "New York, USA",
+      title:
+        "Mauna Kea Summit Sunset and Stars Free Astro Photos Hilo Kona Waikoloa Pick Up",
+      rating: "4.8 (269)",
+      duration: "4 days",
+      price: "$225,00",
+      imageSrc: "img/tourCards/1/8.png",
+    },
+    {
+      location: "London, UK",
+      title: "Starlight with Sea Cave Kayaking and Loy Krathong Floating",
+      rating: "4.8 (269)",
+      duration: "4 days",
+      price: "$943,00",
+      imageSrc: "img/tourCards/1/9.png",
+    },
+    {
+      location: "Paris, France",
+      title: "Full-Day Phi Phi Islands, Maiton island Trip by Speed Catamaran",
+      rating: "4.8 (269)",
+      duration: "4 days",
+      price: "$189,25",
+      imageSrc: "img/tourCards/1/10.png",
+    },
+    {
+      location: "New York, USA",
+      title: "Phi Phi Islands Day Tour from Phuket",
+      rating: "4.8 (269)",
+      duration: "4 days",
+      price: "$225,00",
+      imageSrc: "img/tourCards/1/11.png",
+    },
+    {
+      location: "London, UK",
+      title: "Karon View Point, Big Buddha & Wat Chalong",
+      rating: "4.8 (269)",
+      duration: "4 days",
+      price: "$943,00",
+      imageSrc: "img/tourCards/1/12.png",
+    },
+  ];
+
   const Accordion = (function () {
     function init() {
       const targets = document.querySelectorAll(".js-accordion");
@@ -5263,6 +5364,53 @@ const Tours = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="col-xl-9 col-lg-8">
+              <div class="row y-gap-5 justify-between">
+                <div class="col-auto">
+                  <div>1362 results</div>
+                </div>
+
+                <div class="col-auto">
+                  <div
+                    class="dropdown -type-2 js-dropdown js-form-dd"
+                    data-main-value=""
+                  >
+                    <div class="dropdown__button js-button">
+                      <span>Sort by: </span>
+                      <span class="js-title">Featured</span>
+                      <i class="icon-chevron-down"></i>
+                    </div>
+
+                    <div class="dropdown__menu js-menu-items">
+                      <div class="dropdown__item" data-value="fast">
+                        Fast
+                      </div>
+
+                      <div class="dropdown__item" data-value="steady">
+                        Steady
+                      </div>
+
+                      <div class="dropdown__item" data-value="speedy">
+                        Speedy
+                      </div>
+
+                      <div class="dropdown__item" data-value="furious">
+                        Furious
+                      </div>
+
+                      <div class="dropdown__item" data-value="grind">
+                        Grind
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="row y-gap-30 pt-30">
+                {tourData.map((tour, index) => (
+                  <TourCard key={index} {...tour} />
+                ))}
               </div>
             </div>
           </div>
