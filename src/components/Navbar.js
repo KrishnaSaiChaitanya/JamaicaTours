@@ -1,10 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const destinations = "/destinations";
   function dropdown() {
     const targets = document.querySelectorAll(".js-dropdown");
     if (!targets.length) return;
@@ -494,11 +495,13 @@ export default function Navbar() {
                   </div>
 
                   <div className="desktopNav__item">
-                    <a herf="destinations">Destination</a>
-                  </div>
-
-                  <div className="desktopNav__item">
-                    <a>Activities</a>
+                    <Link
+                      href={{
+                        pathname: "/destinations",
+                      }}
+                    >
+                      Destination
+                    </Link>
                   </div>
 
                   <div className="desktopNav__item">
@@ -509,32 +512,66 @@ export default function Navbar() {
                     <div className="desktopNavSubnav">
                       <div className="desktopNavSubnav__content">
                         <div className="desktopNavSubnav__item">
-                          <a herf="destinations">Destinations</a>
+                          <Link
+                            href={{
+                              pathname: "/destinations",
+                            }}
+                          >
+                            Destination
+                          </Link>
                         </div>
 
                         <div className="desktopNavSubnav__item">
-                          <a herf="about">About</a>
+                          <Link
+                            href={{
+                              pathname: "/about",
+                            }}
+                          >
+                            About
+                          </Link>
                         </div>
 
                         <div className="desktopNavSubnav__item">
-                          <a herf="help-center">Help center</a>
+                          <Link
+                            href={{
+                              pathname: "/help-center",
+                            }}
+                          >
+                            Help Center
+                          </Link>
                         </div>
 
                         <div className="desktopNavSubnav__item">
-                          <a herf="terms">Terms</a>
+                          <Link
+                            href={{
+                              pathname: "/terms",
+                            }}
+                          >
+                            Terms
+                          </Link>
                         </div>
 
                         <div className="desktopNavSubnav__item">
-                          <a herf="login">Login</a>
+                          <Link
+                            href={{
+                              pathname: "/login",
+                            }}
+                          >
+                            Login
+                          </Link>
                         </div>
-
-                        {/* ... Add more page as here ... */}
                       </div>
                     </div>
                   </div>
 
                   <div className="desktopNav__item">
-                    <a herf="contact">Contact</a>
+                    <Link
+                      href={{
+                        pathname: "/contact",
+                      }}
+                    >
+                      Contact
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -651,7 +688,13 @@ export default function Navbar() {
           <div class="menu__content">
             <ul class="menuNav js-navList">
               <li class="menuNav__item">
-                <a href="Home">Home</a>
+                <Link
+                  href={{
+                    pathname: "/",
+                  }}
+                >
+                  Home
+                </Link>
               </li>
 
               <li class="menuNav__item -has-submenu js-has-submenu">
@@ -682,39 +725,83 @@ export default function Navbar() {
                   </li>
 
                   <li class="submenu__item">
-                    <a herf="destinations">Destinations</a>
+                    <Link
+                      href={{
+                        pathname: "/destinations",
+                      }}
+                    >
+                      Destination
+                    </Link>
                   </li>
 
                   <li class="submenu__item">
-                    <a href="about">About</a>
+                    <Link
+                      href={{
+                        pathname: "/about",
+                      }}
+                    >
+                      About
+                    </Link>
                   </li>
 
                   <li class="submenu__item">
-                    <a herf="contact">Contact</a>
+                    <Link
+                      href={{
+                        pathname: "/contact",
+                      }}
+                    >
+                      Contact
+                    </Link>
                   </li>
 
                   <li class="submenu__item">
-                    <a herf="help-center">Help center</a>
+                    <Link
+                      href={{
+                        pathname: "/help-center",
+                      }}
+                    >
+                      Help Center
+                    </Link>
                   </li>
 
                   <li class="submenu__item">
-                    <a herf="terms">Terms</a>
+                    <Link
+                      href={{
+                        pathname: "/terms",
+                      }}
+                    >
+                      Terms
+                    </Link>
                   </li>
 
                   <li class="submenu__item">
-                    <a herf="login">Login</a>
+                    <Link
+                      href={{
+                        pathname: "/login",
+                      }}
+                    >
+                      Login
+                    </Link>
                   </li>
 
                   <li class="submenu__item">
-                    <a herf="register">Register</a>
+                    <Link
+                      href={{
+                        pathname: "/register",
+                      }}
+                    >
+                      Register
+                    </Link>
                   </li>
 
                   <li class="submenu__item">
-                    <a herf="404">404 Page</a>
-                  </li>
-
-                  <li class="submenu__item">
-                    <a herf="invoice">Invoice</a>
+                    <Link
+                      href={{
+                        pathname: "/invoice",
+                      }}
+                    >
+                      Invoice
+                    </Link>
                   </li>
                 </ul>
               </li>

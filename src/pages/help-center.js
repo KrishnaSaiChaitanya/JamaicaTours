@@ -1,57 +1,60 @@
 import React, { useEffect, useState } from "react";
 
 const HelpCenter = () => {
-  const [accordionState, setAccordionState] = useState(Array(4).fill(false));
-  const toggleAccordion = (index) => {
-    setAccordionState((prevState) => {
-      const newState = [...prevState];
-      newState[index] = !newState[index];
-      return newState;
-    });
-  };
-  useEffect(() => {
-    const targets = document.querySelectorAll(".js-accordion");
-    if (!targets) return;
+  const Accordion = (function () {
+    function init() {
+      const targets = document.querySelectorAll(".js-accordion");
+      if (!targets) return;
 
-    for (let i = 0; i < targets.length; i++) {
-      const items = targets[i].querySelectorAll(".accordion__item");
+      for (let i = 0; i < targets.length; i++) {
+        const items = targets[i].querySelectorAll(".accordion__item");
 
-      for (let l = 0; l < items.length; l++) {
-        const button = items[l].querySelector(".accordion__button");
-        const content = items[l].querySelector(".accordion__content");
-        const titleChange = items[l].querySelector("[data-open-change-title]");
-        let buttonOrigTitle;
-        let buttonNewTitle;
+        for (let l = 0; l < items.length; l++) {
+          const button = items[l].querySelector(".accordion__button");
+          const content = items[l].querySelector(".accordion__content");
+          const titleChange = items[l].querySelector(
+            "[data-open-change-title]"
+          );
+          let buttonOrigTitle;
+          let buttonNewTitle;
 
-        if (items[l].classList.contains("js-accordion-item-active")) {
-          items[l].classList.toggle("is-active");
-          content.style.maxHeight = content.scrollHeight + "px";
-        }
-
-        if (titleChange) {
-          buttonOrigTitle = titleChange.innerHTML;
-          buttonNewTitle = titleChange.getAttribute("data-open-change-title");
-        }
-
-        button.addEventListener("click", (e) => {
-          items[l].classList.toggle("is-active");
-
-          if (titleChange) {
-            if (items[l].classList.contains("is-active")) {
-              titleChange.innerHTML = buttonNewTitle;
-            } else {
-              titleChange.innerHTML = buttonOrigTitle;
-            }
-          }
-
-          if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-          } else {
+          if (items[l].classList.contains("js-accordion-item-active")) {
+            items[l].classList.toggle("is-active");
             content.style.maxHeight = content.scrollHeight + "px";
           }
-        });
+
+          if (titleChange) {
+            buttonOrigTitle = titleChange.innerHTML;
+            buttonNewTitle = titleChange.getAttribute("data-open-change-title");
+          }
+
+          button.addEventListener("click", (e) => {
+            items[l].classList.toggle("is-active");
+
+            if (titleChange) {
+              if (items[l].classList.contains("is-active")) {
+                titleChange.innerHTML = buttonNewTitle;
+              } else {
+                titleChange.innerHTML = buttonOrigTitle;
+              }
+            }
+
+            if (content.style.maxHeight) {
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        }
       }
     }
+
+    return {
+      init: init,
+    };
+  })();
+  useEffect(() => {
+    Accordion.init();
   }, []);
 
   const accordionData = [
@@ -174,46 +177,128 @@ const HelpCenter = () => {
         </div>
       </section>
 
-      <section className="layout-pt-xl layout-pb-xl">
-        <div className="container">
-          <div className="row justify-center text-center">
-            <div className="col-auto">
-              <h2 className="text-30 md:text-24">Frequently Asked Questions</h2>
+      <section class="layout-pt-xl layout-pb-xl">
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <h2 class="text-30 md:text-24">Frequently Asked Questions</h2>
             </div>
           </div>
 
-          <div className="row justify-center pt-40">
-            <div className="col-xl-8 col-lg-10">
-              <div className="accordion -simple row y-gap-20 js-accordion">
-                {accordionData.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`accordion__item px-20 py-15 border-1 rounded-12 ${
-                      accordionState[index] ? "is-active" : ""
-                    }`}
-                  >
-                    <div className="accordion__button d-flex items-center justify-between">
-                      <div className="button text-16 text-dark-1">
-                        {item.title}
+          <div class="row justify-center pt-40">
+            <div class="col-xl-8 col-lg-10">
+              <div class="accordion -simple row y-gap-20 js-accordion">
+                <div class="col-12">
+                  <div class="accordion__item px-20 py-15 border-1 rounded-12">
+                    <div class="accordion__button d-flex items-center justify-between">
+                      <div class="button text-16 text-dark-1">
+                        Can I get the refund?
                       </div>
-                      <div
-                        className="accordion__icon size-30 flex-center bg-light-2 rounded-full"
-                        onClick={() => toggleAccordion(index)}
-                      >
-                        {accordionState[index] ? (
-                          <i className="icon-minus"></i>
-                        ) : (
-                          <i className="icon-plus"></i>
-                        )}
+
+                      <div class="accordion__icon size-30 flex-center bg-light-2 rounded-full">
+                        <i class="icon-plus"></i>
+                        <i class="icon-minus"></i>
                       </div>
                     </div>
-                    <div className="accordion__content">
-                      <div className="pt-20">
-                        <p>{item.content}</p>
+
+                    <div class="accordion__content">
+                      <div class="pt-20">
+                        <p>
+                          Phang Nga Bay Sea Cave Canoeing & James Bond Island w/
+                          Buffet Lunch by Big Boat cancellation policy: For a
+                          full refund, cancel at least 24 hours in advance of
+                          the start date of the experience. Discover and book
+                          Phang Nga Bay Sea Cave Canoeing & James Bond Island w/
+                          Buffet Lunch by Big Boat
+                        </p>
                       </div>
                     </div>
                   </div>
-                ))}
+                </div>
+
+                <div class="col-12">
+                  <div class="accordion__item px-20 py-15 border-1 rounded-12">
+                    <div class="accordion__button d-flex items-center justify-between">
+                      <div class="button text-16 text-dark-1">
+                        Can I change the travel date?
+                      </div>
+
+                      <div class="accordion__icon size-30 flex-center bg-light-2 rounded-full">
+                        <i class="icon-plus"></i>
+                        <i class="icon-minus"></i>
+                      </div>
+                    </div>
+
+                    <div class="accordion__content">
+                      <div class="pt-20">
+                        <p>
+                          Phang Nga Bay Sea Cave Canoeing & James Bond Island w/
+                          Buffet Lunch by Big Boat cancellation policy: For a
+                          full refund, cancel at least 24 hours in advance of
+                          the start date of the experience. Discover and book
+                          Phang Nga Bay Sea Cave Canoeing & James Bond Island w/
+                          Buffet Lunch by Big Boat
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="accordion__item px-20 py-15 border-1 rounded-12">
+                    <div class="accordion__button d-flex items-center justify-between">
+                      <div class="button text-16 text-dark-1">
+                        When and where does the tour end?
+                      </div>
+
+                      <div class="accordion__icon size-30 flex-center bg-light-2 rounded-full">
+                        <i class="icon-plus"></i>
+                        <i class="icon-minus"></i>
+                      </div>
+                    </div>
+
+                    <div class="accordion__content">
+                      <div class="pt-20">
+                        <p>
+                          Phang Nga Bay Sea Cave Canoeing & James Bond Island w/
+                          Buffet Lunch by Big Boat cancellation policy: For a
+                          full refund, cancel at least 24 hours in advance of
+                          the start date of the experience. Discover and book
+                          Phang Nga Bay Sea Cave Canoeing & James Bond Island w/
+                          Buffet Lunch by Big Boat
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="accordion__item px-20 py-15 border-1 rounded-12">
+                    <div class="accordion__button d-flex items-center justify-between">
+                      <div class="button text-16 text-dark-1">
+                        Do you arrange airport transfers?
+                      </div>
+
+                      <div class="accordion__icon size-30 flex-center bg-light-2 rounded-full">
+                        <i class="icon-plus"></i>
+                        <i class="icon-minus"></i>
+                      </div>
+                    </div>
+
+                    <div class="accordion__content">
+                      <div class="pt-20">
+                        <p>
+                          Phang Nga Bay Sea Cave Canoeing & James Bond Island w/
+                          Buffet Lunch by Big Boat cancellation policy: For a
+                          full refund, cancel at least 24 hours in advance of
+                          the start date of the experience. Discover and book
+                          Phang Nga Bay Sea Cave Canoeing & James Bond Island w/
+                          Buffet Lunch by Big Boat
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
