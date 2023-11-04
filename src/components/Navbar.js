@@ -169,7 +169,81 @@ export default function Navbar() {
       },
     });
   }
+  function priceRangeSliderInit() {
+    const targets = document.querySelectorAll(".js-price-rangeSlider");
 
+    targets.forEach((el) => {
+      const slider = el.querySelector(".js-slider");
+
+      noUiSlider.create(slider, {
+        start: [20, 70000],
+        step: 1,
+        connect: true,
+        range: {
+          min: 0,
+          max: 100000,
+        },
+        format: {
+          to: function (value) {
+            return "$" + value.toFixed(0);
+          },
+
+          from: function (value) {
+            return value;
+          },
+        },
+      });
+
+      const snapValues = [
+        el.querySelector(".js-lower"),
+        el.querySelector(".js-upper"),
+      ];
+
+      slider.noUiSlider.on("update", function (values, handle) {
+        snapValues[handle].innerHTML = values[handle];
+      });
+    });
+  }
+  const Tabs = (function () {
+    function init() {
+      const targets = document.querySelectorAll(".js-tabs");
+      if (!targets) return;
+
+      targets.forEach((el) => {
+        singleTab(el);
+      });
+    }
+
+    function singleTab(target) {
+      const controls = target.querySelector(".js-tabs-controls");
+      const controlsItems = target.querySelectorAll(
+        ".js-tabs-controls .js-tabs-button"
+      );
+      const content = target.querySelector(".js-tabs-content");
+
+      for (let l = 0; l < controlsItems.length; l++) {
+        const el = controlsItems[l];
+
+        el.addEventListener("click", (e) => {
+          const selector = el.getAttribute("data-tab-target");
+
+          controls
+            .querySelector(".is-tab-el-active")
+            .classList.remove("is-tab-el-active");
+          content
+            .querySelector(".is-tab-el-active")
+            .classList.remove("is-tab-el-active");
+
+          el.classList.add("is-tab-el-active");
+          content.querySelector(selector).classList.add("is-tab-el-active");
+        });
+      }
+    }
+
+    return {
+      init: init,
+    };
+  })();
   useEffect(() => {
     function headerSticky() {
       const target = document.querySelector(".js-header");
@@ -358,7 +432,7 @@ export default function Navbar() {
     Header.init();
     headerSticky();
     menuEvents();
-    Events.init();
+    Tabs.init();
     dropdown();
 
     return () => {
@@ -642,7 +716,7 @@ export default function Navbar() {
               </div>
             </div>
 
-            <a herf="register" className="text-white ml-10">
+            <a href="register" className="text-white ml-10">
               Sign up
             </a>
 
