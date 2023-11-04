@@ -629,6 +629,25 @@ export default function Navbar() {
                         <div className="desktopNavSubnav__item">
                           <Link
                             href={{
+                              pathname: "/blogs",
+                            }}
+                          >
+                            Blogs
+                          </Link>
+                        </div>
+                        <div className="desktopNavSubnav__item">
+                          <Link
+                            href={{
+                              pathname: "/tour-layout",
+                            }}
+                          >
+                            Tours List
+                          </Link>
+                        </div>
+
+                        <div className="desktopNavSubnav__item">
+                          <Link
+                            href={{
                               pathname: "/login",
                             }}
                           >
@@ -829,6 +848,12 @@ export default function Navbar() {
 
                   <li class="submenu__item">
                     <a href="/invoice">Invoice</a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="/blogs">Blogs</a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="/tour-list">Tours List</a>
                   </li>
                 </ul>
               </li>
