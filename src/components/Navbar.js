@@ -461,23 +461,7 @@ export default function Navbar() {
               <div className="xl:d-none ml-30">
                 <div className="desktopNav -light">
                   <div className="desktopNav__item">
-                    <a>
-                      Home <i className="icon-chevron-down"></i>
-                    </a>
-
-                    <div className="desktopNavSubnav">
-                      <div className="desktopNavSubnav__content">
-                        <div className="desktopNavSubnav__item">
-                          <a herf="index">Home 01</a>
-                        </div>
-
-                        <div className="desktopNavSubnav__item">
-                          <a herf="home-2">Home 02</a>
-                        </div>
-
-                        {/* ... Add more home as here ... */}
-                      </div>
-                    </div>
+                    <a>Home</a>
                   </div>
 
                   <div className="desktopNav__item">
@@ -782,13 +766,7 @@ export default function Navbar() {
           <div class="menu__content">
             <ul class="menuNav js-navList">
               <li class="menuNav__item">
-                <Link
-                  href={{
-                    pathname: "/",
-                  }}
-                >
-                  Home
-                </Link>
+                <a href="/">Home</a>
               </li>
 
               <li class="menuNav__item -has-submenu js-has-submenu">

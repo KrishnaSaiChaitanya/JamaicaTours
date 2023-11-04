@@ -70,7 +70,19 @@ function TourLayout() {
     </div>
   `;
   }
+  function dbSidebarToggle() {
+    const target = document.querySelector(".js-toggle-db-sidebar");
+    if (!target) return;
 
+    const dashboard = document.querySelector(".js-dashboard");
+
+    if (window.innerWidth < 575)
+      dashboard.classList.remove("-is-sidebar-visible");
+
+    target.addEventListener("click", () =>
+      dashboard.classList.toggle("-is-sidebar-visible")
+    );
+  }
   const tour_data = [
     {
       location: "Paris, France",
@@ -173,6 +185,7 @@ function TourLayout() {
 
   useEffect(() => {
     initMap();
+    dbSidebarToggle();
   });
 
   return (
