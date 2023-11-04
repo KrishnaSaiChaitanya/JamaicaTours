@@ -6,7 +6,7 @@ function blogs() {
       <div>
         <section class="hero -type-1 -min-2">
           <div class="hero__bg">
-            <img src="img/hero/1.png" alt="image" />
+            <img src="./img/hero/1/1.png" alt="image" />
             <img src="img/hero/1/shape.svg" alt="image" />
           </div>
 
@@ -48,7 +48,7 @@ function blogs() {
                   </button>
                 </div>
 
-                <div class="col-auto">
+                {/* <div class="col-auto">
                   <button
                     class="tabs__button fw-500 rounded-200 js-tabs-button "
                     data-tab-target=".-tab-item-3"
@@ -91,7 +91,7 @@ function blogs() {
                   >
                     South America Guide
                   </button>
-                </div>
+                </div> */}
               </div>
 
               <div class="tabs__content pt-30 js-tabs-content">
