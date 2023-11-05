@@ -434,8 +434,8 @@ export default function Navbar() {
     Header.init();
     headerSticky();
     menuEvents();
-    Tabs.init();
     dropdown();
+    Tabs.init();
 
     return () => {
       window.removeEventListener("scroll", headerSticky);
