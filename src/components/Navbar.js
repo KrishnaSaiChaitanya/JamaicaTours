@@ -461,20 +461,24 @@ export default function Navbar() {
 
           <div className="header__left">
             <div className="header__logo">
-              <a herf="index" className="header__logo">
-                <img src="img/general/logo-light.svg" alt="logo icon" />
+              <a href="index" className="header__logo">
+                <img
+                  src="img/general/logo.png"
+                  alt="logo icon"
+                  className="header_img"
+                />
               </a>
 
               <div className="xl:d-none ml-30">
                 <div className="desktopNav -light">
                   <div className="desktopNav__item">
-                    <a
+                    <Link
                       href={{
                         pathname: "/",
                       }}
                     >
                       Home
-                    </a>
+                    </Link>
                   </div>
 
                   <div className="desktopNav__item">

@@ -2035,10 +2035,15 @@ h6 {
   justify-content: space-between;
   height: 88px;
 }
-
+.header_img {
+  height: 70px;
+}
 @media (max-width: 767px) {
   .header.-type-1 .header__container {
     height: 57px;
+  }
+  .header_img {
+    height: 60px;
   }
 }
 
