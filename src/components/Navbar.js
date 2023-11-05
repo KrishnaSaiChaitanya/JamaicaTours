@@ -468,13 +468,13 @@ export default function Navbar() {
               <div className="xl:d-none ml-30">
                 <div className="desktopNav -light">
                   <div className="desktopNav__item">
-                    <Link
+                    <a
                       href={{
                         pathname: "/",
                       }}
                     >
                       Home
-                    </Link>
+                    </a>
                   </div>
 
                   <div className="desktopNav__item">
@@ -488,41 +488,11 @@ export default function Navbar() {
                           <div className="desktopNavMega-list">
                             <div className="desktopNavMega-list__item">
                               <div className="desktopNavMega-list__list">
-                                <Link
-                                  href={{
-                                    pathname: "/single-tour",
-                                  }}
-                                >
-                                  Tour Single Page
-                                </Link>
-                                <Link
-                                  href={{
-                                    pathname: "/tours-list",
-                                  }}
-                                >
-                                  Tour List
-                                </Link>
-                                <Link
-                                  href={{
-                                    pathname: "/tour-layout",
-                                  }}
-                                >
-                                  Tour Map
-                                </Link>
-                                <Link
-                                  href={{
-                                    pathname: "/booking",
-                                  }}
-                                >
-                                  Booking
-                                </Link>
-                                <Link
-                                  href={{
-                                    pathname: "/booking-status",
-                                  }}
-                                >
-                                  Booking Status
-                                </Link>
+                                <a href="/single-tour">Tour Single Page</a>
+                                <a href="/tours-list">Tour List</a>
+                                <a href="/tour-layout">Tour Map</a>
+                                <a href="/booking">Booking</a>
+                                <a href="/booking-status">Booking Status</a>
                               </div>
                             </div>
                           </div>
@@ -575,13 +545,7 @@ export default function Navbar() {
                   </div>
 
                   <div className="desktopNav__item">
-                    <Link
-                      href={{
-                        pathname: "/destinations",
-                      }}
-                    >
-                      Destination
-                    </Link>
+                    <a href="/destinations">Destination</a>
                   </div>
 
                   <div className="desktopNav__item">
@@ -592,85 +556,37 @@ export default function Navbar() {
                     <div className="desktopNavSubnav">
                       <div className="desktopNavSubnav__content">
                         <div className="desktopNavSubnav__item">
-                          <Link
-                            href={{
-                              pathname: "/destinations",
-                            }}
-                          >
-                            Destination
-                          </Link>
+                          <a href="/destinations">Destination</a>
                         </div>
 
                         <div className="desktopNavSubnav__item">
-                          <Link
-                            href={{
-                              pathname: "/about",
-                            }}
-                          >
-                            About
-                          </Link>
+                          <a href="/about">About</a>
                         </div>
 
                         <div className="desktopNavSubnav__item">
-                          <Link
-                            href={{
-                              pathname: "/help-center",
-                            }}
-                          >
-                            Help Center
-                          </Link>
+                          <a href="/help-center">Help Center</a>
                         </div>
 
                         <div className="desktopNavSubnav__item">
-                          <Link
-                            href={{
-                              pathname: "/terms",
-                            }}
-                          >
-                            Terms
-                          </Link>
+                          <a href="/terms">Terms</a>
                         </div>
 
                         <div className="desktopNavSubnav__item">
-                          <Link
-                            href={{
-                              pathname: "/blogs",
-                            }}
-                          >
-                            Blogs
-                          </Link>
+                          <a href="/blogs">Blogs</a>
                         </div>
                         <div className="desktopNavSubnav__item">
-                          <Link
-                            href={{
-                              pathname: "/tour-layout",
-                            }}
-                          >
-                            Tours List
-                          </Link>
+                          <a href="/tour-layout">Tours List</a>
                         </div>
 
                         <div className="desktopNavSubnav__item">
-                          <Link
-                            href={{
-                              pathname: "/login",
-                            }}
-                          >
-                            Login
-                          </Link>
+                          <a href="/login">Login</a>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="desktopNav__item">
-                    <Link
-                      href={{
-                        pathname: "/contact",
-                      }}
-                    >
-                      Contact
-                    </Link>
+                    <a href="/contact">Contact</a>
                   </div>
                 </div>
               </div>

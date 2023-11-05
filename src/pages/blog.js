@@ -1,6 +1,40 @@
 import React from "react";
 
 function blog() {
+  useEffect(() => {
+    const targets = document.querySelectorAll(".js-tabs");
+    if (!targets) return;
+
+    targets.forEach((el) => {
+      singleTab(el);
+    });
+  }, []);
+
+  function singleTab(target) {
+    const controls = target.querySelector(".js-tabs-controls");
+    const controlsItems = target.querySelectorAll(
+      ".js-tabs-controls .js-tabs-button"
+    );
+    const content = target.querySelector(".js-tabs-content");
+
+    for (let l = 0; l < controlsItems.length; l++) {
+      const el = controlsItems[l];
+
+      el.addEventListener("click", (e) => {
+        const selector = el.getAttribute("data-tab-target");
+
+        controls
+          .querySelector(".is-tab-el-active")
+          .classList.remove("is-tab-el-active");
+        content
+          .querySelector(".is-tab-el-active")
+          .classList.remove("is-tab-el-active");
+
+        el.classList.add("is-tab-el-active");
+        content.querySelector(selector).classList.add("is-tab-el-active");
+      });
+    }
+  }
   return (
     <div className="mt-header2">
       {" "}
