@@ -354,7 +354,7 @@ const TourDetail = () => {
     calendarInteraction();
   }, []);
   return (
-    <div>
+    <div className="mt-header2">
       <div className="container">
         <div className="row justify-between py-30 mt-80">
           <div className="col-auto">

@@ -37,7 +37,7 @@ const Terms = () => {
   }
 
   return (
-    <div>
+    <div className="mt-header2">
       <div class="container mt-header pt-30">
         <h1 class="text-30">Terms and Conditions</h1>
       </div>

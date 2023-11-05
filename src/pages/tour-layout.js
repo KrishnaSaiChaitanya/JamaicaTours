@@ -189,7 +189,7 @@ function TourLayout() {
   });
 
   return (
-    <div>
+    <div className="mt-header2">
       <Filters />
       <section class="halfMap -type-1 mb-30">
         <div class="halfMap__content">

@@ -164,7 +164,7 @@ const Tours = () => {
 
   return (
     <div>
-      <section className="pageHeader -type-3">
+      <section className="pageHeader -type-3 pt-60">
         <div className="container">
           <div className="row justify-between">
             <div className="col-auto"></div>

@@ -2,7 +2,7 @@ import React from "react";
 
 function blog() {
   return (
-    <div>
+    <div className="mt-header2">
       {" "}
       <section class="hero -type-1 -min-2">
         <div class="hero__bg">

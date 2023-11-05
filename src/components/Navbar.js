@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  // const baseUrl = window.location.origin;
   const destinations = "/destinations";
   function dropdown() {
     const targets = document.querySelectorAll(".js-dropdown");
@@ -155,6 +155,8 @@ export default function Navbar() {
       },
     });
   }
+  const router = useRouter();
+  const isHomePage = router.pathname === "/";
 
   function menuClose() {
     const menu = document.querySelector(".js-menu");
@@ -442,11 +444,15 @@ export default function Navbar() {
   return (
     <>
       <header className="header -type-10 js-header ">
-        <div className="header__container">
+        <div
+          className={
+            isHomePage ? "header__container " : "header__container homepage"
+          }
+        >
           <div className="headerMobile__left">
             <button
               className="header__menuBtn js-menu-button"
-              onClick={toggleSidebar}
+              // onClick={toggleSidebar}
             >
               <i className="icon-main-menu text-white"></i>
             </button>
@@ -461,7 +467,13 @@ export default function Navbar() {
               <div className="xl:d-none ml-30">
                 <div className="desktopNav -light">
                   <div className="desktopNav__item">
-                    <a>Home</a>
+                    <Link
+                      href={{
+                        pathname: "/",
+                      }}
+                    >
+                      Home
+                    </Link>
                   </div>
 
                   <div className="desktopNav__item">
@@ -474,41 +486,49 @@ export default function Navbar() {
                         <div className="desktopNavMega__lists">
                           <div className="desktopNavMega-list">
                             <div className="desktopNavMega-list__item">
-                              <div className="desktopNavMega-list__title">
-                                Tour List Style
-                              </div>
-
                               <div className="desktopNavMega-list__list">
-                                {/* ... Add more tour list as here ... */}
+                                <Link
+                                  href={{
+                                    pathname: "/single-tour",
+                                  }}
+                                >
+                                  Tour Single Page
+                                </Link>
+                                <Link
+                                  href={{
+                                    pathname: "/tours-list",
+                                  }}
+                                >
+                                  Tour List
+                                </Link>
+                                <Link
+                                  href={{
+                                    pathname: "/tour-layout",
+                                  }}
+                                >
+                                  Tour Map
+                                </Link>
+                                <Link
+                                  href={{
+                                    pathname: "/booking",
+                                  }}
+                                >
+                                  Booking
+                                </Link>
+                                <Link
+                                  href={{
+                                    pathname: "/booking-status",
+                                  }}
+                                >
+                                  Booking Status
+                                </Link>
                               </div>
                             </div>
                           </div>
-
-                          <div className="desktopNavMega-list">
-                            <div className="desktopNavMega-list__item">
-                              <div className="desktopNavMega-list__title">
-                                Tour Single Style
-                              </div>
-
-                              <div className="desktopNavMega-list__list">
-                                <div className="desktopNavMega-list__a">
-                                  <a herf="tour-single-1">Tour single 1</a>
-                                </div>
-
-                                <div className="desktopNavMega-list__a">
-                                  <a herf="tour-single-2">Tour single 2</a>
-                                </div>
-
-                                {/* ... Add more tour single as here ... */}
-                              </div>
-                            </div>
-                          </div>
-
-                          {/* ... Add more tour-related as here ... */}
                         </div>
 
                         <div className="desktopNavMega__info">
-                          <div className="specialCardGrid row y-gap-30">
+                          <div className="specialCardGrid row y-gap-20">
                             <div className="col-12">
                               <div className="specialCard">
                                 <div className="specialCard__image">
@@ -732,25 +752,7 @@ export default function Navbar() {
           </div>
         </div>
       </header>
-      <div
-        class="tourPagesSidebar"
-        data-x="tourPagesSidebar"
-        data-x-toggle="-is-active"
-      >
-        <div class="tourPagesSidebar__overlay"></div>
-        <div class="tourPagesSidebar__content">
-          <div class="tourPagesSidebar__header d-flex items-center justify-between">
-            <div class="text-20 fw-500">All filters</div>
 
-            <button
-              class="button -dark-1 size-40 rounded-full bg-light-1"
-              data-x-click="tourPagesSidebar"
-            >
-              <i class="icon-cross text-10"></i>
-            </button>
-          </div>
-        </div>
-      </div>
       <div class="menu js-menu">
         <div class="menu__overlay js-menu-button"></div>
 
@@ -781,6 +783,18 @@ export default function Navbar() {
                   </li>
                   <li class="submenu__item">
                     <a href="booking">Booking</a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="/blog">Booking Status</a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="/tours-list">Tour List</a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="/tour-layout">Tour Map</a>
+                  </li>
+                  <li class="submenu__item">
+                    <a href="/single-tour">Single Tour</a>
                   </li>
                 </ul>
               </li>
@@ -831,13 +845,13 @@ export default function Navbar() {
                     <a href="/blogs">Blogs</a>
                   </li>
                   <li class="submenu__item">
-                    <a href="/tour-list">Tours List</a>
+                    <a href="/blog">Blog Page</a>
                   </li>
                 </ul>
               </li>
 
               <li class="menuNav__item">
-                <a herf="contact">Contact</a>
+                <a href="/contact">Contact Us</a>
               </li>
             </ul>
           </div>

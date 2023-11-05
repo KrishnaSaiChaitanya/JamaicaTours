@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Custom404() {
   return (
-    <div>
+    <div className="mt-header2">
       <section class="nopage">
         <div class="container">
           <div class="row y-gap-30 justify-between items-center">

@@ -3,8 +3,8 @@ import React from "react";
 
 function about() {
   return (
-    <div className="">
-      <section className="pageHeader -type-1">
+    <div className="mt-header3">
+      <section className="pageHeader -type-1 mt-30">
         <div className="pageHeader__bg">
           <img src="img/pageHeader/1.jpg" alt="image" />
           <img src="img/hero/1/shape.svg" alt="image" />

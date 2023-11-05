@@ -2,7 +2,7 @@ import React from "react";
 
 const PhuketPage = () => {
   return (
-    <div>
+    <div className="mt-header3">
       <section className="pageHeader -type-1">
         <div className="pageHeader__bg">
           <img src="img/pageHeader/1.jpg" alt="image" />

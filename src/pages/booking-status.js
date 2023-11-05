@@ -2,7 +2,7 @@ import React from "react";
 
 function BookingStatus() {
   return (
-    <div className="row pt-30">
+    <div className="row pt-30 mt-header2">
       <div className="col-2"></div>
       <div class=" col-8 bg-white rounded-12 shadow-2 py-30 px-30 md:py-20 md:px-20 mt-30">
         <div class="d-flex flex-column items-center text-center">

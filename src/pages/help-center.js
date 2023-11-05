@@ -81,7 +81,7 @@ const HelpCenter = () => {
   ];
 
   return (
-    <div>
+    <div className="mt-header3">
       <section className="pageHeader -type-2">
         <div className="pageHeader__bg">
           <img src="img/pageHeader/2.jpg" alt="image" />

@@ -1,3 +1,7 @@
+.header__container.homepage {
+  background-color: black;
+}
+
 .sidebar1 {
   width: 0;
   height: 100%;
@@ -12449,10 +12453,22 @@ h6 {
 .mt-header {
   margin-top: 88px;
 }
+.mt-header3 {
+  margin-top: 120px;
+}
+.mt-header2 {
+  margin-top: 40px;
+}
 
 @media (max-width: 767px) {
   .mt-header {
     margin-top: 57px;
+  }
+  .mt-header2 {
+    margin-top: 5px;
+  }
+  .mt-header3 {
+    margin-top: 5px;
   }
 }
 

@@ -2,8 +2,8 @@ import React from "react";
 
 const ContactSection = () => {
   return (
-    <div>
-      <div class="map relative mt-header ml-60 mr-60 md:ml-0 md:mr-0">
+    <div className="mt-header3">
+      <div class="map relative mt-header ml-60 mr-60 md:ml-0 md:mr-0 pageHeader">
         <div class="map__content rounded-12 md:rounded-0 js-map-single">
           <iframe
             style={{ height: "100%", width: "100%" }}

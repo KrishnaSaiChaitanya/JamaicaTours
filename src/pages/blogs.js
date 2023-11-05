@@ -2,9 +2,9 @@ import React from "react";
 
 function blogs() {
   return (
-    <div>
+    <div className="mt-header3">
       <div>
-        <section class="hero -type-1 -min-2">
+        <section class=" hero -type-1 -min-2 mt-header">
           <div class="hero__bg">
             <img src="./img/hero/1/1.png" alt="image" />
             <img src="img/hero/1/shape.svg" alt="image" />
