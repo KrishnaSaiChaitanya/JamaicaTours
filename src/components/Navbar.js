@@ -432,9 +432,10 @@ export default function Navbar() {
       }
     };
     Header.init();
+    dropdown();
     headerSticky();
     menuEvents();
-    dropdown();
+
     Tabs.init();
 
     return () => {
