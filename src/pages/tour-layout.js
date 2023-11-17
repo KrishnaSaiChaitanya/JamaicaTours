@@ -25,46 +25,46 @@ function TourLayout() {
     ];
 
     const contentString = `
-    <div class="tourCard -type-1 pt-10 pb-15 px-10 border-1 rounded-12">
-      <div class="tourCard__header">
-        <div class="tourCard__image ratio ratio-28:20">
-          <img src="img/tourCards/1/1.png" alt="image" class="img-ratio rounded-12">
+    <div className="tourCard -type-1 pt-10 pb-15 px-10 border-1 rounded-12">
+      <div className="tourCard__header">
+        <div className="tourCard__image ratio ratio-28:20">
+          <img src="img/tourCards/1/1.png" alt="image" className="img-ratio rounded-12">
         </div>
 
-        <button class="tourCard__favorite">
-          <i class="icon-heart"></i>
+        <button className="tourCard__favorite">
+          <i className="icon-heart"></i>
         </button>
       </div>
 
-      <div class="tourCard__content px-10 pt-15">
-        <div class="tourCard__location d-flex items-center text-13 text-light-2">
-          <i class="icon-pin d-flex text-16 text-light-2 mr-5"></i>
+      <div className="tourCard__content px-10 pt-15">
+        <div className="tourCard__location d-flex items-center text-13 text-light-2">
+          <i className="icon-pin d-flex text-16 text-light-2 mr-5"></i>
           New York, USA
         </div>
         
-        <h3 class="tourCard__title text-16 fw-500 mt-10">
+        <h3 className="tourCard__title text-16 fw-500 mt-10">
           <span>Phi Phi Islands Day Tour from Phuket</span>
         </h3>
 
-        <div class="tourCard__rating d-flex items-center text-13 mt-10">
-          <div class="d-flex x-gap-5">
-            <div><i class="icon-star text-10 text-yellow-2"></i></div>
-            <div><i class="icon-star text-10 text-yellow-2"></i></div>
-            <div><i class="icon-star text-10 text-yellow-2"></i></div>
-            <div><i class="icon-star text-10 text-yellow-2"></i></div>
-            <div><i class="icon-star text-10 text-yellow-2"></i></div>
+        <div className="tourCard__rating d-flex items-center text-13 mt-10">
+          <div className="d-flex x-gap-5">
+            <div><i className="icon-star text-10 text-yellow-2"></i></div>
+            <div><i className="icon-star text-10 text-yellow-2"></i></div>
+            <div><i className="icon-star text-10 text-yellow-2"></i></div>
+            <div><i className="icon-star text-10 text-yellow-2"></i></div>
+            <div><i className="icon-star text-10 text-yellow-2"></i></div>
           </div>
 
-          <span class="text-dark-1 ml-10">4.8 (269)</span>
+          <span className="text-dark-1 ml-10">4.8 (269)</span>
         </div>
 
-        <div class="d-flex justify-between items-center border-1-top text-13 text-dark-1 pt-15 mt-15">
-          <div class="d-flex items-center">
-            <i class="icon-clock text-16 mr-5"></i>
+        <div className="d-flex justify-between items-center border-1-top text-13 text-dark-1 pt-15 mt-15">
+          <div className="d-flex items-center">
+            <i className="icon-clock text-16 mr-5"></i>
             4 days
           </div>
 
-          <div>From <span class="text-16 fw-500">$771,00</span></div>
+          <div>From <span className="text-16 fw-500">$771,00</span></div>
         </div>
       </div>
     </div>
@@ -191,48 +191,48 @@ function TourLayout() {
   return (
     <div className="mt-header2">
       <Filters />
-      <section class="halfMap -type-1 mb-30">
-        <div class="halfMap__content">
-          <div class="row">
-            <div class="col-auto">
-              <h2 class="text-30 md:text-24">
+      <section className="halfMap -type-1 mb-30">
+        <div className="halfMap__content">
+          <div className="row">
+            <div className="col-auto">
+              <h2 className="text-30 md:text-24">
                 Explore all things to do in Phuket
               </h2>
             </div>
           </div>
-          <div class="row y-gap-20 justify-between items-center pt-30 md:pt-10 mb-30">
-            <div class="col-auto">
+          <div className="row y-gap-20 justify-between items-center pt-30 md:pt-10 mb-30">
+            <div className="col-auto">
               <TourSidebar />
             </div>
-            <div class="col-auto">
+            <div className="col-auto">
               <div
-                class="dropdown -type-2 js-dropdown js-form-dd"
+                className="dropdown -type-2 js-dropdown js-form-dd"
                 data-main-value=""
               >
-                <div class="dropdown__button js-button">
+                <div className="dropdown__button js-button">
                   <span>Sort by: </span>
-                  <span class="js-title">Featured</span>
-                  <i class="icon-chevron-down"></i>
+                  <span className="js-title">Featured</span>
+                  <i className="icon-chevron-down"></i>
                 </div>
 
-                <div class="dropdown__menu js-menu-items">
-                  <div class="dropdown__item" data-value="fast">
+                <div className="dropdown__menu js-menu-items">
+                  <div className="dropdown__item" data-value="fast">
                     Fast
                   </div>
 
-                  <div class="dropdown__item" data-value="steady">
+                  <div className="dropdown__item" data-value="steady">
                     Steady
                   </div>
 
-                  <div class="dropdown__item" data-value="speedy">
+                  <div className="dropdown__item" data-value="speedy">
                     Speedy
                   </div>
 
-                  <div class="dropdown__item" data-value="furious">
+                  <div className="dropdown__item" data-value="furious">
                     Furious
                   </div>
 
-                  <div class="dropdown__item" data-value="grind">
+                  <div className="dropdown__item" data-value="grind">
                     Grind
                   </div>
                 </div>
@@ -242,10 +242,10 @@ function TourLayout() {
           <div className="halfMap__cards">
             <div className="row y-gap-30">
               {tour_data.map((tour, index) => (
-                <div class="col-sm-6">
+                <div className="col-sm-6">
                   <a
                     href="#"
-                    class="tourCard -type-1 py-10 px-10 border-1 rounded-12  -hover-shadow"
+                    className="tourCard -type-1 py-10 px-10 border-1 rounded-12  -hover-shadow"
                   >
                     <TourCard key={index} {...tour} />
                   </a>
@@ -253,15 +253,15 @@ function TourLayout() {
               ))}
             </div>
           </div>
-          <div class="d-flex justify-center flex-column mt-30">
-            <div class="pagination justify-center">
-              <button class="pagination__button button -accent-1 mr-15 -prev">
-                <i class="icon-arrow-left text-15"></i>
+          <div className="d-flex justify-center flex-column mt-30">
+            <div className="pagination justify-center">
+              <button className="pagination__button button -accent-1 mr-15 -prev">
+                <i className="icon-arrow-left text-15"></i>
               </button>
 
-              <div class="pagination__count">
+              <div className="pagination__count">
                 <a href="#">1</a>
-                <a href="#" class="is-active">
+                <a href="#" className="is-active">
                   2
                 </a>
                 <a href="#">3</a>
@@ -271,18 +271,18 @@ function TourLayout() {
                 <a href="#">20</a>
               </div>
 
-              <button class="pagination__button button -accent-1 ml-15 -next">
-                <i class="icon-arrow-right text-15"></i>
+              <button className="pagination__button button -accent-1 ml-15 -next">
+                <i className="icon-arrow-right text-15"></i>
               </button>
             </div>
 
-            <div class="text-14 text-center mt-20">
+            <div className="text-14 text-center mt-20">
               Showing results 1-30 of 1,415
             </div>
           </div>
         </div>
-        <div class="halfMap__map">
-          <div class="map js-map"></div>
+        <div className="halfMap__map">
+          <div className="map js-map"></div>
         </div>
       </section>
     </div>

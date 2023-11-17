@@ -2167,7 +2167,7 @@ h6 {
   align-items: center;
   justify-content: space-between;
   padding: 0 30px;
-  height: 60px;
+  height: 30px;
   font-size: 16px;
   font-weight: 500;
   line-height: 1;
@@ -12486,11 +12486,22 @@ h6 {
     height: 300px;
   }
 }
-
+@media (max-width: 767px) {
+  .map__content {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: #a3a3a3;
+  }
+}
 .map__content {
-  width: 100%;
+  width: 90%;
   height: 100%;
+  margin: auto;
   background-color: #a3a3a3;
+}
+#taxiHome {
+  margin-top: 200px;
 }
 
 .map__shape {

@@ -37,51 +37,51 @@ const PhuketPage = () => {
             </div>
           </div>
 
-          <div class="specialCardGrid row y-gap-30 md:y-gap-20 pt-40 sm:pt-20">
-            <div class="col-xl-4 col-lg-6 col-md-6">
-              <div class="specialCard">
-                <div class="specialCard__image">
+          <div className="specialCardGrid row y-gap-30 md:y-gap-20 pt-40 sm:pt-20">
+            <div className="col-xl-4 col-lg-6 col-md-6">
+              <div className="specialCard">
+                <div className="specialCard__image">
                   <img src="img/cta/10/1.jpg" alt="image" />
                 </div>
 
-                <div class="specialCard__content">
-                  <div class="specialCard__subtitle">Enjoy Upto</div>
-                  <h3 class="specialCard__title">60 % OFF</h3>
-                  <div class="specialCard__text">on Your Booking</div>
+                <div className="specialCard__content">
+                  <div className="specialCard__subtitle">Enjoy Upto</div>
+                  <h3 className="specialCard__title">60 % OFF</h3>
+                  <div className="specialCard__text">on Your Booking</div>
                 </div>
               </div>
             </div>
 
-            <div class="col-xl-4 col-lg-6 col-md-6">
-              <div class="specialCard">
-                <div class="specialCard__image">
+            <div className="col-xl-4 col-lg-6 col-md-6">
+              <div className="specialCard">
+                <div className="specialCard__image">
                   <img src="img/cta/10/2.jpg" alt="image" />
                 </div>
 
-                <div class="specialCard__content">
-                  <div class="specialCard__subtitle">80% Discount</div>
-                  <h3 class="specialCard__title">
+                <div className="specialCard__content">
+                  <div className="specialCard__subtitle">80% Discount</div>
+                  <h3 className="specialCard__title">
                     Are You Ready
                     <br /> To Turkey Tour
                   </h3>
-                  <div class="specialCard__text"></div>
+                  <div className="specialCard__text"></div>
                 </div>
               </div>
             </div>
 
-            <div class="col-xl-4 col-lg-6 col-md-6">
-              <div class="specialCard">
-                <div class="specialCard__image">
+            <div className="col-xl-4 col-lg-6 col-md-6">
+              <div className="specialCard">
+                <div className="specialCard__image">
                   <img src="img/cta/10/3.jpg" alt="image" />
                 </div>
 
-                <div class="specialCard__content">
-                  <div class="specialCard__subtitle"></div>
-                  <h3 class="specialCard__title">
+                <div className="specialCard__content">
+                  <div className="specialCard__subtitle"></div>
+                  <h3 className="specialCard__title">
                     Discover the wow
                     <br /> of europe
                   </h3>
-                  <div class="specialCard__text"></div>
+                  <div className="specialCard__text"></div>
                 </div>
               </div>
             </div>

@@ -56,98 +56,106 @@ const Booking = () => {
                 <h2 className="text-30 md:text-24 fw-700">
                   Let us know who you are
                 </h2>
-                <div class="row y-gap-30 contactForm pt-30">
-                  <div class="col-12">
-                    <div class="form-input ">
+                <div className="row y-gap-30 contactForm pt-30">
+                  <div className="col-12">
+                    <div className="form-input ">
                       <input type="text" required />
-                      <label class="lh-1 text-16 text-light-1">Full Name</label>
+                      <label className="lh-1 text-16 text-light-1">
+                        Full Name
+                      </label>
                     </div>
                   </div>
 
-                  <div class="col-md-6">
-                    <div class="form-input ">
+                  <div className="col-md-6">
+                    <div className="form-input ">
                       <input type="text" required />
-                      <label class="lh-1 text-16 text-light-1">Email</label>
+                      <label className="lh-1 text-16 text-light-1">Email</label>
                     </div>
                   </div>
 
-                  <div class="col-md-6">
-                    <div class="form-input ">
+                  <div className="col-md-6">
+                    <div className="form-input ">
                       <input type="text" required />
-                      <label class="lh-1 text-16 text-light-1">
+                      <label className="lh-1 text-16 text-light-1">
                         Phone Number
                       </label>
                     </div>
                   </div>
 
-                  <div class="col-md-6">
-                    <div class="form-input ">
+                  <div className="col-md-6">
+                    <div className="form-input ">
                       <input type="text" required />
-                      <label class="lh-1 text-16 text-light-1">Country</label>
+                      <label className="lh-1 text-16 text-light-1">
+                        Country
+                      </label>
                     </div>
                   </div>
 
-                  <div class="col-md-6">
-                    <div class="form-input ">
+                  <div className="col-md-6">
+                    <div className="form-input ">
                       <input type="text" required />
-                      <label class="lh-1 text-16 text-light-1">City</label>
+                      <label className="lh-1 text-16 text-light-1">City</label>
                     </div>
                   </div>
 
-                  <div class="col-12">
-                    <div class="form-input ">
+                  <div className="col-12">
+                    <div className="form-input ">
                       <input type="text" required />
-                      <label class="lh-1 text-16 text-light-1">Address 1</label>
+                      <label className="lh-1 text-16 text-light-1">
+                        Address 1
+                      </label>
                     </div>
                   </div>
 
-                  <div class="col-12">
-                    <div class="form-input ">
+                  <div className="col-12">
+                    <div className="form-input ">
                       <input type="text" required />
-                      <label class="lh-1 text-16 text-light-1">Address 2</label>
+                      <label className="lh-1 text-16 text-light-1">
+                        Address 2
+                      </label>
                     </div>
                   </div>
 
-                  <div class="col-lg-6">
-                    <div class="form-input ">
+                  <div className="col-lg-6">
+                    <div className="form-input ">
                       <input type="text" required />
-                      <label class="lh-1 text-16 text-light-1">
+                      <label className="lh-1 text-16 text-light-1">
                         State/Province/Region
                       </label>
                     </div>
                   </div>
 
-                  <div class="col-lg-6">
-                    <div class="form-input ">
+                  <div className="col-lg-6">
+                    <div className="form-input ">
                       <input type="text" required />
-                      <label class="lh-1 text-16 text-light-1">
+                      <label className="lh-1 text-16 text-light-1">
                         ZIP code/Postal code
                       </label>
                     </div>
                   </div>
 
-                  <div class="col-12">
-                    <div class="form-input ">
+                  <div className="col-12">
+                    <div className="form-input ">
                       <textarea required rows="8"></textarea>
-                      <label class="lh-1 text-16 text-light-1">
+                      <label className="lh-1 text-16 text-light-1">
                         Tour Content
                       </label>
                     </div>
                   </div>
 
-                  <div class="col-12">
-                    <div class="row y-gap-20 items-center justify-between">
-                      <div class="col-auto">
-                        <div class="text-14">
+                  <div className="col-12">
+                    <div className="row y-gap-20 items-center justify-between">
+                      <div className="col-auto">
+                        <div className="text-14">
                           By proceeding with this booking, I agree to tourz
                           Terms of Use and Privacy Policy.
                         </div>
                       </div>
 
-                      <div class="col-md-auto col-12">
-                        <button class="button -md -dark-1 bg-accent-1 text-white col-12">
+                      <div className="col-md-auto col-12">
+                        <button className="button -md -dark-1 bg-accent-1 text-white col-12">
                           Next: Final details
-                          <i class="icon-arrow-top-right text-16 ml-10"></i>
+                          <i className="icon-arrow-top-right text-16 ml-10"></i>
                         </button>
                       </div>
                     </div>
@@ -159,20 +167,20 @@ const Booking = () => {
                 <h2 className="text-30 md:text-24 fw-700 mb-30">
                   How do you want to pay?
                 </h2>
-                <div class="tabs -pills-3 js-tabs">
-                  <div class="tabs__controls row x-gap-10 y-gap-10 js-tabs-controls">
-                    <div class="col-auto">
+                <div className="tabs -pills-3 js-tabs">
+                  <div className="tabs__controls row x-gap-10 y-gap-10 js-tabs-controls">
+                    <div className="col-auto">
                       <button
-                        class="tabs__button fw-500 rounded-200 js-tabs-button is-tab-el-active"
+                        className="tabs__button fw-500 rounded-200 js-tabs-button is-tab-el-active"
                         data-tab-target=".-tab-item-1"
                       >
                         Credit/Debit Card
                       </button>
                     </div>
 
-                    <div class="col-auto">
+                    <div className="col-auto">
                       <button
-                        class="tabs__button fw-500 rounded-200 js-tabs-button "
+                        className="tabs__button fw-500 rounded-200 js-tabs-button "
                         data-tab-target=".-tab-item-2"
                       >
                         Digital Payment
@@ -180,48 +188,48 @@ const Booking = () => {
                     </div>
                   </div>
 
-                  <div class="tabs__content pt-30 js-tabs-content">
-                    <div class="tabs__pane -tab-item-1 is-tab-el-active">
-                      <div class="contactForm">
-                        <div class="form-input ">
+                  <div className="tabs__content pt-30 js-tabs-content">
+                    <div className="tabs__pane -tab-item-1 is-tab-el-active">
+                      <div className="contactForm">
+                        <div className="form-input ">
                           <input type="text" required />
-                          <label class="lh-1 text-16 text-light-1">
+                          <label className="lh-1 text-16 text-light-1">
                             Select payment method *
                           </label>
                         </div>
                       </div>
 
-                      <div class="row y-gap-30 pt-30">
-                        <div class="col-lg-6">
-                          <div class="row y-gap-30 contactForm">
-                            <div class="col-12">
-                              <div class="form-input ">
+                      <div className="row y-gap-30 pt-30">
+                        <div className="col-lg-6">
+                          <div className="row y-gap-30 contactForm">
+                            <div className="col-12">
+                              <div className="form-input ">
                                 <input type="text" required />
-                                <label class="lh-1 text-16 text-light-1">
+                                <label className="lh-1 text-16 text-light-1">
                                   Card holder name *
                                 </label>
                               </div>
                             </div>
-                            <div class="col-12">
-                              <div class="form-input ">
+                            <div className="col-12">
+                              <div className="form-input ">
                                 <input type="text" required />
-                                <label class="lh-1 text-16 text-light-1">
+                                <label className="lh-1 text-16 text-light-1">
                                   Credit/debit card number *
                                 </label>
                               </div>
                             </div>
-                            <div class="col-lg-6">
-                              <div class="form-input ">
+                            <div className="col-lg-6">
+                              <div className="form-input ">
                                 <input type="text" required />
-                                <label class="lh-1 text-16 text-light-1">
+                                <label className="lh-1 text-16 text-light-1">
                                   Expiry date *
                                 </label>
                               </div>
                             </div>
-                            <div class="col-lg-6">
-                              <div class="form-input ">
+                            <div className="col-lg-6">
+                              <div className="form-input ">
                                 <input type="text" required />
-                                <label class="lh-1 text-16 text-light-1">
+                                <label className="lh-1 text-16 text-light-1">
                                   CVC/CVV *
                                 </label>
                               </div>
@@ -229,7 +237,7 @@ const Booking = () => {
                           </div>
                         </div>
 
-                        <div class="col-lg-6">
+                        <div className="col-lg-6">
                           <img
                             src="img/tourSingle/booking/card.png"
                             alt="image"
@@ -238,17 +246,17 @@ const Booking = () => {
                       </div>
                     </div>
 
-                    <div class="tabs__pane -tab-item-2">
-                      <div class="contactForm">
-                        <div class="form-input ">
+                    <div className="tabs__pane -tab-item-2">
+                      <div className="contactForm">
+                        <div className="form-input ">
                           <input type="text" required />
-                          <label class="lh-1 text-16 text-light-1">
+                          <label className="lh-1 text-16 text-light-1">
                             Select payment method *
                           </label>
                         </div>
                       </div>
 
-                      <ul class="ulList mt-20">
+                      <ul className="ulList mt-20">
                         <li>
                           You have chosen to pay by PayPal. You will be
                           forwarded to the PayPal website to proceed with this
@@ -259,16 +267,16 @@ const Booking = () => {
                         </li>
                       </ul>
 
-                      <div class="line mt-30 mb-30"></div>
+                      <div className="line mt-30 mb-30"></div>
 
-                      <div class="row y-gap-15 justify-between items-center">
-                        <div class="col">
-                          <div class="d-flex">
-                            <div class="form-checkbox mt-5">
+                      <div className="row y-gap-15 justify-between items-center">
+                        <div className="col">
+                          <div className="d-flex">
+                            <div className="form-checkbox mt-5">
                               <input type="checkbox" name="name" />
 
-                              <div class="form-checkbox__mark">
-                                <div class="form-checkbox__icon">
+                              <div className="form-checkbox__mark">
+                                <div className="form-checkbox__icon">
                                   <svg
                                     width="10"
                                     height="8"
@@ -284,17 +292,17 @@ const Booking = () => {
                                 </div>
                               </div>
                             </div>
-                            <div class="text-14 ml-10">
+                            <div className="text-14 ml-10">
                               Get access to members-only deals, just like the
                               millions of other email subscribers
                             </div>
                           </div>
                         </div>
 
-                        <div class="col-auto">
-                          <button class="button -md -dark-1 bg-accent-1 text-white">
+                        <div className="col-auto">
+                          <button className="button -md -dark-1 bg-accent-1 text-white">
                             Complete My Order
-                            <i class="icon-arrow-top-right text-16 ml-10"></i>
+                            <i className="icon-arrow-top-right text-16 ml-10"></i>
                           </button>
                         </div>
                       </div>
@@ -306,106 +314,106 @@ const Booking = () => {
 
             <div className="col-lg-4">
               <div className="pl-50 md:pl-0">
-                <div class="bg-white rounded-12 shadow-2 py-30 px-30 md:py-20 md:px-20">
-                  <h2 class="text-20 fw-500">Your booking details</h2>
+                <div className="bg-white rounded-12 shadow-2 py-30 px-30 md:py-20 md:px-20">
+                  <h2 className="text-20 fw-500">Your booking details</h2>
 
-                  <div class="d-flex mt-30">
+                  <div className="d-flex mt-30">
                     <img src="img/tourSingle/booking/1.png" alt="image" />
-                    <div class="ml-20">
+                    <div className="ml-20">
                       Zipline 18 Platform and ATV Adventure Tour From Phuket
                     </div>
                   </div>
 
-                  <div class="line mt-20 mb-20"></div>
+                  <div className="line mt-20 mb-20"></div>
 
-                  <div class="">
-                    <div class="d-flex items-center justify-between">
-                      <div class="fw-500">Date:</div>
-                      <div class="">06 April 2023</div>
+                  <div className="">
+                    <div className="d-flex items-center justify-between">
+                      <div className="fw-500">Date:</div>
+                      <div className="">06 April 2023</div>
                     </div>
 
-                    <div class="d-flex items-center justify-between">
-                      <div class="fw-500">Time:</div>
-                      <div class="">10:00 am</div>
+                    <div className="d-flex items-center justify-between">
+                      <div className="fw-500">Time:</div>
+                      <div className="">10:00 am</div>
                     </div>
 
-                    <div class="d-flex items-center justify-between">
-                      <div class="fw-500">Duration:</div>
-                      <div class="">12 Days</div>
+                    <div className="d-flex items-center justify-between">
+                      <div className="fw-500">Duration:</div>
+                      <div className="">12 Days</div>
                     </div>
 
-                    <div class="d-flex items-center justify-between">
-                      <div class="fw-500">Tickets:</div>
-                      <div class="">Adult x2 = $98</div>
+                    <div className="d-flex items-center justify-between">
+                      <div className="fw-500">Tickets:</div>
+                      <div className="">Adult x2 = $98</div>
                     </div>
 
-                    <div class="d-flex items-center justify-between">
-                      <div class="fw-500"></div>
-                      <div class="">Youth x3 = $383</div>
+                    <div className="d-flex items-center justify-between">
+                      <div className="fw-500"></div>
+                      <div className="">Youth x3 = $383</div>
                     </div>
 
-                    <div class="d-flex items-center justify-between">
-                      <div class="fw-500"></div>
-                      <div class="">Children x6 = $394</div>
+                    <div className="d-flex items-center justify-between">
+                      <div className="fw-500"></div>
+                      <div className="">Children x6 = $394</div>
                     </div>
                   </div>
 
-                  <div class="line mt-20 mb-20"></div>
+                  <div className="line mt-20 mb-20"></div>
 
-                  <div class="y-gap-15">
-                    <div class="d-flex justify-between">
-                      <div class="fw-500">Service per booking</div>
-                      <div class="">$30.00</div>
+                  <div className="y-gap-15">
+                    <div className="d-flex justify-between">
+                      <div className="fw-500">Service per booking</div>
+                      <div className="">$30.00</div>
                     </div>
 
-                    <div class="d-flex justify-between">
-                      <div class="fw-500">
+                    <div className="d-flex justify-between">
+                      <div className="fw-500">
                         Service per person 1 Adult, 2 Youth, 4 Children
                       </div>
-                      <div class="">$179.00</div>
+                      <div className="">$179.00</div>
                     </div>
                   </div>
 
-                  <div class="line mt-20 mb-20"></div>
+                  <div className="line mt-20 mb-20"></div>
 
-                  <div class="">
-                    <div class="d-flex items-center justify-between">
-                      <div class="fw-500">Subtotal</div>
-                      <div class="">$382</div>
+                  <div className="">
+                    <div className="d-flex items-center justify-between">
+                      <div className="fw-500">Subtotal</div>
+                      <div className="">$382</div>
                     </div>
 
-                    <div class="d-flex items-center justify-between">
-                      <div class="fw-500">Total</div>
-                      <div class="">$23</div>
+                    <div className="d-flex items-center justify-between">
+                      <div className="fw-500">Total</div>
+                      <div className="">$23</div>
                     </div>
 
-                    <div class="d-flex items-center justify-between">
-                      <div class="fw-500">Amount Paid</div>
-                      <div class="">$3.482</div>
+                    <div className="d-flex items-center justify-between">
+                      <div className="fw-500">Amount Paid</div>
+                      <div className="">$3.482</div>
                     </div>
 
-                    <div class="d-flex items-center justify-between">
-                      <div class="fw-500">Amount Due</div>
-                      <div class="">$43.242</div>
+                    <div className="d-flex items-center justify-between">
+                      <div className="fw-500">Amount Due</div>
+                      <div className="">$43.242</div>
                     </div>
                   </div>
                 </div>
 
-                <div class="bg-white rounded-12 shadow-2 py-30 px-30 md:py-20 md:px-20 mt-30">
-                  <h2 class="text-20 fw-500">Do you have a promo code?</h2>
+                <div className="bg-white rounded-12 shadow-2 py-30 px-30 md:py-20 md:px-20 mt-30">
+                  <h2 className="text-20 fw-500">Do you have a promo code?</h2>
 
-                  <div class="contactForm mt-25">
-                    <div class="form-input ">
+                  <div className="contactForm mt-25">
+                    <div className="form-input ">
                       <input type="text" required />
-                      <label class="lh-1 text-16 text-light-1">
+                      <label className="lh-1 text-16 text-light-1">
                         Promo code
                       </label>
                     </div>
                   </div>
 
-                  <button class="button -md -outline-accent-1 text-accent-1 mt-30">
+                  <button className="button -md -outline-accent-1 text-accent-1 mt-30">
                     Apply
-                    <i class="icon-arrow-top-right text-16 ml-10"></i>
+                    <i className="icon-arrow-top-right text-16 ml-10"></i>
                   </button>
                 </div>
 

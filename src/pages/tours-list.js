@@ -184,91 +184,93 @@ const Tours = () => {
           </div>
         </div>
       </section>
-      <section class="layout-pb-xl">
-        <div class="container">
-          <div class="pl-tag__grid mobile-css-slider-2">
-            <div class="">
-              <a href="#" class="pl-tag">
-                <div class="pl-tag__icon">
-                  <i class="icon-office text-24 text-accent-1"></i>
+      <section className="layout-pb-xl">
+        <div className="container">
+          <div className="pl-tag__grid mobile-css-slider-2">
+            <div className="">
+              <a href="#" className="pl-tag">
+                <div className="pl-tag__icon">
+                  <i className="icon-office text-24 text-accent-1"></i>
                 </div>
 
-                <div class="pl-tag__title text-dark-1">City Tours</div>
+                <div className="pl-tag__title text-dark-1">City Tours</div>
               </a>
             </div>
 
-            <div class="">
-              <a href="#" class="pl-tag">
-                <div class="pl-tag__icon">
-                  <i class="icon-bank text-24 text-accent-1"></i>
+            <div className="">
+              <a href="#" className="pl-tag">
+                <div className="pl-tag__icon">
+                  <i className="icon-bank text-24 text-accent-1"></i>
                 </div>
 
-                <div class="pl-tag__title text-dark-1">Cultural Tours</div>
+                <div className="pl-tag__title text-dark-1">Cultural Tours</div>
               </a>
             </div>
 
-            <div class="">
-              <a href="#" class="pl-tag">
-                <div class="pl-tag__icon">
-                  <i class="icon-boat text-24 text-accent-1"></i>
+            <div className="">
+              <a href="#" className="pl-tag">
+                <div className="pl-tag__icon">
+                  <i className="icon-boat text-24 text-accent-1"></i>
                 </div>
 
-                <div class="pl-tag__title text-dark-1">Day Cruises</div>
+                <div className="pl-tag__title text-dark-1">Day Cruises</div>
               </a>
             </div>
 
-            <div class="">
-              <a href="#" class="pl-tag">
-                <div class="pl-tag__icon">
-                  <i class="icon-bus text-24 text-accent-1"></i>
+            <div className="">
+              <a href="#" className="pl-tag">
+                <div className="pl-tag__icon">
+                  <i className="icon-bus text-24 text-accent-1"></i>
                 </div>
 
-                <div class="pl-tag__title text-dark-1">Bus Tours</div>
+                <div className="pl-tag__title text-dark-1">Bus Tours</div>
               </a>
             </div>
 
-            <div class="">
-              <a href="#" class="pl-tag">
-                <div class="pl-tag__icon">
-                  <i class="icon-beach text-24 text-accent-1"></i>
+            <div className="">
+              <a href="#" className="pl-tag">
+                <div className="pl-tag__icon">
+                  <i className="icon-beach text-24 text-accent-1"></i>
                 </div>
 
-                <div class="pl-tag__title text-dark-1">Beach Tours</div>
+                <div className="pl-tag__title text-dark-1">Beach Tours</div>
               </a>
             </div>
 
-            <div class="">
-              <a href="#" class="pl-tag">
-                <div class="pl-tag__icon">
-                  <i class="icon-menu-1 text-24 text-accent-1"></i>
+            <div className="">
+              <a href="#" className="pl-tag">
+                <div className="pl-tag__icon">
+                  <i className="icon-menu-1 text-24 text-accent-1"></i>
                 </div>
 
-                <div class="pl-tag__title text-dark-1">Food Tours</div>
+                <div className="pl-tag__title text-dark-1">Food Tours</div>
               </a>
             </div>
           </div>
-          <div class="row pt-30">
-            <div class="col-xl-3 col-lg-4">
-              <div class="lg:d-none">
-                <div class="sidebar -type-1 rounded-12">
-                  <div class="sidebar__header bg-accent-1">
-                    <div class="text-15 text-white fw-500">
+          <div className="row pt-30">
+            <div className="col-xl-3 col-lg-4">
+              <div className="lg:d-none">
+                <div className="sidebar -type-1 rounded-12">
+                  <div className="sidebar__header bg-accent-1">
+                    <div className="text-15 text-white fw-500">
                       When are you traveling?
                     </div>
 
-                    <div class="mt-10">
-                      <div class="searchForm -type-1 -col-1 -narrow">
-                        <div class="searchForm__form">
-                          <div class="searchFormItem js-select-control js-form-dd js-calendar">
+                    <div className="mt-10">
+                      <div className="searchForm -type-1 -col-1 -narrow">
+                        <div className="searchForm__form">
+                          <div className="searchFormItem js-select-control js-form-dd js-calendar">
                             <div
-                              class="searchFormItem__button"
+                              className="searchFormItem__button"
                               data-x-click="calendar"
                             >
-                              <div class="pl-calendar d-flex items-center">
-                                <i class="icon-calendar text-20 mr-15"></i>
+                              <div className="pl-calendar d-flex items-center">
+                                <i className="icon-calendar text-20 mr-15"></i>
                                 <div>
-                                  <span class="js-first-date">Add dates</span>
-                                  <span class="js-last-date"></span>
+                                  <span className="js-first-date">
+                                    Add dates
+                                  </span>
+                                  <span className="js-last-date"></span>
                                 </div>
                               </div>
                             </div>
@@ -278,28 +280,28 @@ const Tours = () => {
                     </div>
                   </div>
 
-                  <div class="sidebar__content">
-                    <div class="sidebar__item">
-                      <div class="accordion -simple-2 js-accordion">
-                        <div class="accordion__item js-accordion-item-active">
-                          <div class="accordion__button d-flex items-center justify-between">
-                            <h5 class="text-18 fw-500">Tour Type</h5>
+                  <div className="sidebar__content">
+                    <div className="sidebar__item">
+                      <div className="accordion -simple-2 js-accordion">
+                        <div className="accordion__item js-accordion-item-active">
+                          <div className="accordion__button d-flex items-center justify-between">
+                            <h5 className="text-18 fw-500">Tour Type</h5>
 
-                            <div class="accordion__icon flex-center">
-                              <i class="icon-chevron-down"></i>
-                              <i class="icon-chevron-down"></i>
+                            <div className="accordion__icon flex-center">
+                              <i className="icon-chevron-down"></i>
+                              <i className="icon-chevron-down"></i>
                             </div>
                           </div>
 
-                          <div class="accordion__content">
-                            <div class="pt-15">
-                              <div class="d-flex flex-column y-gap-15">
+                          <div className="accordion__content">
+                            <div className="pt-15">
+                              <div className="d-flex flex-column y-gap-15">
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -316,16 +318,18 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">Nature Tours</div>
+                                    <div className="lh-11 ml-10">
+                                      Nature Tours
+                                    </div>
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -342,18 +346,18 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">
+                                    <div className="lh-11 ml-10">
                                       Adventure Tours
                                     </div>
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -370,18 +374,18 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">
+                                    <div className="lh-11 ml-10">
                                       Cultural Tours
                                     </div>
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -398,16 +402,18 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">Food Tours</div>
+                                    <div className="lh-11 ml-10">
+                                      Food Tours
+                                    </div>
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -424,16 +430,18 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">City Tours</div>
+                                    <div className="lh-11 ml-10">
+                                      City Tours
+                                    </div>
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -450,14 +458,16 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">Cruises Tours</div>
+                                    <div className="lh-11 ml-10">
+                                      Cruises Tours
+                                    </div>
                                   </div>
                                 </div>
                               </div>
 
                               <a
                                 href="#"
-                                class="d-flex text-15 fw-500 text-accent-2 mt-15"
+                                className="d-flex text-15 fw-500 text-accent-2 mt-15"
                               >
                                 See More
                               </a>
@@ -467,34 +477,38 @@ const Tours = () => {
                       </div>
                     </div>
 
-                    <div class="sidebar__item">
-                      <div class="accordion -simple-2 js-accordion">
-                        <div class="accordion__item js-accordion-item-active">
-                          <div class="accordion__button mb-10 d-flex items-center justify-between">
-                            <h5 class="text-18 fw-500">Filter Price</h5>
+                    <div className="sidebar__item">
+                      <div className="accordion -simple-2 js-accordion">
+                        <div className="accordion__item js-accordion-item-active">
+                          <div className="accordion__button mb-10 d-flex items-center justify-between">
+                            <h5 className="text-18 fw-500">Filter Price</h5>
 
-                            <div class="accordion__icon flex-center">
-                              <i class="icon-chevron-down"></i>
-                              <i class="icon-chevron-down"></i>
+                            <div className="accordion__icon flex-center">
+                              <i className="icon-chevron-down"></i>
+                              <i className="icon-chevron-down"></i>
                             </div>
                           </div>
 
-                          <div class="accordion__content">
-                            <div class="pt-15">
-                              <div class="js-price-rangeSlider">
-                                <div class="px-5">
-                                  <div class="js-slider"></div>
+                          <div className="accordion__content">
+                            <div className="pt-15">
+                              <div className="js-price-rangeSlider">
+                                <div className="px-5">
+                                  <div className="js-slider"></div>
                                 </div>
 
-                                <div class="d-flex justify-between mt-20">
-                                  <div class="">
-                                    <span class="">Price:</span>
-                                    <span class="fw-500 js-lower">11,200</span>
+                                <div className="d-flex justify-between mt-20">
+                                  <div className="">
+                                    <span className="">Price:</span>
+                                    <span className="fw-500 js-lower">
+                                      11,200
+                                    </span>
                                     <span> - </span>
-                                    <span class="fw-500 js-upper">15,000</span>
+                                    <span className="fw-500 js-upper">
+                                      15,000
+                                    </span>
                                   </div>
 
-                                  <div class="fw-500">Filter</div>
+                                  <div className="fw-500">Filter</div>
                                 </div>
                               </div>
                             </div>
@@ -503,27 +517,27 @@ const Tours = () => {
                       </div>
                     </div>
 
-                    <div class="sidebar__item">
-                      <div class="accordion -simple-2 js-accordion">
-                        <div class="accordion__item js-accordion-item-active">
-                          <div class="accordion__button d-flex items-center justify-between">
-                            <h5 class="text-18 fw-500">Duration</h5>
+                    <div className="sidebar__item">
+                      <div className="accordion -simple-2 js-accordion">
+                        <div className="accordion__item js-accordion-item-active">
+                          <div className="accordion__button d-flex items-center justify-between">
+                            <h5 className="text-18 fw-500">Duration</h5>
 
-                            <div class="accordion__icon flex-center">
-                              <i class="icon-chevron-down"></i>
-                              <i class="icon-chevron-down"></i>
+                            <div className="accordion__icon flex-center">
+                              <i className="icon-chevron-down"></i>
+                              <i className="icon-chevron-down"></i>
                             </div>
                           </div>
 
-                          <div class="accordion__content">
-                            <div class="pt-15">
-                              <div class="d-flex flex-column y-gap-15">
+                          <div className="accordion__content">
+                            <div className="pt-15">
+                              <div className="d-flex flex-column y-gap-15">
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -540,16 +554,16 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">0-3 hours</div>
+                                    <div className="lh-11 ml-10">0-3 hours</div>
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -566,16 +580,16 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">3-5 hours</div>
+                                    <div className="lh-11 ml-10">3-5 hours</div>
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -592,16 +606,16 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">5-7 hours</div>
+                                    <div className="lh-11 ml-10">5-7 hours</div>
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -618,18 +632,18 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">
+                                    <div className="lh-11 ml-10">
                                       Full day (7+ hours)
                                     </div>
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -646,7 +660,7 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">Multi-day</div>
+                                    <div className="lh-11 ml-10">Multi-day</div>
                                   </div>
                                 </div>
                               </div>
@@ -656,27 +670,27 @@ const Tours = () => {
                       </div>
                     </div>
 
-                    <div class="sidebar__item">
-                      <div class="accordion -simple-2 js-accordion">
-                        <div class="accordion__item js-accordion-item-active">
-                          <div class="accordion__button d-flex items-center justify-between">
-                            <h5 class="text-18 fw-500">Language</h5>
+                    <div className="sidebar__item">
+                      <div className="accordion -simple-2 js-accordion">
+                        <div className="accordion__item js-accordion-item-active">
+                          <div className="accordion__button d-flex items-center justify-between">
+                            <h5 className="text-18 fw-500">Language</h5>
 
-                            <div class="accordion__icon flex-center">
-                              <i class="icon-chevron-down"></i>
-                              <i class="icon-chevron-down"></i>
+                            <div className="accordion__icon flex-center">
+                              <i className="icon-chevron-down"></i>
+                              <i className="icon-chevron-down"></i>
                             </div>
                           </div>
 
-                          <div class="accordion__content">
-                            <div class="pt-15">
-                              <div class="d-flex flex-column y-gap-15">
+                          <div className="accordion__content">
+                            <div className="pt-15">
+                              <div className="d-flex flex-column y-gap-15">
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -693,16 +707,16 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">English</div>
+                                    <div className="lh-11 ml-10">English</div>
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -719,16 +733,16 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">Dutch</div>
+                                    <div className="lh-11 ml-10">Dutch</div>
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -745,16 +759,16 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">German</div>
+                                    <div className="lh-11 ml-10">German</div>
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -771,16 +785,16 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">French</div>
+                                    <div className="lh-11 ml-10">French</div>
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -797,7 +811,7 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">Italian</div>
+                                    <div className="lh-11 ml-10">Italian</div>
                                   </div>
                                 </div>
                               </div>
@@ -808,26 +822,26 @@ const Tours = () => {
                     </div>
 
                     {/* <!-- Rating --> */}
-                    <div class="sidebar__item">
-                      <div class="accordion -simple-2 js-accordion">
-                        <div class="accordion__item js-accordion-item-active">
-                          <div class="accordion__button d-flex items-center justify-between">
-                            <h5 class="text-18 fw-500">Rating</h5>
+                    <div className="sidebar__item">
+                      <div className="accordion -simple-2 js-accordion">
+                        <div className="accordion__item js-accordion-item-active">
+                          <div className="accordion__button d-flex items-center justify-between">
+                            <h5 className="text-18 fw-500">Rating</h5>
 
-                            <div class="accordion__icon flex-center">
-                              <i class="icon-chevron-down"></i>
-                              <i class="icon-chevron-down"></i>
+                            <div className="accordion__icon flex-center">
+                              <i className="icon-chevron-down"></i>
+                              <i className="icon-chevron-down"></i>
                             </div>
                           </div>
 
-                          <div class="accordion__content">
-                            <div class="pt-15">
-                              <div class="d-flex flex-column y-gap-15">
-                                <div class="d-flex">
-                                  <div class="form-checkbox">
+                          <div className="accordion__content">
+                            <div className="pt-15">
+                              <div className="d-flex flex-column y-gap-15">
+                                <div className="d-flex">
+                                  <div className="form-checkbox">
                                     <input type="checkbox" name="rating" />
-                                    <div class="form-checkbox__mark">
-                                      <div class="form-checkbox__icon">
+                                    <div className="form-checkbox__mark">
+                                      <div className="form-checkbox__icon">
                                         <svg
                                           width="10"
                                           height="8"
@@ -843,24 +857,24 @@ const Tours = () => {
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="d-flex x-gap-5 ml-10">
-                                    <i class="flex-center icon-star text-yellow-2 text-13"></i>
+                                  <div className="d-flex x-gap-5 ml-10">
+                                    <i className="flex-center icon-star text-yellow-2 text-13"></i>
 
-                                    <i class="flex-center icon-star text-yellow-2 text-13"></i>
+                                    <i className="flex-center icon-star text-yellow-2 text-13"></i>
 
-                                    <i class="flex-center icon-star text-yellow-2 text-13"></i>
+                                    <i className="flex-center icon-star text-yellow-2 text-13"></i>
 
-                                    <i class="flex-center icon-star text-yellow-2 text-13"></i>
+                                    <i className="flex-center icon-star text-yellow-2 text-13"></i>
 
-                                    <i class="flex-center icon-star text-yellow-2 text-13"></i>
+                                    <i className="flex-center icon-star text-yellow-2 text-13"></i>
                                   </div>
                                 </div>
 
-                                <div class="d-flex">
-                                  <div class="form-checkbox">
+                                <div className="d-flex">
+                                  <div className="form-checkbox">
                                     <input type="checkbox" name="rating" />
-                                    <div class="form-checkbox__mark">
-                                      <div class="form-checkbox__icon">
+                                    <div className="form-checkbox__mark">
+                                      <div className="form-checkbox__icon">
                                         <svg
                                           width="10"
                                           height="8"
@@ -876,24 +890,24 @@ const Tours = () => {
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="d-flex x-gap-5 ml-10">
-                                    <i class="flex-center icon-star text-yellow-2 text-13"></i>
+                                  <div className="d-flex x-gap-5 ml-10">
+                                    <i className="flex-center icon-star text-yellow-2 text-13"></i>
 
-                                    <i class="flex-center icon-star text-yellow-2 text-13"></i>
+                                    <i className="flex-center icon-star text-yellow-2 text-13"></i>
 
-                                    <i class="flex-center icon-star text-yellow-2 text-13"></i>
+                                    <i className="flex-center icon-star text-yellow-2 text-13"></i>
 
-                                    <i class="flex-center icon-star text-yellow-2 text-13"></i>
+                                    <i className="flex-center icon-star text-yellow-2 text-13"></i>
 
-                                    <i class="flex-center icon-star text-light-6 text-13"></i>
+                                    <i className="flex-center icon-star text-light-6 text-13"></i>
                                   </div>
                                 </div>
 
-                                <div class="d-flex">
-                                  <div class="form-checkbox">
+                                <div className="d-flex">
+                                  <div className="form-checkbox">
                                     <input type="checkbox" name="rating" />
-                                    <div class="form-checkbox__mark">
-                                      <div class="form-checkbox__icon">
+                                    <div className="form-checkbox__mark">
+                                      <div className="form-checkbox__icon">
                                         <svg
                                           width="10"
                                           height="8"
@@ -909,24 +923,24 @@ const Tours = () => {
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="d-flex x-gap-5 ml-10">
-                                    <i class="flex-center icon-star text-yellow-2 text-13"></i>
+                                  <div className="d-flex x-gap-5 ml-10">
+                                    <i className="flex-center icon-star text-yellow-2 text-13"></i>
 
-                                    <i class="flex-center icon-star text-yellow-2 text-13"></i>
+                                    <i className="flex-center icon-star text-yellow-2 text-13"></i>
 
-                                    <i class="flex-center icon-star text-yellow-2 text-13"></i>
+                                    <i className="flex-center icon-star text-yellow-2 text-13"></i>
 
-                                    <i class="flex-center icon-star text-light-6 text-13"></i>
+                                    <i className="flex-center icon-star text-light-6 text-13"></i>
 
-                                    <i class="flex-center icon-star text-light-6 text-13"></i>
+                                    <i className="flex-center icon-star text-light-6 text-13"></i>
                                   </div>
                                 </div>
 
-                                <div class="d-flex">
-                                  <div class="form-checkbox">
+                                <div className="d-flex">
+                                  <div className="form-checkbox">
                                     <input type="checkbox" name="rating" />
-                                    <div class="form-checkbox__mark">
-                                      <div class="form-checkbox__icon">
+                                    <div className="form-checkbox__mark">
+                                      <div className="form-checkbox__icon">
                                         <svg
                                           width="10"
                                           height="8"
@@ -942,24 +956,24 @@ const Tours = () => {
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="d-flex x-gap-5 ml-10">
-                                    <i class="flex-center icon-star text-yellow-2 text-13"></i>
+                                  <div className="d-flex x-gap-5 ml-10">
+                                    <i className="flex-center icon-star text-yellow-2 text-13"></i>
 
-                                    <i class="flex-center icon-star text-yellow-2 text-13"></i>
+                                    <i className="flex-center icon-star text-yellow-2 text-13"></i>
 
-                                    <i class="flex-center icon-star text-light-6 text-13"></i>
+                                    <i className="flex-center icon-star text-light-6 text-13"></i>
 
-                                    <i class="flex-center icon-star text-light-6 text-13"></i>
+                                    <i className="flex-center icon-star text-light-6 text-13"></i>
 
-                                    <i class="flex-center icon-star text-light-6 text-13"></i>
+                                    <i className="flex-center icon-star text-light-6 text-13"></i>
                                   </div>
                                 </div>
 
-                                <div class="d-flex">
-                                  <div class="form-checkbox">
+                                <div className="d-flex">
+                                  <div className="form-checkbox">
                                     <input type="checkbox" name="rating" />
-                                    <div class="form-checkbox__mark">
-                                      <div class="form-checkbox__icon">
+                                    <div className="form-checkbox__mark">
+                                      <div className="form-checkbox__icon">
                                         <svg
                                           width="10"
                                           height="8"
@@ -975,16 +989,16 @@ const Tours = () => {
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="d-flex x-gap-5 ml-10">
-                                    <i class="flex-center icon-star text-yellow-2 text-13"></i>
+                                  <div className="d-flex x-gap-5 ml-10">
+                                    <i className="flex-center icon-star text-yellow-2 text-13"></i>
 
-                                    <i class="flex-center icon-star text-light-6 text-13"></i>
+                                    <i className="flex-center icon-star text-light-6 text-13"></i>
 
-                                    <i class="flex-center icon-star text-light-6 text-13"></i>
+                                    <i className="flex-center icon-star text-light-6 text-13"></i>
 
-                                    <i class="flex-center icon-star text-light-6 text-13"></i>
+                                    <i className="flex-center icon-star text-light-6 text-13"></i>
 
-                                    <i class="flex-center icon-star text-light-6 text-13"></i>
+                                    <i className="flex-center icon-star text-light-6 text-13"></i>
                                   </div>
                                 </div>
                               </div>
@@ -995,27 +1009,27 @@ const Tours = () => {
                     </div>
 
                     {/* <!-- Specials --> */}
-                    <div class="sidebar__item">
-                      <div class="accordion -simple-2 js-accordion">
-                        <div class="accordion__item js-accordion-item-active">
-                          <div class="accordion__button d-flex items-center justify-between">
-                            <h5 class="text-18 fw-500">Specials</h5>
+                    <div className="sidebar__item">
+                      <div className="accordion -simple-2 js-accordion">
+                        <div className="accordion__item js-accordion-item-active">
+                          <div className="accordion__button d-flex items-center justify-between">
+                            <h5 className="text-18 fw-500">Specials</h5>
 
-                            <div class="accordion__icon flex-center">
-                              <i class="icon-chevron-down"></i>
-                              <i class="icon-chevron-down"></i>
+                            <div className="accordion__icon flex-center">
+                              <i className="icon-chevron-down"></i>
+                              <i className="icon-chevron-down"></i>
                             </div>
                           </div>
 
-                          <div class="accordion__content">
-                            <div class="pt-15">
-                              <div class="d-flex flex-column y-gap-15">
+                          <div className="accordion__content">
+                            <div className="pt-15">
+                              <div className="d-flex flex-column y-gap-15">
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -1032,18 +1046,18 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">
+                                    <div className="lh-11 ml-10">
                                       Deals &amp; Discounts
                                     </div>
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -1060,18 +1074,18 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">
+                                    <div className="lh-11 ml-10">
                                       Free Cancellation
                                     </div>
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -1088,18 +1102,18 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">
+                                    <div className="lh-11 ml-10">
                                       Likely to Sell Out
                                     </div>
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -1116,16 +1130,18 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">Skip-The-Line</div>
+                                    <div className="lh-11 ml-10">
+                                      Skip-The-Line
+                                    </div>
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div class="d-flex items-center">
-                                    <div class="form-checkbox ">
+                                  <div className="d-flex items-center">
+                                    <div className="form-checkbox ">
                                       <input type="checkbox" name="name" />
-                                      <div class="form-checkbox__mark">
-                                        <div class="form-checkbox__icon">
+                                      <div className="form-checkbox__mark">
+                                        <div className="form-checkbox__icon">
                                           <svg
                                             width="10"
                                             height="8"
@@ -1142,7 +1158,9 @@ const Tours = () => {
                                       </div>
                                     </div>
 
-                                    <div class="lh-11 ml-10">Private Tour</div>
+                                    <div className="lh-11 ml-10">
+                                      Private Tour
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -1155,41 +1173,41 @@ const Tours = () => {
                 </div>
               </div>
             </div>
-            <div class="col-xl-9 col-lg-8">
-              <div class="row y-gap-5 justify-between">
-                <div class="col-auto">
+            <div className="col-xl-9 col-lg-8">
+              <div className="row y-gap-5 justify-between">
+                <div className="col-auto">
                   <div>1362 results</div>
                 </div>
 
-                <div class="col-auto">
+                <div className="col-auto">
                   <div
-                    class="dropdown -type-2 js-dropdown js-form-dd"
+                    className="dropdown -type-2 js-dropdown js-form-dd"
                     data-main-value=""
                   >
-                    <div class="dropdown__button js-button">
+                    <div className="dropdown__button js-button">
                       <span>Sort by: </span>
-                      <span class="js-title">Featured</span>
-                      <i class="icon-chevron-down"></i>
+                      <span className="js-title">Featured</span>
+                      <i className="icon-chevron-down"></i>
                     </div>
 
-                    <div class="dropdown__menu js-menu-items">
-                      <div class="dropdown__item" data-value="fast">
+                    <div className="dropdown__menu js-menu-items">
+                      <div className="dropdown__item" data-value="fast">
                         Fast
                       </div>
 
-                      <div class="dropdown__item" data-value="steady">
+                      <div className="dropdown__item" data-value="steady">
                         Steady
                       </div>
 
-                      <div class="dropdown__item" data-value="speedy">
+                      <div className="dropdown__item" data-value="speedy">
                         Speedy
                       </div>
 
-                      <div class="dropdown__item" data-value="furious">
+                      <div className="dropdown__item" data-value="furious">
                         Furious
                       </div>
 
-                      <div class="dropdown__item" data-value="grind">
+                      <div className="dropdown__item" data-value="grind">
                         Grind
                       </div>
                     </div>

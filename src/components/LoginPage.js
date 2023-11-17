@@ -5,41 +5,43 @@ import Image from "next/image";
 
 function LoginPage() {
   return (
-    <section class="mt-header layout-pt-lg layout-pb-lg">
-      <div class="container">
-        <div data-anim="slide-up" class="row justify-center">
-          <div class="col-xl-6 col-lg-7 col-md-9">
-            <div class="text-center mb-60 md:mb-30">
-              <h1 class="text-30">Log In</h1>
-              <div class="text-18 fw-500 mt-20 md:mt-15">
+    <section className="mt-header layout-pt-lg layout-pb-lg">
+      <div className="container">
+        <div data-anim="slide-up" className="row justify-center">
+          <div className="col-xl-6 col-lg-7 col-md-9">
+            <div className="text-center mb-60 md:mb-30">
+              <h1 className="text-30">Log In</h1>
+              <div className="text-18 fw-500 mt-20 md:mt-15">
                 Were glad to see you again!
               </div>
-              <div class="mt-5">
+              <div className="mt-5">
                 Dont have an account?{" "}
-                <a href="register.html" class="text-accent-1">
+                <a href="register.html" className="text-accent-1">
                   Sign Up!
                 </a>
               </div>
             </div>
 
-            <div class="contactForm border-1 rounded-12 px-60 py-60 md:px-25 md:py-30">
-              <div class="form-input ">
+            <div className="contactForm border-1 rounded-12 px-60 py-60 md:px-25 md:py-30">
+              <div className="form-input ">
                 <input type="email" required />
-                <label class="lh-1 text-16 text-light-1">Email Address</label>
+                <label className="lh-1 text-16 text-light-1">
+                  Email Address
+                </label>
               </div>
 
-              <div class="form-input mt-30">
+              <div className="form-input mt-30">
                 <input type="email" required />
-                <label class="lh-1 text-16 text-light-1">Password</label>
+                <label className="lh-1 text-16 text-light-1">Password</label>
               </div>
 
-              <div class="row y-ga-10 justify-between items-center pt-30">
-                <div class="col-auto">
-                  <div class="d-flex items-center">
-                    <div class="form-checkbox ">
+              <div className="row y-ga-10 justify-between items-center pt-30">
+                <div className="col-auto">
+                  <div className="d-flex items-center">
+                    <div className="form-checkbox ">
                       <input type="checkbox" name="name" />
-                      <div class="form-checkbox__mark">
-                        <div class="form-checkbox__icon">
+                      <div className="form-checkbox__mark">
+                        <div className="form-checkbox__icon">
                           <svg
                             width="10"
                             height="8"
@@ -56,35 +58,35 @@ function LoginPage() {
                       </div>
                     </div>
 
-                    <div class="lh-11 ml-10">Remember me</div>
+                    <div className="lh-11 ml-10">Remember me</div>
                   </div>
                 </div>
 
-                <div class="col-auto">
+                <div className="col-auto">
                   <a href="#">Lost your password?</a>
                 </div>
               </div>
 
-              <button class="button -md -dark-1 bg-accent-1 text-white col-12 mt-30">
+              <button className="button -md -dark-1 bg-accent-1 text-white col-12 mt-30">
                 Log In
-                <i class="icon-arrow-top-right ml-10"></i>
+                <i className="icon-arrow-top-right ml-10"></i>
               </button>
 
-              <div class="relative line mt-50 mb-30">
-                <div class="line__word fw-500">OR</div>
+              <div className="relative line mt-50 mb-30">
+                <div className="line__word fw-500">OR</div>
               </div>
 
-              <div class="row y-gap-15">
-                <div class="col">
-                  <button class="button -md -outline-blue-1 text-blue-1 col-12">
-                    <i class="icon-facebook mr-10"></i>
+              <div className="row y-gap-15">
+                <div className="col">
+                  <button className="button -md -outline-blue-1 text-blue-1 col-12">
+                    <i className="icon-facebook mr-10"></i>
                     Continue Facebook
                   </button>
                 </div>
 
-                <div class="col">
-                  <button class="button -md -outline-red-1 text-red-1 col-12">
-                    <i class="icon-google mr-10"></i>
+                <div className="col">
+                  <button className="button -md -outline-red-1 text-red-1 col-12">
+                    <i className="icon-google mr-10"></i>
                     Continue Google
                   </button>
                 </div>

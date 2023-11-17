@@ -108,7 +108,7 @@ function about() {
                   Ultimate flexibility
                 </h3>
                 <p className="featureIcon__text mt-10">
-                  You're in control, with free cancellation and payment options
+                  Youre in control, with free cancellation and payment options
                   to satisfy any plan or budget.
                 </p>
               </div>
@@ -242,12 +242,12 @@ function about() {
                 data-pagination="js-testimonials-pagination"
               >
                 <div className="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="testimonials -type-1 pt-10 text-center">
-                      <div class="testimonials__image size-100 rounded-full">
+                  <div className="swiper-slide">
+                    <div className="testimonials -type-1 pt-10 text-center">
+                      <div className="testimonials__image size-100 rounded-full">
                         <img src="img/testimonials/1/2.png" alt="image" />
 
-                        <div class="testimonials__icon">
+                        <div className="testimonials__icon">
                           <svg
                             width="16"
                             height="13"
@@ -263,20 +263,22 @@ function about() {
                         </div>
                       </div>
 
-                      <div class="text-18 fw-500 text-accent-1 mt-60 md:mt-40">
+                      <div className="text-18 fw-500 text-accent-1 mt-60 md:mt-40">
                         Great quality!
                       </div>
 
-                      <div class="text-20 fw-500 mt-20">
+                      <div className="text-20 fw-500 mt-20">
                         The tours in this website are great. I had been really
                         enjoy with my family! The team is very professional and
                         taking care of the customers. Will surely recommend to
                         my freind to join this company!
                       </div>
 
-                      <div class="mt-20 md:mt-40">
-                        <div class="lh-16 text-16 fw-500">Brooklyn Simmons</div>
-                        <div class="lh-16">Web Developer</div>
+                      <div className="mt-20 md:mt-40">
+                        <div className="lh-16 text-16 fw-500">
+                          Brooklyn Simmons
+                        </div>
+                        <div className="lh-16">Web Developer</div>
                       </div>
                     </div>
                   </div>

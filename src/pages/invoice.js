@@ -124,47 +124,47 @@ const Invoice = () => {
                     </div>
                   </div>
 
-                  <div class="row justify-between pt-50">
-                    <div class="col-auto">
-                      <div class="text-15">Invoice date:</div>
-                      <div class="text-15 fw-500 lh-15">03/10/2022</div>
+                  <div className="row justify-between pt-50">
+                    <div className="col-auto">
+                      <div className="text-15">Invoice date:</div>
+                      <div className="text-15 fw-500 lh-15">03/10/2022</div>
                     </div>
 
-                    <div class="col-xl-4">
-                      <div class="text-15">Due date:</div>
-                      <div class="text-15 fw-500 lh-15">03/10/2022</div>
+                    <div className="col-xl-4">
+                      <div className="text-15">Due date:</div>
+                      <div className="text-15 fw-500 lh-15">03/10/2022</div>
                     </div>
                   </div>
 
-                  <div class="row justify-between pt-50">
-                    <div class="col-auto">
-                      <div class="text-20 fw-500">Supplier</div>
-                      <div class="text-15 fw-500 mt-20">Jobio LLC</div>
-                      <div class="text-15 mt-10">
+                  <div className="row justify-between pt-50">
+                    <div className="col-auto">
+                      <div className="text-20 fw-500">Supplier</div>
+                      <div className="text-15 fw-500 mt-20">Jobio LLC</div>
+                      <div className="text-15 mt-10">
                         2301 Ravenswood Rd Madison,
                         <br /> WI 53711
                       </div>
                     </div>
 
-                    <div class="col-xl-4">
-                      <div class="text-20 fw-500">Customer</div>
-                      <div class="text-15 fw-500 mt-20">John Doe</div>
-                      <div class="text-15 mt-10">
+                    <div className="col-xl-4">
+                      <div className="text-20 fw-500">Customer</div>
+                      <div className="text-15 fw-500 mt-20">John Doe</div>
+                      <div className="text-15 mt-10">
                         329 Queensberry Street, North Melbourne VIC 3051,
                         Australia.
                       </div>
                     </div>
                   </div>
 
-                  <div class="row pt-50">
-                    <div class="col-12">
-                      <table class="table col-12">
-                        <thead class="bg-light-1">
+                  <div className="row pt-50">
+                    <div className="col-12">
+                      <table className="table col-12">
+                        <thead className="bg-light-1">
                           <tr>
-                            <th class="fw-500">Description</th>
-                            <th class="fw-500">Price</th>
-                            <th class="fw-500">VAT (20%)</th>
-                            <th class="fw-500">Total</th>
+                            <th className="fw-500">Description</th>
+                            <th className="fw-500">Price</th>
+                            <th className="fw-500">VAT (20%)</th>
+                            <th className="fw-500">Total</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -189,10 +189,10 @@ const Invoice = () => {
                           </tr>
 
                           <tr>
-                            <td class="text-18 fw-500">Total Due</td>
+                            <td className="text-18 fw-500">Total Due</td>
                             <td></td>
                             <td></td>
-                            <td class="text-18 fw-500">$9,750</td>
+                            <td className="text-18 fw-500">$9,750</td>
                           </tr>
                         </tbody>
                       </table>

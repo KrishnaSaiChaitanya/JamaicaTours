@@ -264,7 +264,12 @@ const TourDetail = () => {
           clickable: true,
           renderBullet: function (index, className) {
             return (
-              '<span class="' + className + '">' + 0 + (index + 1) + "</span>"
+              '<span className="' +
+              className +
+              '">' +
+              0 +
+              (index + 1) +
+              "</span>"
             );
           },
         };
@@ -517,60 +522,60 @@ const TourDetail = () => {
         </div>
       </section>
 
-      <section class="layout-pt-md js-pin-container">
-        <div class="container">
-          <div class="row y-gap-30 justify-between">
-            <div class="col-lg-8">
-              <div class="tabs -tourSingle js-tabs">
-                <div class="tabs__controls row x-gap-30 y-gap-10 js-tabs-controls">
-                  <div class="col-auto">
+      <section className="layout-pt-md js-pin-container">
+        <div className="container">
+          <div className="row y-gap-30 justify-between">
+            <div className="col-lg-8">
+              <div className="tabs -tourSingle js-tabs">
+                <div className="tabs__controls row x-gap-30 y-gap-10 js-tabs-controls">
+                  <div className="col-auto">
                     <button
-                      class="tabs__button text-30 md:text-20 fw-700 js-tabs-button is-tab-el-active"
+                      className="tabs__button text-30 md:text-20 fw-700 js-tabs-button is-tab-el-active"
                       data-tab-target=".-tab-item-1"
                     >
                       Overview
                     </button>
                   </div>
 
-                  <div class="col-auto">
+                  <div className="col-auto">
                     <button
-                      class="tabs__button text-30 md:text-20 fw-700 js-tabs-button "
+                      className="tabs__button text-30 md:text-20 fw-700 js-tabs-button "
                       data-tab-target=".-tab-item-2"
                     >
                       included
                     </button>
                   </div>
 
-                  <div class="col-auto">
+                  <div className="col-auto">
                     <button
-                      class="tabs__button text-30 md:text-20 fw-700 js-tabs-button "
+                      className="tabs__button text-30 md:text-20 fw-700 js-tabs-button "
                       data-tab-target=".-tab-item-3"
                     >
                       Itinerary
                     </button>
                   </div>
 
-                  <div class="col-auto">
+                  <div className="col-auto">
                     <button
-                      class="tabs__button text-30 md:text-20 fw-700 js-tabs-button "
+                      className="tabs__button text-30 md:text-20 fw-700 js-tabs-button "
                       data-tab-target=".-tab-item-4"
                     >
                       calendar
                     </button>
                   </div>
 
-                  <div class="col-auto">
+                  <div className="col-auto">
                     <button
-                      class="tabs__button text-30 md:text-20 fw-700 js-tabs-button "
+                      className="tabs__button text-30 md:text-20 fw-700 js-tabs-button "
                       data-tab-target=".-tab-item-5"
                     >
                       FAQ
                     </button>
                   </div>
 
-                  <div class="col-auto">
+                  <div className="col-auto">
                     <button
-                      class="tabs__button text-30 md:text-20 fw-700 js-tabs-button "
+                      className="tabs__button text-30 md:text-20 fw-700 js-tabs-button "
                       data-tab-target=".-tab-item-6"
                     >
                       Reviews
@@ -578,61 +583,63 @@ const TourDetail = () => {
                   </div>
                 </div>
 
-                <div class="tabs__content pt-40 js-tabs-content">
-                  <div class="tabs__pane -tab-item-1 is-tab-el-active">
-                    <div class="row y-gap-20 justify-between items-center layout-pb-md">
-                      <div class="col-lg-3 col-6">
-                        <div class="d-flex items-center">
-                          <div class="flex-center size-50 rounded-12 border-1">
-                            <i class="text-20 icon-clock"></i>
+                <div className="tabs__content pt-40 js-tabs-content">
+                  <div className="tabs__pane -tab-item-1 is-tab-el-active">
+                    <div className="row y-gap-20 justify-between items-center layout-pb-md">
+                      <div className="col-lg-3 col-6">
+                        <div className="d-flex items-center">
+                          <div className="flex-center size-50 rounded-12 border-1">
+                            <i className="text-20 icon-clock"></i>
                           </div>
 
-                          <div class="ml-10">
-                            <div class="lh-16">Duration</div>
-                            <div class="text-14 text-light-2 lh-16">3 days</div>
+                          <div className="ml-10">
+                            <div className="lh-16">Duration</div>
+                            <div className="text-14 text-light-2 lh-16">
+                              3 days
+                            </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col-lg-3 col-6">
-                        <div class="d-flex items-center">
-                          <div class="flex-center size-50 rounded-12 border-1">
-                            <i class="text-20 icon-teamwork"></i>
+                      <div className="col-lg-3 col-6">
+                        <div className="d-flex items-center">
+                          <div className="flex-center size-50 rounded-12 border-1">
+                            <i className="text-20 icon-teamwork"></i>
                           </div>
 
-                          <div class="ml-10">
-                            <div class="lh-16">Group Size</div>
-                            <div class="text-14 text-light-2 lh-16">
+                          <div className="ml-10">
+                            <div className="lh-16">Group Size</div>
+                            <div className="text-14 text-light-2 lh-16">
                               10 people
                             </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col-lg-3 col-6">
-                        <div class="d-flex items-center">
-                          <div class="flex-center size-50 rounded-12 border-1">
-                            <i class="text-20 icon-birthday-cake"></i>
+                      <div className="col-lg-3 col-6">
+                        <div className="d-flex items-center">
+                          <div className="flex-center size-50 rounded-12 border-1">
+                            <i className="text-20 icon-birthday-cake"></i>
                           </div>
 
-                          <div class="ml-10">
-                            <div class="lh-16">Ages</div>
-                            <div class="text-14 text-light-2 lh-16">
+                          <div className="ml-10">
+                            <div className="lh-16">Ages</div>
+                            <div className="text-14 text-light-2 lh-16">
                               18-99 yrs
                             </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col-lg-3 col-6">
-                        <div class="d-flex items-center">
-                          <div class="flex-center size-50 rounded-12 border-1">
-                            <i class="text-20 icon-translate"></i>
+                      <div className="col-lg-3 col-6">
+                        <div className="d-flex items-center">
+                          <div className="flex-center size-50 rounded-12 border-1">
+                            <i className="text-20 icon-translate"></i>
                           </div>
 
-                          <div class="ml-10">
-                            <div class="lh-16">Languages</div>
-                            <div class="text-14 text-light-2 lh-16">
+                          <div className="ml-10">
+                            <div className="lh-16">Languages</div>
+                            <div className="text-14 text-light-2 lh-16">
                               English, Japanese
                             </div>
                           </div>
@@ -640,8 +647,8 @@ const TourDetail = () => {
                       </div>
                     </div>
 
-                    <h2 class="text-30">Tour Overview</h2>
-                    <p class="mt-20">
+                    <h2 className="text-30">Tour Overview</h2>
+                    <p className="mt-20">
                       The Phi Phi archipelago is a must-visit while in Phuket,
                       and this speedboat trip whisks you around the islands in
                       one day. Swim over the coral reefs of Pileh Lagoon, have
@@ -652,8 +659,8 @@ const TourDetail = () => {
                       included.
                     </p>
 
-                    <h3 class="text-20 fw-500 mt-20">Tour Highlights</h3>
-                    <ul class="ulList mt-20">
+                    <h3 className="text-20 fw-500 mt-20">Tour Highlights</h3>
+                    <ul className="ulList mt-20">
                       <li>
                         Experience the thrill of a speedboat to the stunning Phi
                         Phi Islands
@@ -675,52 +682,52 @@ const TourDetail = () => {
                     </ul>
                   </div>
 
-                  <div class="tabs__pane -tab-item-2">
-                    <h2 class="text-30">What's included</h2>
+                  <div className="tabs__pane -tab-item-2">
+                    <h2 className="text-30">What's included</h2>
 
-                    <div class="row x-gap-130 y-gap-20 pt-20">
-                      <div class="col-lg-6">
-                        <div class="y-gap-15">
-                          <div class="d-flex">
-                            <i class="icon-check flex-center text-10 size-24 rounded-full text-green-2 bg-green-1 mr-15"></i>
+                    <div className="row x-gap-130 y-gap-20 pt-20">
+                      <div className="col-lg-6">
+                        <div className="y-gap-15">
+                          <div className="d-flex">
+                            <i className="icon-check flex-center text-10 size-24 rounded-full text-green-2 bg-green-1 mr-15"></i>
                             Beverages, drinking water, morning tea and buffet
                             lunch
                           </div>
-                          <div class="d-flex">
-                            <i class="icon-check flex-center text-10 size-24 rounded-full text-green-2 bg-green-1 mr-15"></i>
+                          <div className="d-flex">
+                            <i className="icon-check flex-center text-10 size-24 rounded-full text-green-2 bg-green-1 mr-15"></i>
                             Local taxes
                           </div>
-                          <div class="d-flex">
-                            <i class="icon-check flex-center text-10 size-24 rounded-full text-green-2 bg-green-1 mr-15"></i>
+                          <div className="d-flex">
+                            <i className="icon-check flex-center text-10 size-24 rounded-full text-green-2 bg-green-1 mr-15"></i>
                             Hotel pickup and drop-off by air-conditioned minivan
                           </div>
-                          <div class="d-flex">
-                            <i class="icon-check flex-center text-10 size-24 rounded-full text-green-2 bg-green-1 mr-15"></i>
+                          <div className="d-flex">
+                            <i className="icon-check flex-center text-10 size-24 rounded-full text-green-2 bg-green-1 mr-15"></i>
                             InsuranceTransfer to a private pier
                           </div>
-                          <div class="d-flex">
-                            <i class="icon-check flex-center text-10 size-24 rounded-full text-green-2 bg-green-1 mr-15"></i>
+                          <div className="d-flex">
+                            <i className="icon-check flex-center text-10 size-24 rounded-full text-green-2 bg-green-1 mr-15"></i>
                             Soft drinks
                           </div>
-                          <div class="d-flex">
-                            <i class="icon-check flex-center text-10 size-24 rounded-full text-green-2 bg-green-1 mr-15"></i>
+                          <div className="d-flex">
+                            <i className="icon-check flex-center text-10 size-24 rounded-full text-green-2 bg-green-1 mr-15"></i>
                             Tour Guide
                           </div>
                         </div>
                       </div>
 
-                      <div class="col-lg-6">
-                        <div class="y-gap-15">
-                          <div class="d-flex">
-                            <i class="icon-cross flex-center text-10 size-24 rounded-full text-red-3 bg-red-4 mr-15"></i>
+                      <div className="col-lg-6">
+                        <div className="y-gap-15">
+                          <div className="d-flex">
+                            <i className="icon-cross flex-center text-10 size-24 rounded-full text-red-3 bg-red-4 mr-15"></i>
                             Towel
                           </div>
-                          <div class="d-flex">
-                            <i class="icon-cross flex-center text-10 size-24 rounded-full text-red-3 bg-red-4 mr-15"></i>
+                          <div className="d-flex">
+                            <i className="icon-cross flex-center text-10 size-24 rounded-full text-red-3 bg-red-4 mr-15"></i>
                             Tips
                           </div>
-                          <div class="d-flex">
-                            <i class="icon-cross flex-center text-10 size-24 rounded-full text-red-3 bg-red-4 mr-15"></i>
+                          <div className="d-flex">
+                            <i className="icon-cross flex-center text-10 size-24 rounded-full text-red-3 bg-red-4 mr-15"></i>
                             Alcoholic Beverages
                           </div>
                         </div>
@@ -728,29 +735,29 @@ const TourDetail = () => {
                     </div>
                   </div>
 
-                  <div class="tabs__pane -tab-item-3">
-                    <h2 class="text-30">Itinerary</h2>
+                  <div className="tabs__pane -tab-item-3">
+                    <h2 className="text-30">Itinerary</h2>
 
-                    <div class="mt-30">
-                      <div class="roadmap">
-                        <div class="roadmap__item">
-                          <div class="roadmap__iconBig">
-                            <i class="icon-pin"></i>
+                    <div className="mt-30">
+                      <div className="roadmap">
+                        <div className="roadmap__item">
+                          <div className="roadmap__iconBig">
+                            <i className="icon-pin"></i>
                           </div>
-                          <div class="roadmap__wrap">
-                            <div class="roadmap__title">
+                          <div className="roadmap__wrap">
+                            <div className="roadmap__title">
                               Day 1: Airport Pick Up
                             </div>
                           </div>
                         </div>
 
-                        <div class="roadmap__item">
-                          <div class="roadmap__icon"></div>
-                          <div class="roadmap__wrap">
-                            <div class="roadmap__title">
+                        <div className="roadmap__item">
+                          <div className="roadmap__icon"></div>
+                          <div className="roadmap__wrap">
+                            <div className="roadmap__title">
                               Day 2: Temples & River Cruise
                             </div>
-                            <div class="roadmap__content">
+                            <div className="roadmap__content">
                               Like on all of our trips, we can collect you from
                               the airport when you land and take you directly to
                               your hotel. The first Day is just a check-in Day
@@ -760,48 +767,48 @@ const TourDetail = () => {
                           </div>
                         </div>
 
-                        <div class="roadmap__item">
-                          <div class="roadmap__icon"></div>
-                          <div class="roadmap__wrap">
-                            <div class="roadmap__title">
+                        <div className="roadmap__item">
+                          <div className="roadmap__icon"></div>
+                          <div className="roadmap__wrap">
+                            <div className="roadmap__title">
                               Day 3: Massage &amp; Overnight Train
                             </div>
                           </div>
                         </div>
 
-                        <div class="roadmap__item">
-                          <div class="roadmap__icon"></div>
-                          <div class="roadmap__wrap">
-                            <div class="roadmap__title">
+                        <div className="roadmap__item">
+                          <div className="roadmap__icon"></div>
+                          <div className="roadmap__wrap">
+                            <div className="roadmap__title">
                               Day 4: Khao Sok National Park
                             </div>
                           </div>
                         </div>
 
-                        <div class="roadmap__item">
-                          <div class="roadmap__icon"></div>
-                          <div class="roadmap__wrap">
-                            <div class="roadmap__title">
+                        <div className="roadmap__item">
+                          <div className="roadmap__icon"></div>
+                          <div className="roadmap__wrap">
+                            <div className="roadmap__title">
                               Day 5: Travel to Koh Phangan
                             </div>
                           </div>
                         </div>
 
-                        <div class="roadmap__item">
-                          <div class="roadmap__icon"></div>
-                          <div class="roadmap__wrap">
-                            <div class="roadmap__title">
+                        <div className="roadmap__item">
+                          <div className="roadmap__icon"></div>
+                          <div className="roadmap__wrap">
+                            <div className="roadmap__title">
                               Day 6: Morning Chill &amp; Muay Thai Lesson
                             </div>
                           </div>
                         </div>
 
-                        <div class="roadmap__item">
-                          <div class="roadmap__iconBig">
-                            <i class="icon-flag"></i>
+                        <div className="roadmap__item">
+                          <div className="roadmap__iconBig">
+                            <i className="icon-flag"></i>
                           </div>
-                          <div class="roadmap__wrap">
-                            <div class="roadmap__title">
+                          <div className="roadmap__wrap">
+                            <div className="roadmap__title">
                               Day 7: Island Boat Trip
                             </div>
                           </div>
@@ -810,32 +817,32 @@ const TourDetail = () => {
                     </div>
                   </div>
 
-                  <div class="tabs__pane -tab-item-4">
-                    <h2 class="text-30">Availability Calendar</h2>
+                  <div className="tabs__pane -tab-item-4">
+                    <h2 className="text-30">Availability Calendar</h2>
                     <Calender />
 
                     <span>{date}</span>
                   </div>
 
-                  <div class="tabs__pane -tab-item-5">
-                    <h2 class="text-30">FAQ</h2>
+                  <div className="tabs__pane -tab-item-5">
+                    <h2 className="text-30">FAQ</h2>
 
-                    <div class="accordion -simple row y-gap-20 mt-30 js-accordion">
-                      <div class="col-12">
-                        <div class="accordion__item px-20 py-15 border-1 rounded-12">
-                          <div class="accordion__button d-flex items-center justify-between">
-                            <div class="button text-16 text-dark-1">
+                    <div className="accordion -simple row y-gap-20 mt-30 js-accordion">
+                      <div className="col-12">
+                        <div className="accordion__item px-20 py-15 border-1 rounded-12">
+                          <div className="accordion__button d-flex items-center justify-between">
+                            <div className="button text-16 text-dark-1">
                               Can I get the refund?
                             </div>
 
-                            <div class="accordion__icon size-30 flex-center bg-light-2 rounded-full">
-                              <i class="icon-plus"></i>
-                              <i class="icon-minus"></i>
+                            <div className="accordion__icon size-30 flex-center bg-light-2 rounded-full">
+                              <i className="icon-plus"></i>
+                              <i className="icon-minus"></i>
                             </div>
                           </div>
 
-                          <div class="accordion__content">
-                            <div class="pt-20">
+                          <div className="accordion__content">
+                            <div className="pt-20">
                               <p>
                                 Phang Nga Bay Sea Cave Canoeing & James Bond
                                 Island w/ Buffet Lunch by Big Boat cancellation
@@ -850,21 +857,21 @@ const TourDetail = () => {
                         </div>
                       </div>
 
-                      <div class="col-12">
-                        <div class="accordion__item px-20 py-15 border-1 rounded-12">
-                          <div class="accordion__button d-flex items-center justify-between">
-                            <div class="button text-16 text-dark-1">
+                      <div className="col-12">
+                        <div className="accordion__item px-20 py-15 border-1 rounded-12">
+                          <div className="accordion__button d-flex items-center justify-between">
+                            <div className="button text-16 text-dark-1">
                               Can I change the travel date?
                             </div>
 
-                            <div class="accordion__icon size-30 flex-center bg-light-2 rounded-full">
-                              <i class="icon-plus"></i>
-                              <i class="icon-minus"></i>
+                            <div className="accordion__icon size-30 flex-center bg-light-2 rounded-full">
+                              <i className="icon-plus"></i>
+                              <i className="icon-minus"></i>
                             </div>
                           </div>
 
-                          <div class="accordion__content">
-                            <div class="pt-20">
+                          <div className="accordion__content">
+                            <div className="pt-20">
                               <p>
                                 Phang Nga Bay Sea Cave Canoeing & James Bond
                                 Island w/ Buffet Lunch by Big Boat cancellation
@@ -879,21 +886,21 @@ const TourDetail = () => {
                         </div>
                       </div>
 
-                      <div class="col-12">
-                        <div class="accordion__item px-20 py-15 border-1 rounded-12">
-                          <div class="accordion__button d-flex items-center justify-between">
-                            <div class="button text-16 text-dark-1">
+                      <div className="col-12">
+                        <div className="accordion__item px-20 py-15 border-1 rounded-12">
+                          <div className="accordion__button d-flex items-center justify-between">
+                            <div className="button text-16 text-dark-1">
                               When and where does the tour end?
                             </div>
 
-                            <div class="accordion__icon size-30 flex-center bg-light-2 rounded-full">
-                              <i class="icon-plus"></i>
-                              <i class="icon-minus"></i>
+                            <div className="accordion__icon size-30 flex-center bg-light-2 rounded-full">
+                              <i className="icon-plus"></i>
+                              <i className="icon-minus"></i>
                             </div>
                           </div>
 
-                          <div class="accordion__content">
-                            <div class="pt-20">
+                          <div className="accordion__content">
+                            <div className="pt-20">
                               <p>
                                 Phang Nga Bay Sea Cave Canoeing & James Bond
                                 Island w/ Buffet Lunch by Big Boat cancellation
@@ -908,21 +915,21 @@ const TourDetail = () => {
                         </div>
                       </div>
 
-                      <div class="col-12">
-                        <div class="accordion__item px-20 py-15 border-1 rounded-12">
-                          <div class="accordion__button d-flex items-center justify-between">
-                            <div class="button text-16 text-dark-1">
+                      <div className="col-12">
+                        <div className="accordion__item px-20 py-15 border-1 rounded-12">
+                          <div className="accordion__button d-flex items-center justify-between">
+                            <div className="button text-16 text-dark-1">
                               Do you arrange airport transfers?
                             </div>
 
-                            <div class="accordion__icon size-30 flex-center bg-light-2 rounded-full">
-                              <i class="icon-plus"></i>
-                              <i class="icon-minus"></i>
+                            <div className="accordion__icon size-30 flex-center bg-light-2 rounded-full">
+                              <i className="icon-plus"></i>
+                              <i className="icon-minus"></i>
                             </div>
                           </div>
 
-                          <div class="accordion__content">
-                            <div class="pt-20">
+                          <div className="accordion__content">
+                            <div className="pt-20">
                               <p>
                                 Phang Nga Bay Sea Cave Canoeing & James Bond
                                 Island w/ Buffet Lunch by Big Boat cancellation
@@ -939,383 +946,385 @@ const TourDetail = () => {
                     </div>
                   </div>
 
-                  <div class="tabs__pane -tab-item-6">
-                    <h2 class="text-30">Customer Reviews</h2>
+                  <div className="tabs__pane -tab-item-6">
+                    <h2 className="text-30">Customer Reviews</h2>
 
-                    <div class="overallRating mt-30">
-                      <div class="overallRating__list">
-                        <div class="overallRating__item">
-                          <div class="overallRating__content">
-                            <div class="overallRating__icon">
-                              <i class="icon-star-2 text-30 text-accent-1"></i>
+                    <div className="overallRating mt-30">
+                      <div className="overallRating__list">
+                        <div className="overallRating__item">
+                          <div className="overallRating__content">
+                            <div className="overallRating__icon">
+                              <i className="icon-star-2 text-30 text-accent-1"></i>
                             </div>
 
-                            <div class="overallRating__info">
-                              <h5 class="text-16 fw-500">Overall Rating</h5>
-                              <div class="lh-15">Excellent</div>
-                            </div>
-                          </div>
-
-                          <div class="overallRating__rating d-flex items-center">
-                            <i class="icon-star text-yellow-2 text-16"></i>
-                            <div class="text-16 fw-500 ml-10">5.0</div>
-                          </div>
-                        </div>
-
-                        <div class="overallRating__item">
-                          <div class="overallRating__content">
-                            <div class="overallRating__icon">
-                              <i class="icon-pin-2 text-30 text-accent-1"></i>
-                            </div>
-
-                            <div class="overallRating__info">
-                              <h5 class="text-16 fw-500">Location</h5>
-                              <div class="lh-15">Excellent</div>
+                            <div className="overallRating__info">
+                              <h5 className="text-16 fw-500">Overall Rating</h5>
+                              <div className="lh-15">Excellent</div>
                             </div>
                           </div>
 
-                          <div class="overallRating__rating d-flex items-center">
-                            <i class="icon-star text-yellow-2 text-16"></i>
-                            <div class="text-16 fw-500 ml-10">5.0</div>
+                          <div className="overallRating__rating d-flex items-center">
+                            <i className="icon-star text-yellow-2 text-16"></i>
+                            <div className="text-16 fw-500 ml-10">5.0</div>
                           </div>
                         </div>
 
-                        <div class="overallRating__item">
-                          <div class="overallRating__content">
-                            <div class="overallRating__icon">
-                              <i class="icon-application text-30 text-accent-1"></i>
+                        <div className="overallRating__item">
+                          <div className="overallRating__content">
+                            <div className="overallRating__icon">
+                              <i className="icon-pin-2 text-30 text-accent-1"></i>
                             </div>
 
-                            <div class="overallRating__info">
-                              <h5 class="text-16 fw-500">Amenities</h5>
-                              <div class="lh-15">Excellent</div>
-                            </div>
-                          </div>
-
-                          <div class="overallRating__rating d-flex items-center">
-                            <i class="icon-star text-yellow-2 text-16"></i>
-                            <div class="text-16 fw-500 ml-10">5.0</div>
-                          </div>
-                        </div>
-
-                        <div class="overallRating__item">
-                          <div class="overallRating__content">
-                            <div class="overallRating__icon">
-                              <i class="icon-utensils text-30 text-accent-1"></i>
-                            </div>
-
-                            <div class="overallRating__info">
-                              <h5 class="text-16 fw-500">Food</h5>
-                              <div class="lh-15">Excellent</div>
+                            <div className="overallRating__info">
+                              <h5 className="text-16 fw-500">Location</h5>
+                              <div className="lh-15">Excellent</div>
                             </div>
                           </div>
 
-                          <div class="overallRating__rating d-flex items-center">
-                            <i class="icon-star text-yellow-2 text-16"></i>
-                            <div class="text-16 fw-500 ml-10">5.0</div>
+                          <div className="overallRating__rating d-flex items-center">
+                            <i className="icon-star text-yellow-2 text-16"></i>
+                            <div className="text-16 fw-500 ml-10">5.0</div>
                           </div>
                         </div>
 
-                        <div class="overallRating__item">
-                          <div class="overallRating__content">
-                            <div class="overallRating__icon">
-                              <i class="icon-price-tag text-30 text-accent-1"></i>
+                        <div className="overallRating__item">
+                          <div className="overallRating__content">
+                            <div className="overallRating__icon">
+                              <i className="icon-application text-30 text-accent-1"></i>
                             </div>
 
-                            <div class="overallRating__info">
-                              <h5 class="text-16 fw-500">Price</h5>
-                              <div class="lh-15">Excellent</div>
-                            </div>
-                          </div>
-
-                          <div class="overallRating__rating d-flex items-center">
-                            <i class="icon-star text-yellow-2 text-16"></i>
-                            <div class="text-16 fw-500 ml-10">5.0</div>
-                          </div>
-                        </div>
-
-                        <div class="overallRating__item">
-                          <div class="overallRating__content">
-                            <div class="overallRating__icon">
-                              <i class="icon-bed-2 text-30 text-accent-1"></i>
-                            </div>
-
-                            <div class="overallRating__info">
-                              <h5 class="text-16 fw-500">Rooms</h5>
-                              <div class="lh-15">Excellent</div>
+                            <div className="overallRating__info">
+                              <h5 className="text-16 fw-500">Amenities</h5>
+                              <div className="lh-15">Excellent</div>
                             </div>
                           </div>
 
-                          <div class="overallRating__rating d-flex items-center">
-                            <i class="icon-star text-yellow-2 text-16"></i>
-                            <div class="text-16 fw-500 ml-10">5.0</div>
+                          <div className="overallRating__rating d-flex items-center">
+                            <i className="icon-star text-yellow-2 text-16"></i>
+                            <div className="text-16 fw-500 ml-10">5.0</div>
                           </div>
                         </div>
 
-                        <div class="overallRating__item">
-                          <div class="overallRating__content">
-                            <div class="overallRating__icon">
-                              <i class="icon-online-support-2 text-30 text-accent-1"></i>
+                        <div className="overallRating__item">
+                          <div className="overallRating__content">
+                            <div className="overallRating__icon">
+                              <i className="icon-utensils text-30 text-accent-1"></i>
                             </div>
 
-                            <div class="overallRating__info">
-                              <h5 class="text-16 fw-500">Tour Operator</h5>
-                              <div class="lh-15">Excellent</div>
+                            <div className="overallRating__info">
+                              <h5 className="text-16 fw-500">Food</h5>
+                              <div className="lh-15">Excellent</div>
                             </div>
                           </div>
 
-                          <div class="overallRating__rating d-flex items-center">
-                            <i class="icon-star text-yellow-2 text-16"></i>
-                            <div class="text-16 fw-500 ml-10">5.0</div>
+                          <div className="overallRating__rating d-flex items-center">
+                            <i className="icon-star text-yellow-2 text-16"></i>
+                            <div className="text-16 fw-500 ml-10">5.0</div>
+                          </div>
+                        </div>
+
+                        <div className="overallRating__item">
+                          <div className="overallRating__content">
+                            <div className="overallRating__icon">
+                              <i className="icon-price-tag text-30 text-accent-1"></i>
+                            </div>
+
+                            <div className="overallRating__info">
+                              <h5 className="text-16 fw-500">Price</h5>
+                              <div className="lh-15">Excellent</div>
+                            </div>
+                          </div>
+
+                          <div className="overallRating__rating d-flex items-center">
+                            <i className="icon-star text-yellow-2 text-16"></i>
+                            <div className="text-16 fw-500 ml-10">5.0</div>
+                          </div>
+                        </div>
+
+                        <div className="overallRating__item">
+                          <div className="overallRating__content">
+                            <div className="overallRating__icon">
+                              <i className="icon-bed-2 text-30 text-accent-1"></i>
+                            </div>
+
+                            <div className="overallRating__info">
+                              <h5 className="text-16 fw-500">Rooms</h5>
+                              <div className="lh-15">Excellent</div>
+                            </div>
+                          </div>
+
+                          <div className="overallRating__rating d-flex items-center">
+                            <i className="icon-star text-yellow-2 text-16"></i>
+                            <div className="text-16 fw-500 ml-10">5.0</div>
+                          </div>
+                        </div>
+
+                        <div className="overallRating__item">
+                          <div className="overallRating__content">
+                            <div className="overallRating__icon">
+                              <i className="icon-online-support-2 text-30 text-accent-1"></i>
+                            </div>
+
+                            <div className="overallRating__info">
+                              <h5 className="text-16 fw-500">Tour Operator</h5>
+                              <div className="lh-15">Excellent</div>
+                            </div>
+                          </div>
+
+                          <div className="overallRating__rating d-flex items-center">
+                            <i className="icon-star text-yellow-2 text-16"></i>
+                            <div className="text-16 fw-500 ml-10">5.0</div>
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    <div class="pt-30">
-                      <div class="row justify-between">
-                        <div class="col-auto">
-                          <div class="d-flex items-center">
-                            <div class="size-40 rounded-full">
+                    <div className="pt-30">
+                      <div className="row justify-between">
+                        <div className="col-auto">
+                          <div className="d-flex items-center">
+                            <div className="size-40 rounded-full">
                               <img
                                 src="img/reviews/avatars/1.png"
                                 alt="image"
-                                class="img-cover"
+                                className="img-cover"
                               />
                             </div>
 
-                            <div class="text-16 fw-500 ml-20">Ali Tufan</div>
+                            <div className="text-16 fw-500 ml-20">
+                              Ali Tufan
+                            </div>
                           </div>
                         </div>
 
-                        <div class="col-auto">
-                          <div class="text-14 text-light-2">April 2023</div>
+                        <div className="col-auto">
+                          <div className="text-14 text-light-2">April 2023</div>
                         </div>
                       </div>
 
-                      <div class="d-flex items-center mt-15">
-                        <div class="d-flex x-gap-5">
-                          <i class="icon-star text-yellow-2 text-10"></i>
+                      <div className="d-flex items-center mt-15">
+                        <div className="d-flex x-gap-5">
+                          <i className="icon-star text-yellow-2 text-10"></i>
 
-                          <i class="icon-star text-yellow-2 text-10"></i>
+                          <i className="icon-star text-yellow-2 text-10"></i>
 
-                          <i class="icon-star text-yellow-2 text-10"></i>
+                          <i className="icon-star text-yellow-2 text-10"></i>
 
-                          <i class="icon-star text-yellow-2 text-10"></i>
+                          <i className="icon-star text-yellow-2 text-10"></i>
 
-                          <i class="icon-star text-yellow-2 text-10"></i>
+                          <i className="icon-star text-yellow-2 text-10"></i>
                         </div>
-                        <div class="text-16 fw-500 ml-10">
+                        <div className="text-16 fw-500 ml-10">
                           Take this tour! Its fantastic!
                         </div>
                       </div>
 
-                      <p class="mt-10">
+                      <p className="mt-10">
                         Great for 4-5 hours to explore. Really a lot to see and
                         tons of photo spots. Even have a passport for you to
                         collect all the stamps as a souvenir. Must see for a
                         Harry Potter fan.
                       </p>
 
-                      <div class="row x-gap-20 y-gap-20 pt-20">
-                        <div class="col-auto">
-                          <div class="size-130">
+                      <div className="row x-gap-20 y-gap-20 pt-20">
+                        <div className="col-auto">
+                          <div className="size-130">
                             <img
                               src="img/reviews/1/1.png"
                               alt="image"
-                              class="img-cover rounded-12"
+                              className="img-cover rounded-12"
                             />
                           </div>
                         </div>
 
-                        <div class="col-auto">
-                          <div class="size-130">
+                        <div className="col-auto">
+                          <div className="size-130">
                             <img
                               src="img/reviews/1/2.png"
                               alt="image"
-                              class="img-cover rounded-12"
+                              className="img-cover rounded-12"
                             />
                           </div>
                         </div>
 
-                        <div class="col-auto">
-                          <div class="size-130">
+                        <div className="col-auto">
+                          <div className="size-130">
                             <img
                               src="img/reviews/1/3.png"
                               alt="image"
-                              class="img-cover rounded-12"
+                              className="img-cover rounded-12"
                             />
                           </div>
                         </div>
                       </div>
 
-                      <div class="d-flex x-gap-30 items-center mt-20">
+                      <div className="d-flex x-gap-30 items-center mt-20">
                         <div>
-                          <a href="#" class="d-flex items-center">
-                            <i class="icon-like text-16 mr-10"></i>
+                          <a href="#" className="d-flex items-center">
+                            <i className="icon-like text-16 mr-10"></i>
                             Helpful
                           </a>
                         </div>
                         <div>
-                          <a href="#" class="d-flex items-center">
-                            <i class="icon-dislike text-16 mr-10"></i>
+                          <a href="#" className="d-flex items-center">
+                            <i className="icon-dislike text-16 mr-10"></i>
                             Not helpful
                           </a>
                         </div>
                       </div>
                     </div>
 
-                    <button class="button -md -outline-accent-1 text-accent-1 mt-30">
+                    <button className="button -md -outline-accent-1 text-accent-1 mt-30">
                       See more reviews
-                      <i class="icon-arrow-top-right text-16 ml-10"></i>
+                      <i className="icon-arrow-top-right text-16 ml-10"></i>
                     </button>
 
-                    <h2 class="text-30 pt-60">Leave a Reply</h2>
-                    <p class="mt-30">
+                    <h2 className="text-30 pt-60">Leave a Reply</h2>
+                    <p className="mt-30">
                       Your email address will not be published. Required fields
                       are marked *
                     </p>
 
-                    <div class="reviewsGrid pt-30">
-                      <div class="reviewsGrid__item">
+                    <div className="reviewsGrid pt-30">
+                      <div className="reviewsGrid__item">
                         Location
-                        <div class="d-flex x-gap-5 pl-20">
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                        <div className="d-flex x-gap-5 pl-20">
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
                         </div>
                       </div>
 
-                      <div class="reviewsGrid__item">
+                      <div className="reviewsGrid__item">
                         Amenities
-                        <div class="d-flex x-gap-5 pl-20">
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                        <div className="d-flex x-gap-5 pl-20">
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
                         </div>
                       </div>
 
-                      <div class="reviewsGrid__item">
+                      <div className="reviewsGrid__item">
                         Food
-                        <div class="d-flex x-gap-5 pl-20">
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                        <div className="d-flex x-gap-5 pl-20">
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
                         </div>
                       </div>
 
-                      <div class="reviewsGrid__item">
+                      <div className="reviewsGrid__item">
                         Room
-                        <div class="d-flex x-gap-5 pl-20">
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                        <div className="d-flex x-gap-5 pl-20">
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
                         </div>
                       </div>
 
-                      <div class="reviewsGrid__item">
+                      <div className="reviewsGrid__item">
                         Price
-                        <div class="d-flex x-gap-5 pl-20">
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                        <div className="d-flex x-gap-5 pl-20">
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
                         </div>
                       </div>
 
-                      <div class="reviewsGrid__item">
+                      <div className="reviewsGrid__item">
                         Tour Operator
-                        <div class="d-flex x-gap-5 pl-20">
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                        <div className="d-flex x-gap-5 pl-20">
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
 
-                          <i class="icon-star text-10 text-yellow-2"></i>
+                          <i className="icon-star text-10 text-yellow-2"></i>
                         </div>
                       </div>
                     </div>
 
-                    <div class="contactForm y-gap-30 pt-30">
-                      <div class="row y-gap-30">
-                        <div class="col-md-6">
-                          <div class="form-input ">
+                    <div className="contactForm y-gap-30 pt-30">
+                      <div className="row y-gap-30">
+                        <div className="col-md-6">
+                          <div className="form-input ">
                             <input type="text" required />
-                            <label class="lh-1 text-16 text-light-1">
+                            <label className="lh-1 text-16 text-light-1">
                               Name
                             </label>
                           </div>
                         </div>
 
-                        <div class="col-md-6">
-                          <div class="form-input ">
+                        <div className="col-md-6">
+                          <div className="form-input ">
                             <input type="email" required />
-                            <label class="lh-1 text-16 text-light-1">
+                            <label className="lh-1 text-16 text-light-1">
                               Email
                             </label>
                           </div>
                         </div>
                       </div>
 
-                      <div class="row">
-                        <div class="col-12">
-                          <div class="form-input ">
+                      <div className="row">
+                        <div className="col-12">
+                          <div className="form-input ">
                             <input type="text" required />
-                            <label class="lh-1 text-16 text-light-1">
+                            <label className="lh-1 text-16 text-light-1">
                               Title
                             </label>
                           </div>
                         </div>
                       </div>
 
-                      <div class="row">
-                        <div class="col-12">
-                          <div class="form-input ">
+                      <div className="row">
+                        <div className="col-12">
+                          <div className="form-input ">
                             <textarea required rows="5"></textarea>
-                            <label class="lh-1 text-16 text-light-1">
+                            <label className="lh-1 text-16 text-light-1">
                               Comment
                             </label>
                           </div>
                         </div>
                       </div>
 
-                      <div class="row">
-                        <div class="col-12">
-                          <button class="button -md -dark-1 bg-accent-1 text-white">
+                      <div className="row">
+                        <div className="col-12">
+                          <button className="button -md -dark-1 bg-accent-1 text-white">
                             Post Comment
-                            <i class="icon-arrow-top-right text-16 ml-10"></i>
+                            <i className="icon-arrow-top-right text-16 ml-10"></i>
                           </button>
                         </div>
                       </div>
@@ -1325,111 +1334,114 @@ const TourDetail = () => {
               </div>
             </div>
 
-            <div class="col-lg-4">
-              <div class="d-flex justify-end js-pin-content">
-                <div class="tourSingleSidebar -top-320">
-                  <div class="d-flex items-center">
+            <div className="col-lg-4">
+              <div className="d-flex justify-end js-pin-content">
+                <div className="tourSingleSidebar -top-320">
+                  <div className="d-flex items-center">
                     <div>From</div>
-                    <div class="text-20 fw-500 ml-10">$1,200</div>
+                    <div className="text-20 fw-500 ml-10">$1,200</div>
                   </div>
 
-                  <div class="searchForm -type-1 -sidebar mt-20">
-                    <div class="searchForm__form">
-                      <div class="searchFormItem js-select-control js-form-dd js-calendar">
+                  <div className="searchForm -type-1 -sidebar mt-20">
+                    <div className="searchForm__form">
+                      <div className="searchFormItem js-select-control js-form-dd js-calendar">
                         <div
-                          class="searchFormItem__button"
+                          className="searchFormItem__button"
                           data-x-click="calendar"
                         >
-                          <div class="searchFormItem__icon size-50 rounded-12 bg-light-1 flex-center">
-                            <i class="text-20 icon-calendar"></i>
+                          <div className="searchFormItem__icon size-50 rounded-12 bg-light-1 flex-center">
+                            <i className="text-20 icon-calendar"></i>
                           </div>
-                          <div class="searchFormItem__content">
+                          <div className="searchFormItem__content">
                             <h5>From</h5>
                             <div>
-                              <span class="js-first-date">Add dates</span>
-                              <span class="js-last-date"></span>
+                              <span className="js-first-date">Add dates</span>
+                              <span className="js-last-date"></span>
                             </div>
                           </div>
-                          <div class="searchFormItem__icon_chevron">
-                            <i class="icon-chevron-down d-flex text-18"></i>
+                          <div className="searchFormItem__icon_chevron">
+                            <i className="icon-chevron-down d-flex text-18"></i>
                           </div>
                         </div>
                       </div>
 
-                      <div class="searchFormItem js-select-control js-form-dd">
-                        <div class="searchFormItem__button" data-x-click="time">
-                          <div class="searchFormItem__icon size-50 rounded-12 bg-light-1 flex-center">
-                            <i class="text-20 icon-clock"></i>
+                      <div className="searchFormItem js-select-control js-form-dd">
+                        <div
+                          className="searchFormItem__button"
+                          data-x-click="time"
+                        >
+                          <div className="searchFormItem__icon size-50 rounded-12 bg-light-1 flex-center">
+                            <i className="text-20 icon-clock"></i>
                           </div>
-                          <div class="searchFormItem__content">
+                          <div className="searchFormItem__content">
                             <h5>Time</h5>
-                            <div class="js-select-control-chosen">
+                            <div className="js-select-control-chosen">
                               Choose time
                             </div>
                           </div>
-                          <div class="searchFormItem__icon_chevron">
-                            <i class="icon-chevron-down d-flex text-18"></i>
+                          <div className="searchFormItem__icon_chevron">
+                            <i className="icon-chevron-down d-flex text-18"></i>
                           </div>
                         </div>
 
                         <div
-                          class="searchFormItemDropdown -tour-type"
+                          className="searchFormItemDropdown -tour-type"
                           data-x="time"
                           data-x-toggle="is-active"
                         >
-                          <div class="searchFormItemDropdown__container">
-                            <div class="searchFormItemDropdown__list sroll-bar-1">
-                              <div class="searchFormItemDropdown__item">
-                                <button class="js-select-control-button">
-                                  <span class="js-select-control-choice">
+                          <div className="searchFormItemDropdown__container">
+                            <div className="searchFormItemDropdown__list sroll-bar-1">
+                              <div className="searchFormItemDropdown__item">
+                                <button className="js-select-control-button">
+                                  <span className="js-select-control-choice">
                                     12:00
                                   </span>
                                 </button>
                               </div>
 
-                              <div class="searchFormItemDropdown__item">
-                                <button class="js-select-control-button">
-                                  <span class="js-select-control-choice">
+                              <div className="searchFormItemDropdown__item">
+                                <button className="js-select-control-button">
+                                  <span className="js-select-control-choice">
                                     13:00
                                   </span>
                                 </button>
                               </div>
 
-                              <div class="searchFormItemDropdown__item">
-                                <button class="js-select-control-button">
-                                  <span class="js-select-control-choice">
+                              <div className="searchFormItemDropdown__item">
+                                <button className="js-select-control-button">
+                                  <span className="js-select-control-choice">
                                     14:00
                                   </span>
                                 </button>
                               </div>
 
-                              <div class="searchFormItemDropdown__item">
-                                <button class="js-select-control-button">
-                                  <span class="js-select-control-choice">
+                              <div className="searchFormItemDropdown__item">
+                                <button className="js-select-control-button">
+                                  <span className="js-select-control-choice">
                                     15:00
                                   </span>
                                 </button>
                               </div>
 
-                              <div class="searchFormItemDropdown__item">
-                                <button class="js-select-control-button">
-                                  <span class="js-select-control-choice">
+                              <div className="searchFormItemDropdown__item">
+                                <button className="js-select-control-button">
+                                  <span className="js-select-control-choice">
                                     16:00
                                   </span>
                                 </button>
                               </div>
 
-                              <div class="searchFormItemDropdown__item">
-                                <button class="js-select-control-button">
-                                  <span class="js-select-control-choice">
+                              <div className="searchFormItemDropdown__item">
+                                <button className="js-select-control-button">
+                                  <span className="js-select-control-choice">
                                     17:00
                                   </span>
                                 </button>
                               </div>
 
-                              <div class="searchFormItemDropdown__item">
-                                <button class="js-select-control-button">
-                                  <span class="js-select-control-choice">
+                              <div className="searchFormItemDropdown__item">
+                                <button className="js-select-control-button">
+                                  <span className="js-select-control-choice">
                                     18:00
                                   </span>
                                 </button>
@@ -1441,82 +1453,84 @@ const TourDetail = () => {
                     </div>
                   </div>
 
-                  <h5 class="text-18 fw-500 mb-20 mt-20">Tickets</h5>
+                  <h5 className="text-18 fw-500 mb-20 mt-20">Tickets</h5>
 
                   <div>
-                    <div class="d-flex items-center justify-between">
-                      <div class="text-14">
-                        Adult (18+ years) <span class="fw-500">$94.00</span>
+                    <div className="d-flex items-center justify-between">
+                      <div className="text-14">
+                        Adult (18+ years) <span className="fw-500">$94.00</span>
                       </div>
 
-                      <div class="d-flex items-center js-counter">
-                        <button class="button size-30 border-1 rounded-full js-down">
-                          <i class="icon-minus text-10"></i>
+                      <div className="d-flex items-center js-counter">
+                        <button className="button size-30 border-1 rounded-full js-down">
+                          <i className="icon-minus text-10"></i>
                         </button>
 
-                        <div class="flex-center ml-10 mr-10">
-                          <div class="text-14 size-20 js-count">3</div>
+                        <div className="flex-center ml-10 mr-10">
+                          <div className="text-14 size-20 js-count">3</div>
                         </div>
 
-                        <button class="button size-30 border-1 rounded-full js-up">
-                          <i class="icon-plus text-10"></i>
+                        <button className="button size-30 border-1 rounded-full js-up">
+                          <i className="icon-plus text-10"></i>
                         </button>
                       </div>
                     </div>
                   </div>
 
-                  <div class="mt-15">
-                    <div class="d-flex items-center justify-between">
-                      <div class="text-14">
-                        Youth (13-17 years) <span class="fw-500">$84.00</span>
+                  <div className="mt-15">
+                    <div className="d-flex items-center justify-between">
+                      <div className="text-14">
+                        Youth (13-17 years){" "}
+                        <span className="fw-500">$84.00</span>
                       </div>
 
-                      <div class="d-flex items-center js-counter">
-                        <button class="button size-30 border-1 rounded-full js-down">
-                          <i class="icon-minus text-10"></i>
+                      <div className="d-flex items-center js-counter">
+                        <button className="button size-30 border-1 rounded-full js-down">
+                          <i className="icon-minus text-10"></i>
                         </button>
 
-                        <div class="flex-center ml-10 mr-10">
-                          <div class="text-14 size-20 js-count">4</div>
+                        <div className="flex-center ml-10 mr-10">
+                          <div className="text-14 size-20 js-count">4</div>
                         </div>
 
-                        <button class="button size-30 border-1 rounded-full js-up">
-                          <i class="icon-plus text-10"></i>
+                        <button className="button size-30 border-1 rounded-full js-up">
+                          <i className="icon-plus text-10"></i>
                         </button>
                       </div>
                     </div>
                   </div>
 
-                  <div class="mt-15">
-                    <div class="d-flex items-center justify-between">
-                      <div class="text-14">
-                        Children (0-12 years) <span class="fw-500">$20.00</span>
+                  <div className="mt-15">
+                    <div className="d-flex items-center justify-between">
+                      <div className="text-14">
+                        Children (0-12 years){" "}
+                        <span className="fw-500">$20.00</span>
                       </div>
 
-                      <div class="d-flex items-center js-counter">
-                        <button class="button size-30 border-1 rounded-full js-down">
-                          <i class="icon-minus text-10"></i>
+                      <div className="d-flex items-center js-counter">
+                        <button className="button size-30 border-1 rounded-full js-down">
+                          <i className="icon-minus text-10"></i>
                         </button>
 
-                        <div class="flex-center ml-10 mr-10">
-                          <div class="text-14 size-20 js-count">2</div>
+                        <div className="flex-center ml-10 mr-10">
+                          <div className="text-14 size-20 js-count">2</div>
                         </div>
 
-                        <button class="button size-30 border-1 rounded-full js-up">
-                          <i class="icon-plus text-10"></i>
+                        <button className="button size-30 border-1 rounded-full js-up">
+                          <i className="icon-plus text-10"></i>
                         </button>
                       </div>
                     </div>
                   </div>
 
-                  <h5 class="text-18 fw-500 mb-20 mt-20">Add Extra</h5>
+                  <h5 className="text-18 fw-500 mb-20 mt-20">Add Extra</h5>
 
-                  <div class="d-flex items-center justify-between">
-                    <div class="d-flex items-center">
-                      <div class="form-checkbox">
+                  <div className="d-flex items-center justify-between">
+                    <div className="d-flex items-center">
+                      <div className="form-checkbox">
                         <input type="checkbox" />
-                        <div class="form-checkbox__mark">
-                          <div class="form-checkbox__icon">
+                        <div className="form-checkbox__mark">
+                          <div className="form-checkbox__icon">
                             <svg
                               width="10"
                               height="8"
@@ -1532,18 +1546,18 @@ const TourDetail = () => {
                           </div>
                         </div>
                       </div>
-                      <div class="ml-10">Add Service per booking</div>
+                      <div className="ml-10">Add Service per booking</div>
                     </div>
 
-                    <div class="text-14">$40</div>
+                    <div className="text-14">$40</div>
                   </div>
 
-                  <div class="d-flex justify-between mt-20">
-                    <div class="d-flex">
-                      <div class="form-checkbox mt-5">
+                  <div className="d-flex justify-between mt-20">
+                    <div className="d-flex">
+                      <div className="form-checkbox mt-5">
                         <input type="checkbox" />
-                        <div class="form-checkbox__mark">
-                          <div class="form-checkbox__icon">
+                        <div className="form-checkbox__mark">
+                          <div className="form-checkbox__icon">
                             <svg
                               width="10"
                               height="8"
@@ -1560,28 +1574,28 @@ const TourDetail = () => {
                         </div>
                       </div>
 
-                      <div class="ml-10">
+                      <div className="ml-10">
                         Add Service per person
-                        <div class="lh-16">
-                          Adult: <span class="fw-500">$17.00</span> - Youth:{" "}
-                          <span class="fw-500">$14.00</span>
+                        <div className="lh-16">
+                          Adult: <span className="fw-500">$17.00</span> - Youth:{" "}
+                          <span className="fw-500">$14.00</span>
                         </div>
                       </div>
                     </div>
 
-                    <div class="text-14">$40</div>
+                    <div className="text-14">$40</div>
                   </div>
 
-                  <div class="line mt-20 mb-20"></div>
+                  <div className="line mt-20 mb-20"></div>
 
-                  <div class="d-flex items-center justify-between">
-                    <div class="text-18 fw-500">Total:</div>
-                    <div class="text-18 fw-500">$392.09</div>
+                  <div className="d-flex items-center justify-between">
+                    <div className="text-18 fw-500">Total:</div>
+                    <div className="text-18 fw-500">$392.09</div>
                   </div>
 
-                  <button class="button -md -dark-1 col-12 bg-accent-1 text-white mt-20">
+                  <button className="button -md -dark-1 col-12 bg-accent-1 text-white mt-20">
                     Book Now
-                    <i class="icon-arrow-top-right ml-10"></i>
+                    <i className="icon-arrow-top-right ml-10"></i>
                   </button>
                 </div>
               </div>

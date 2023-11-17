@@ -43,7 +43,12 @@ function TourCard(props) {
           clickable: true,
           renderBullet: function (index, className) {
             return (
-              '<span class="' + className + '">' + 0 + (index + 1) + "</span>"
+              '<span className="' +
+              className +
+              '">' +
+              0 +
+              (index + 1) +
+              "</span>"
             );
           },
         };

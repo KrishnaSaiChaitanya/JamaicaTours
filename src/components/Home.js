@@ -7,17 +7,17 @@ export default function Home() {
   };
   return (
     <div>
-      <section class="hero -type-10">
-        <div class="hero__bg">
+      <section className="hero -type-10">
+        <div className="hero__bg">
           <img src="img/hero/10/1.jpg" alt="background" />
         </div>
 
-        <div class="container">
-          <div class="row justify-center text-center">
-            <div class="col-xl-9 col-lg-10">
-              <div class="hero__content">
-                <h1 class="hero__title text-white mb-30">
-                  Choose a Country For Your <br class="lg:d-none" />
+        <div className="container">
+          <div className="row justify-center text-center">
+            <div className="col-xl-9 col-lg-10">
+              <div className="hero__content">
+                <h1 className="hero__title text-white mb-30">
+                  Choose a Country For Your <br className="lg:d-none" />
                   Next Adventure?
                 </h1>
                 <div className="home_tab" style={{ width: "470px" }}>
@@ -39,7 +39,7 @@ export default function Home() {
                   </div>
                 </div>
                 {selectedTab ? (
-                  <div class="hero__search">
+                  <div className="hero__search">
                     <svg
                       width="20"
                       height="20"
@@ -65,12 +65,12 @@ export default function Home() {
 
                     <button>
                       <svg
-                        class="feather feather-search"
+                        className="feather feather-search"
                         fill="none"
                         height="24"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         stroke-width="2"
                         viewBox="0 0 24 24"
                         width="24"
@@ -82,7 +82,7 @@ export default function Home() {
                     </button>
                   </div>
                 ) : (
-                  <div class="hero__search">
+                  <div className="hero__search">
                     <svg
                       width="20"
                       height="20"
@@ -107,12 +107,12 @@ export default function Home() {
 
                     <button>
                       <svg
-                        class="feather feather-search"
+                        className="feather feather-search"
                         fill="none"
                         height="24"
                         stroke="currentColor"
                         stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinejoin="round"
                         stroke-width="2"
                         viewBox="0 0 24 24"
                         width="24"
@@ -125,36 +125,36 @@ export default function Home() {
                   </div>
                 )}
 
-                <div class="heroTags">
-                  <div class="heroTags__title text-white">
+                <div className="heroTags">
+                  <div className="heroTags__title text-white">
                     Or browse the selected type
                   </div>
 
-                  <div class="heroTags__tags">
+                  <div className="heroTags__tags">
                     <div>
                       <button>
-                        <i class="icon-bank text-26"></i>
+                        <i className="icon-bank text-26"></i>
                         <span>Culture</span>
                       </button>
                     </div>
 
                     <div>
                       <button>
-                        <i class="icon-menu-3 text-26"></i>
+                        <i className="icon-menu-3 text-26"></i>
                         <span>Food</span>
                       </button>
                     </div>
 
                     <div>
                       <button>
-                        <i class="icon-mountain text-26"></i>
+                        <i className="icon-mountain text-26"></i>
                         <span>Nature</span>
                       </button>
                     </div>
 
                     <div>
                       <button>
-                        <i class="icon-hot-air-balloon-2 text-26"></i>
+                        <i className="icon-hot-air-balloon-2 text-26"></i>
                         <span>Adventure</span>
                       </button>
                     </div>
@@ -823,27 +823,27 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section class="video">
-        <div class="video__bg">
+      <section className="video">
+        <div className="video__bg">
           <img src="img/video/bg.jpg" alt="image" />
         </div>
 
-        <div class="container">
-          <div class="row justify-center text-center">
-            <div class="col-auto">
-              <h2 class="text-70 lg:text-50 md:text-40 sm:text-24 text-white">
+        <div className="container">
+          <div className="row justify-center text-center">
+            <div className="col-auto">
+              <h2 className="text-70 lg:text-50 md:text-40 sm:text-24 text-white">
                 Keep things flexible
               </h2>
 
-              <p class="text-white mt-10">
+              <p className="text-white mt-10">
                 Use Reserve Now & Pay Later to secure the activities you
-                <br class="lg:d-none" />
-                don't want to miss without being locked in.
+                <br className="lg:d-none" />
+                dont want to miss without being locked in.
               </p>
 
               <a
                 href="https://www.youtube.com/watch?v=ANYfx4-jyqY"
-                class="d-block mt-30 md:mt-20 js-gallery"
+                className="d-block mt-30 md:mt-20 js-gallery"
                 data-gallery="gallery1"
               >
                 <svg
@@ -860,7 +860,7 @@ export default function Home() {
                     stroke="white"
                     stroke-width="2"
                   />
-                  <g clip-path="url(#clip0_79_4379)">
+                  <g clipPath="url(#clip0_79_4379)">
                     <path
                       d="M39.339 27.6922L27.5265 20.4107C26.6718 19.8846 25.6386 19.8627 24.7625 20.3522C23.8863 20.8416 23.3633 21.7331 23.3633 22.7366V37.2332C23.3633 38.7506 24.5859 39.9918 26.0887 40C26.0928 40 26.0969 40 26.1009 40C26.5705 40 27.0599 39.8528 27.517 39.5739C27.8847 39.3495 28.0009 38.8696 27.7765 38.502C27.5522 38.1342 27.0722 38.0181 26.7046 38.2424C26.4908 38.3728 26.282 38.4402 26.0971 38.4402C25.5301 38.4371 24.923 37.9514 24.923 37.2332V22.7367C24.923 22.3061 25.1474 21.9238 25.5232 21.7139C25.899 21.5039 26.3422 21.5133 26.7083 21.7387L38.5208 29.0202C38.8759 29.2388 39.0791 29.6033 39.0782 30.0202C39.0773 30.4371 38.8727 30.8008 38.5157 31.0187L29.9752 36.2479C29.6078 36.4728 29.4924 36.9529 29.7173 37.3202C29.9422 37.6876 30.4223 37.8031 30.7896 37.5781L39.3291 32.3495C40.1468 31.8507 40.636 30.9812 40.638 30.0234C40.64 29.0656 40.1542 28.1941 39.339 27.6922Z"
                       fill="white"
@@ -882,151 +882,153 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section class="layout-pt-xl layout-pb-xl bg-accent-1-05">
-        <div class="container">
-          <div class="row">
-            <div class="col-auto">
-              <h2 class="text-30 md:text-24">What our Travelers are saying</h2>
+      <section className="layout-pt-xl layout-pb-xl bg-accent-1-05">
+        <div className="container">
+          <div className="row">
+            <div className="col-auto">
+              <h2 className="text-30 md:text-24">
+                What our Travelers are saying
+              </h2>
             </div>
           </div>
 
-          <div class="row y-gap-30 pt-40 md:pt-30">
-            <div class="col-lg-4 col-md-6">
-              <div class="bg-white py-30 px-30 rounded-12">
-                <h4 class="text-18 fw-500 text-accent-1">Great Work</h4>
-                <div class="fw-500 mt-15">
+          <div className="row y-gap-30 pt-40 md:pt-30">
+            <div className="col-lg-4 col-md-6">
+              <div className="bg-white py-30 px-30 rounded-12">
+                <h4 className="text-18 fw-500 text-accent-1">Great Work</h4>
+                <div className="fw-500 mt-15">
                   “I think Educrat is the best theme I ever seen this year.
                   Amazing design, easy to customize and a design quality
                   superlative account on its cloud platform for the optimized
                   performance”
                 </div>
 
-                <div class="line mt-20 mb-20"></div>
+                <div className="line mt-20 mb-20"></div>
 
-                <div class="d-flex items-center">
+                <div className="d-flex items-center">
                   <img
                     src="img/avatars/1/1.jpg"
                     alt="image"
-                    class="size-60 object-cover rounded-full"
+                    className="size-60 object-cover rounded-full"
                   />
-                  <div class="ml-20">
-                    <div class="fw-500 lh-15">Courtney Henry</div>
-                    <div class="text-14 lh-15">Web Designer</div>
+                  <div className="ml-20">
+                    <div className="fw-500 lh-15">Courtney Henry</div>
+                    <div className="text-14 lh-15">Web Designer</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6">
-              <div class="bg-white py-30 px-30 rounded-12">
-                <h4 class="text-18 fw-500 text-accent-1">Great Work</h4>
-                <div class="fw-500 mt-15">
+            <div className="col-lg-4 col-md-6">
+              <div className="bg-white py-30 px-30 rounded-12">
+                <h4 className="text-18 fw-500 text-accent-1">Great Work</h4>
+                <div className="fw-500 mt-15">
                   “I think Educrat is the best theme I ever seen this year.
                   Amazing design, easy to customize and a design quality
                   superlative account on its cloud platform for the optimized
                   performance”
                 </div>
 
-                <div class="line mt-20 mb-20"></div>
+                <div className="line mt-20 mb-20"></div>
 
-                <div class="d-flex items-center">
+                <div className="d-flex items-center">
                   <img
                     src="img/avatars/1/1.jpg"
                     alt="image"
-                    class="size-60 object-cover rounded-full"
+                    className="size-60 object-cover rounded-full"
                   />
-                  <div class="ml-20">
-                    <div class="fw-500 lh-15">Courtney Henry</div>
-                    <div class="text-14 lh-15">Web Designer</div>
+                  <div className="ml-20">
+                    <div className="fw-500 lh-15">Courtney Henry</div>
+                    <div className="text-14 lh-15">Web Designer</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6">
-              <div class="bg-white py-30 px-30 rounded-12">
-                <h4 class="text-18 fw-500 text-accent-1">Great Work</h4>
-                <div class="fw-500 mt-15">
+            <div className="col-lg-4 col-md-6">
+              <div className="bg-white py-30 px-30 rounded-12">
+                <h4 className="text-18 fw-500 text-accent-1">Great Work</h4>
+                <div className="fw-500 mt-15">
                   “I think Educrat is the best theme I ever seen this year.
                   Amazing design, easy to customize and a design quality
                   superlative account on its cloud platform for the optimized
                   performance”
                 </div>
 
-                <div class="line mt-20 mb-20"></div>
+                <div className="line mt-20 mb-20"></div>
 
-                <div class="d-flex items-center">
+                <div className="d-flex items-center">
                   <img
                     src="img/avatars/1/1.jpg"
                     alt="image"
-                    class="size-60 object-cover rounded-full"
+                    className="size-60 object-cover rounded-full"
                   />
-                  <div class="ml-20">
-                    <div class="fw-500 lh-15">Courtney Henry</div>
-                    <div class="text-14 lh-15">Web Designer</div>
+                  <div className="ml-20">
+                    <div className="fw-500 lh-15">Courtney Henry</div>
+                    <div className="text-14 lh-15">Web Designer</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="row y-gap-30 pt-40 md:pt-30">
-            <div class="col-lg-4 col-md-6">
-              <h4 class="text-30 fw-700">4.9</h4>
-              <div class="mt-5">
+          <div className="row y-gap-30 pt-40 md:pt-30">
+            <div className="col-lg-4 col-md-6">
+              <h4 className="text-30 fw-700">4.9</h4>
+              <div className="mt-5">
                 1000+ reviews on TripAdvisor.
                 <br /> Certificate of Excellence
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-6">
-              <h4 class="text-30 fw-700">16M</h4>
-              <div class="mt-5">Happy Customers</div>
+            <div className="col-lg-4 col-md-6">
+              <h4 className="text-30 fw-700">16M</h4>
+              <div className="mt-5">Happy Customers</div>
             </div>
 
-            <div class="col-lg-4 col-md-6">
-              <h4 class="text-30 fw-700">Award winner</h4>
-              <div class="mt-5">G2’s 2021 Best Software Awards</div>
+            <div className="col-lg-4 col-md-6">
+              <h4 className="text-30 fw-700">Award winner</h4>
+              <div className="mt-5">G2’s 2021 Best Software Awards</div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="layout-pt-xl layout-pb-xl">
-        <div class="container">
-          <div class="row justify-between items-end y-gap-10">
-            <div class="col-auto">
-              <h2 class="text-30 md:text-24">Travel Articles</h2>
+      <section className="layout-pt-xl layout-pb-xl">
+        <div className="container">
+          <div className="row justify-between items-end y-gap-10">
+            <div className="col-auto">
+              <h2 className="text-30 md:text-24">Travel Articles</h2>
             </div>
 
-            <div class="col-auto">
-              <button class="buttonArrow d-flex items-center">
+            <div className="col-auto">
+              <button className="buttonArrow d-flex items-center">
                 <span>See all</span>
-                <i class="icon-arrow-top-right text-16 ml-10"></i>
+                <i className="icon-arrow-top-right text-16 ml-10"></i>
               </button>
             </div>
           </div>
 
-          <div class="row y-gap-30 pt-40 sm:pt-20">
-            <div class="col-lg-4 col-md-6">
-              <a href="#" class="blogCard -type-1">
-                <div class="blogCard__image ratio ratio-41:30">
+          <div className="row y-gap-30 pt-40 sm:pt-20">
+            <div className="col-lg-4 col-md-6">
+              <a href="#" className="blogCard -type-1">
+                <div className="blogCard__image ratio ratio-41:30">
                   <img
                     src="img/blogCards/1/1.png"
                     alt="image"
-                    class="img-ratio rounded-12"
+                    className="img-ratio rounded-12"
                   />
-                  <div class="blogCard__badge">Trips</div>
+                  <div className="blogCard__badge">Trips</div>
                 </div>
 
-                <div class="blogCard__content mt-30">
-                  <div class="blogCard__info text-14">
-                    <div class="lh-13">April 06 2023</div>
-                    <div class="blogCard__line"></div>
-                    <div class="lh-13">By Ali Tufan</div>
+                <div className="blogCard__content mt-30">
+                  <div className="blogCard__info text-14">
+                    <div className="lh-13">April 06 2023</div>
+                    <div className="blogCard__line"></div>
+                    <div className="lh-13">By Ali Tufan</div>
                   </div>
 
-                  <h3 class="blogCard__title text-18 fw-500 mt-10">
+                  <h3 className="blogCard__title text-18 fw-500 mt-10">
                     Kenya vs Tanzania Safari: The Better African Safari
                     Experience
                   </h3>
@@ -1034,25 +1036,25 @@ export default function Home() {
               </a>
             </div>
 
-            <div class="col-lg-4 col-md-6">
-              <a href="#" class="blogCard -type-1">
-                <div class="blogCard__image ratio ratio-41:30">
+            <div className="col-lg-4 col-md-6">
+              <a href="#" className="blogCard -type-1">
+                <div className="blogCard__image ratio ratio-41:30">
                   <img
                     src="img/blogCards/1/2.png"
                     alt="image"
-                    class="img-ratio rounded-12"
+                    className="img-ratio rounded-12"
                   />
-                  <div class="blogCard__badge">Trips</div>
+                  <div className="blogCard__badge">Trips</div>
                 </div>
 
-                <div class="blogCard__content mt-30">
-                  <div class="blogCard__info text-14">
-                    <div class="lh-13">April 06 2023</div>
-                    <div class="blogCard__line"></div>
-                    <div class="lh-13">By Ali Tufan</div>
+                <div className="blogCard__content mt-30">
+                  <div className="blogCard__info text-14">
+                    <div className="lh-13">April 06 2023</div>
+                    <div className="blogCard__line"></div>
+                    <div className="lh-13">By Ali Tufan</div>
                   </div>
 
-                  <h3 class="blogCard__title text-18 fw-500 mt-10">
+                  <h3 className="blogCard__title text-18 fw-500 mt-10">
                     Kenya vs Tanzania Safari: The Better African Safari
                     Experience
                   </h3>
@@ -1060,25 +1062,25 @@ export default function Home() {
               </a>
             </div>
 
-            <div class="col-lg-4 col-md-6">
-              <a href="#" class="blogCard -type-1">
-                <div class="blogCard__image ratio ratio-41:30">
+            <div className="col-lg-4 col-md-6">
+              <a href="#" className="blogCard -type-1">
+                <div className="blogCard__image ratio ratio-41:30">
                   <img
                     src="img/blogCards/1/3.png"
                     alt="image"
-                    class="img-ratio rounded-12"
+                    className="img-ratio rounded-12"
                   />
-                  <div class="blogCard__badge">Trips</div>
+                  <div className="blogCard__badge">Trips</div>
                 </div>
 
-                <div class="blogCard__content mt-30">
-                  <div class="blogCard__info text-14">
-                    <div class="lh-13">April 06 2023</div>
-                    <div class="blogCard__line"></div>
-                    <div class="lh-13">By Ali Tufan</div>
+                <div className="blogCard__content mt-30">
+                  <div className="blogCard__info text-14">
+                    <div className="lh-13">April 06 2023</div>
+                    <div className="blogCard__line"></div>
+                    <div className="lh-13">By Ali Tufan</div>
                   </div>
 
-                  <h3 class="blogCard__title text-18 fw-500 mt-10">
+                  <h3 className="blogCard__title text-18 fw-500 mt-10">
                     Kenya vs Tanzania Safari: The Better African Safari
                     Experience
                   </h3>
@@ -1088,25 +1090,27 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section class="layout-pt-xl layout-pb-xl relative">
-        <div class="sectionBg">
-          <img src="img/cta/13/bg.jpg" alt="image" class="img-cover" />
+      <section className="layout-pt-xl layout-pb-xl relative">
+        <div className="sectionBg">
+          <img src="img/cta/13/bg.jpg" alt="image" className="img-cover" />
         </div>
 
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5">
-              <h2 class="text-30 text-white fw-700">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-5">
+              <h2 className="text-30 text-white fw-700">
                 Subscribe To Our Mailing List
-                <br class="md:d-none" /> And Stay Up To Date
+                <br className="md:d-none" /> And Stay Up To Date
               </h2>
-              <p class="text-white mt-30">
+              <p className="text-white mt-30">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
 
-              <div class="singleInput type-1 mt-30">
+              <div className="singleInput type-1 mt-30">
                 <input type="text" placeholder="Your email" />
-                <button class="button -md -dark-1 bg-white">Subscribe</button>
+                <button className="button -md -dark-1 bg-white">
+                  Subscribe
+                </button>
               </div>
             </div>
           </div>

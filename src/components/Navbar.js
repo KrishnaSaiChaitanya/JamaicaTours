@@ -622,38 +622,38 @@ export default function Navbar() {
                 data-x="header-currency"
                 data-x-toggle="is-active"
               >
-                <div class="headerDropdown">
-                  <div class="headerDropdown__container">
-                    <div class="headerDropdown__item">
-                      <button class="">U.S. Dollar</button>
+                <div className="headerDropdown">
+                  <div className="headerDropdown__container">
+                    <div className="headerDropdown__item">
+                      <button className="">U.S. Dollar</button>
                     </div>
 
-                    <div class="headerDropdown__item">
-                      <button class="">Euro</button>
+                    <div className="headerDropdown__item">
+                      <button className="">Euro</button>
                     </div>
 
-                    <div class="headerDropdown__item">
-                      <button class="">British Pound</button>
+                    <div className="headerDropdown__item">
+                      <button className="">British Pound</button>
                     </div>
 
-                    <div class="headerDropdown__item">
-                      <button class="">Turkish Lira</button>
+                    <div className="headerDropdown__item">
+                      <button className="">Turkish Lira</button>
                     </div>
 
-                    <div class="headerDropdown__item">
-                      <button class="">Canadian Dollar</button>
+                    <div className="headerDropdown__item">
+                      <button className="">Canadian Dollar</button>
                     </div>
 
-                    <div class="headerDropdown__item">
-                      <button class="">Australian Dollar</button>
+                    <div className="headerDropdown__item">
+                      <button className="">Australian Dollar</button>
                     </div>
 
-                    <div class="headerDropdown__item">
-                      <button class="">Swiss Franc</button>
+                    <div className="headerDropdown__item">
+                      <button className="">Swiss Franc</button>
                     </div>
 
-                    <div class="headerDropdown__item">
-                      <button class="">Singapore Dollar</button>
+                    <div className="headerDropdown__item">
+                      <button className="">Singapore Dollar</button>
                     </div>
                   </div>
                 </div>
@@ -674,139 +674,139 @@ export default function Navbar() {
         </div>
       </header>
 
-      <div class="menu js-menu">
-        <div class="menu__overlay js-menu-button"></div>
+      <div className="menu js-menu">
+        <div className="menu__overlay js-menu-button"></div>
 
-        <div class="menu__container">
-          <div class="menu__header">
+        <div className="menu__container">
+          <div className="menu__header">
             <h4>Main Menu</h4>
 
-            <button class="js-menu-button">
-              <i class="icon-cross text-10"></i>
+            <button className="js-menu-button">
+              <i className="icon-cross text-10"></i>
             </button>
           </div>
 
-          <div class="menu__content">
-            <ul class="menuNav js-navList">
-              <li class="menuNav__item">
+          <div className="menu__content">
+            <ul className="menuNav js-navList">
+              <li className="menuNav__item">
                 <a href="/">Home</a>
               </li>
 
-              <li class="menuNav__item -has-submenu js-has-submenu">
+              <li className="menuNav__item -has-submenu js-has-submenu">
                 <a>
                   Tour
-                  <i class="icon-chevron-right"></i>
+                  <i className="icon-chevron-right"></i>
                 </a>
 
-                <ul class="submenu">
-                  <li class="submenu__item js-nav-list-back">
+                <ul className="submenu">
+                  <li className="submenu__item js-nav-list-back">
                     <a>Back</a>
                   </li>
-                  <li class="submenu__item">
+                  <li className="submenu__item">
                     <a href="booking">Booking</a>
                   </li>
-                  <li class="submenu__item">
+                  <li className="submenu__item">
                     <a href="/blog">Booking Status</a>
                   </li>
-                  <li class="submenu__item">
+                  <li className="submenu__item">
                     <a href="/tours-list">Tour List</a>
                   </li>
-                  <li class="submenu__item">
+                  <li className="submenu__item">
                     <a href="/tour-layout">Tour Map</a>
                   </li>
-                  <li class="submenu__item">
+                  <li className="submenu__item">
                     <a href="/single-tour">Single Tour</a>
                   </li>
                 </ul>
               </li>
 
-              <li class="menuNav__item -has-submenu js-has-submenu">
+              <li className="menuNav__item -has-submenu js-has-submenu">
                 <a>
                   Pages
-                  <i class="icon-chevron-right"></i>
+                  <i className="icon-chevron-right"></i>
                 </a>
 
-                <ul class="submenu">
-                  <li class="submenu__item js-nav-list-back">
+                <ul className="submenu">
+                  <li className="submenu__item js-nav-list-back">
                     <a>Back</a>
                   </li>
 
-                  <li class="submenu__item">
+                  <li className="submenu__item">
                     <a href="/destinations">Destination</a>
                   </li>
 
-                  <li class="submenu__item">
+                  <li className="submenu__item">
                     <a href="/about">About</a>
                   </li>
 
-                  <li class="submenu__item">
+                  <li className="submenu__item">
                     <a href="/contact">Contact</a>
                   </li>
 
-                  <li class="submenu__item">
+                  <li className="submenu__item">
                     <a href="/help-center">Help Center</a>
                   </li>
 
-                  <li class="submenu__item">
+                  <li className="submenu__item">
                     <a href="/terms">Terms</a>
                   </li>
 
-                  <li class="submenu__item">
+                  <li className="submenu__item">
                     <a href="/login">Login</a>
                   </li>
 
-                  <li class="submenu__item">
+                  <li className="submenu__item">
                     <a href="/register">Register</a>
                   </li>
 
-                  <li class="submenu__item">
+                  <li className="submenu__item">
                     <a href="/invoice">Invoice</a>
                   </li>
-                  <li class="submenu__item">
+                  <li className="submenu__item">
                     <a href="/blogs">Blogs</a>
                   </li>
-                  <li class="submenu__item">
+                  <li className="submenu__item">
                     <a href="/blog">Blog Page</a>
                   </li>
                 </ul>
               </li>
 
-              <li class="menuNav__item">
+              <li className="menuNav__item">
                 <a href="/contact">Contact Us</a>
               </li>
             </ul>
           </div>
 
-          <div class="menu__footer">
-            <i class="icon-headphone text-50"></i>
+          <div className="menu__footer">
+            <i className="icon-headphone text-50"></i>
 
-            <div class="text-20 lh-12 fw-500 mt-20">
+            <div className="text-20 lh-12 fw-500 mt-20">
               <div>Speak to our expert at</div>
-              <div class="text-accent-1">1-800-453-6744</div>
+              <div className="text-accent-1">1-800-453-6744</div>
             </div>
 
-            <div class="d-flex items-center x-gap-10 pt-30">
+            <div className="d-flex items-center x-gap-10 pt-30">
               <div>
-                <a class="d-block">
-                  <i class="icon-facebook"></i>
+                <a className="d-block">
+                  <i className="icon-facebook"></i>
                 </a>
               </div>
 
               <div>
-                <a class="d-block">
-                  <i class="icon-twitter"></i>
+                <a className="d-block">
+                  <i className="icon-twitter"></i>
                 </a>
               </div>
 
               <div>
-                <a class="d-block">
-                  <i class="icon-instagram"></i>
+                <a className="d-block">
+                  <i className="icon-instagram"></i>
                 </a>
               </div>
 
               <div>
-                <a class="d-block">
-                  <i class="icon-aedin"></i>
+                <a className="d-block">
+                  <i className="icon-aedin"></i>
                 </a>
               </div>
             </div>

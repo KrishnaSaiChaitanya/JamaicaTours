@@ -3,20 +3,20 @@ import React from "react";
 const ContactSection = () => {
   return (
     <div className="mt-header3">
-      <div class="map relative mt-header ml-60 mr-60 md:ml-0 md:mr-0 pageHeader">
-        <div class="map__content rounded-12 md:rounded-0 js-map-single">
+      <div className="map relative mt-header ml-60 mr-60 md:ml-0 md:mr-0 pageHeader">
+        <div className="map__content rounded-12 md:rounded-0 js-map-single">
           <iframe
             style={{ height: "100%", width: "100%" }}
             id="gmap_canvas"
             src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            frameborder="0"
+            frameBorder="0"
             scrolling="no"
-            marginheight="0"
-            marginwidth="0"
+            marginHeight="0"
+            marginWidth="0"
           ></iframe>
         </div>
 
-        <div class="map__shape">
+        <div className="map__shape">
           <svg
             width="1800"
             height="40"

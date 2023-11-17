@@ -38,21 +38,21 @@ function blog() {
   return (
     <div className="mt-header2">
       {" "}
-      <section class="hero -type-1 -min-2">
-        <div class="hero__bg">
+      <section className="hero -type-1 -min-2">
+        <div className="hero__bg">
           <img src="img/hero/1/1.png" alt="image" />
           <img src="img/hero/1/shape.svg" alt="image" />
         </div>
 
-        <div class="container">
-          <div class="row justify-center">
-            <div class="col-xl-12">
-              <div class="hero__content">
-                <h1 class="hero__title">
+        <div className="container">
+          <div className="row justify-center">
+            <div className="col-xl-12">
+              <div className="hero__content">
+                <h1 className="hero__title">
                   Pubs with History: 7 of Dublin’s Most Storied Drinking Dens
                 </h1>
 
-                <p class="hero__text">
+                <p className="hero__text">
                   Find inspiration, guides and stories for wherever you're going
                   Select a destination
                 </p>
@@ -61,12 +61,12 @@ function blog() {
           </div>
         </div>
       </section>
-      <section class="layout-pt-md layout-pb-xl">
-        <div class="container">
-          <div class="row y-gap-30 justify-center">
-            <div class="col-lg-8">
-              <h2 class="text-30 md:text-24">The Brazen Head</h2>
-              <p class="mt-20">
+      <section className="layout-pt-md layout-pb-xl">
+        <div className="container">
+          <div className="row y-gap-30 justify-center">
+            <div className="col-lg-8">
+              <h2 className="text-30 md:text-24">The Brazen Head</h2>
+              <p className="mt-20">
                 Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida.
                 Diam phasellus vestibulum lorem sed risus ultricies. Magna sit
                 amet purus gravida quis blandit. Arcu cursus vitae congue
@@ -78,7 +78,7 @@ function blog() {
                 felis.
               </p>
 
-              <ul class="ulList2 mt-20">
+              <ul className="ulList2 mt-20">
                 <li>
                   Sed viverra ipsum nunc aliquet bibendum enim facilisis
                   gravida.
@@ -94,8 +94,8 @@ function blog() {
                 </li>
               </ul>
 
-              <div class="blockquote bg-accent-1-05 rounded-12 px-30 py-30 mt-20">
-                <div class="blockquote__icon">
+              <div className="blockquote bg-accent-1-05 rounded-12 px-30 py-30 mt-20">
+                <div className="blockquote__icon">
                   <svg
                     width="37"
                     height="25"
@@ -109,7 +109,7 @@ function blog() {
                     />
                   </svg>
                 </div>
-                <div class="blockquote__text">
+                <div className="blockquote__text">
                   “Sed viverra ipsum nunc aliquet bibendum enim facilisis
                   gravida. Diam phasellus vestibulum lorem sed risus ultricies.
                   Magna sit amet purus gravida quis blandit. Arcu cursus vitae
@@ -117,7 +117,7 @@ function blog() {
                 </div>
               </div>
 
-              <p class="mt-20">
+              <p className="mt-20">
                 Donec purus posuere nullam lacus aliquam egestas arcu. A egestas
                 a, tellus massa, ornare vulputate. Erat enim eget laoreet
                 ullamcorper lectus aliquet nullam tempus id. Dignissim convallis
@@ -139,31 +139,31 @@ function blog() {
                 felis et duis fames.
               </p>
 
-              <div class="row y-gap-30 pt-20">
-                <div class="col-md-6">
+              <div className="row y-gap-30 pt-20">
+                <div className="col-md-6">
                   <img
                     src="img/blogSingle/1.png"
                     alt="image"
-                    class="rounded-8"
+                    className="rounded-8"
                   />
-                  <div class="mt-10">
+                  <div className="mt-10">
                     Donec purus posuere nullam lacus aliquam.
                   </div>
                 </div>
 
-                <div class="col-md-6">
+                <div className="col-md-6">
                   <img
                     src="img/blogSingle/2.png"
                     alt="image"
-                    class="rounded-8"
+                    className="rounded-8"
                   />
-                  <div class="mt-10">
+                  <div className="mt-10">
                     Donec purus posuere nullam lacus aliquam.
                   </div>
                 </div>
               </div>
 
-              <p class="mt-20">
+              <p className="mt-20">
                 Donec purus posuere nullam lacus aliquam egestas arcu. A egestas
                 a, tellus massa, ornare vulputate. Erat enim eget laoreet
                 ullamcorper lectus aliquet nullam tempus id. Dignissim convallis
@@ -185,58 +185,58 @@ function blog() {
                 felis et duis fames.
               </p>
 
-              <div class="row y-gap-15 justify-between items-center pt-20">
-                <div class="col-auto">
-                  <div class="d-flex x-gap-10">
+              <div className="row y-gap-15 justify-between items-center pt-20">
+                <div className="col-auto">
+                  <div className="d-flex x-gap-10">
                     <div>
                       <a
                         href="#"
-                        class="button -accent-1 size-40 flex-center bg-accent-1-05 rounded-full"
+                        className="button -accent-1 size-40 flex-center bg-accent-1-05 rounded-full"
                       >
-                        <i class="icon-facebook text-14"></i>
+                        <i className="icon-facebook text-14"></i>
                       </a>
                     </div>
                     <div>
                       <a
                         href="#"
-                        class="button -accent-1 size-40 flex-center bg-accent-1-05 rounded-full"
+                        className="button -accent-1 size-40 flex-center bg-accent-1-05 rounded-full"
                       >
-                        <i class="icon-twitter text-14"></i>
+                        <i className="icon-twitter text-14"></i>
                       </a>
                     </div>
                     <div>
                       <a
                         href="#"
-                        class="button -accent-1 size-40 flex-center bg-accent-1-05 rounded-full"
+                        className="button -accent-1 size-40 flex-center bg-accent-1-05 rounded-full"
                       >
-                        <i class="icon-instagram text-14"></i>
+                        <i className="icon-instagram text-14"></i>
                       </a>
                     </div>
                     <div>
                       <a
                         href="#"
-                        class="button -accent-1 size-40 flex-center bg-accent-1-05 rounded-full"
+                        className="button -accent-1 size-40 flex-center bg-accent-1-05 rounded-full"
                       >
-                        <i class="icon-linkedin text-14"></i>
+                        <i className="icon-linkedin text-14"></i>
                       </a>
                     </div>
                   </div>
                 </div>
 
-                <div class="col-auto">
-                  <div class="d-flex x-gap-10">
+                <div className="col-auto">
+                  <div className="d-flex x-gap-10">
                     <div>
-                      <button class="button -accent-1 border-1 text-14 px-15 py-10 rounded-200">
+                      <button className="button -accent-1 border-1 text-14 px-15 py-10 rounded-200">
                         Advanture
                       </button>
                     </div>
                     <div>
-                      <button class="button -accent-1 border-1 text-14 px-15 py-10 rounded-200">
+                      <button className="button -accent-1 border-1 text-14 px-15 py-10 rounded-200">
                         Nature
                       </button>
                     </div>
                     <div>
-                      <button class="button -accent-1 border-1 text-14 px-15 py-10 rounded-200">
+                      <button className="button -accent-1 border-1 text-14 px-15 py-10 rounded-200">
                         Culture
                       </button>
                     </div>
@@ -244,17 +244,17 @@ function blog() {
                 </div>
               </div>
 
-              <div class="line mt-60 mb-30"></div>
+              <div className="line mt-60 mb-30"></div>
 
-              <div class="row y-gap-20">
-                <div class="col-auto">
+              <div className="row y-gap-20">
+                <div className="col-auto">
                   <img src="img/blogSingle/3.png" alt="image" />
                 </div>
 
-                <div class="col">
-                  <div class="text-18 fw-500">Brooklyn Simmons</div>
-                  <div class="lh-15">Medical Assistant</div>
-                  <div class="mt-20">
+                <div className="col">
+                  <div className="text-18 fw-500">Brooklyn Simmons</div>
+                  <div className="lh-15">Medical Assistant</div>
+                  <div className="mt-20">
                     Etiam vitae leo et diam pellentesque porta. Sed eleifend
                     ultricies risus, vel rutrum erat commodo ut. Praesent
                     finibus congue euismod. Nullam scelerisque massa vel augue
@@ -264,17 +264,17 @@ function blog() {
                 </div>
               </div>
 
-              <div class="line mt-30 mb-30"></div>
+              <div className="line mt-30 mb-30"></div>
 
-              <div class="row y-gap-15 justify-between">
-                <div class="col-md-auto">
-                  <div class="d-flex">
-                    <div class="pt-5">
-                      <i class="icon-arrow-left text-16"></i>
+              <div className="row y-gap-15 justify-between">
+                <div className="col-md-auto">
+                  <div className="d-flex">
+                    <div className="pt-5">
+                      <i className="icon-arrow-left text-16"></i>
                     </div>
-                    <div class="ml-20">
-                      <div class="text-18 fw-500">Prev</div>
-                      <div class="mt-5">
+                    <div className="ml-20">
+                      <div className="text-18 fw-500">Prev</div>
+                      <div className="mt-5">
                         5 awesome steps to get rid of
                         <br /> stress and routine
                       </div>
@@ -282,7 +282,7 @@ function blog() {
                   </div>
                 </div>
 
-                <div class="col-auto md:d-none">
+                <div className="col-auto md:d-none">
                   <svg
                     width="20"
                     height="20"
@@ -302,262 +302,264 @@ function blog() {
                   </svg>
                 </div>
 
-                <div class="col-md-auto">
-                  <div class="d-flex text-right md:text-left">
-                    <div class="mr-20">
-                      <div class="text-18 fw-500">Next</div>
-                      <div class="mt-5">
+                <div className="col-md-auto">
+                  <div className="d-flex text-right md:text-left">
+                    <div className="mr-20">
+                      <div className="text-18 fw-500">Next</div>
+                      <div className="mt-5">
                         Happy clients leave positive
                         <br />
                         feedback less often
                       </div>
                     </div>
-                    <div class="pt-5">
-                      <i class="icon-arrow-right text-16"></i>
+                    <div className="pt-5">
+                      <i className="icon-arrow-right text-16"></i>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="line mt-30 mb-30"></div>
+              <div className="line mt-30 mb-30"></div>
 
-              <h2 class="text-30 mt-30">Customer Reviews</h2>
+              <h2 className="text-30 mt-30">Customer Reviews</h2>
 
-              <div class="pt-30">
-                <div class="row justify-between">
-                  <div class="col-auto">
-                    <div class="d-flex items-center">
-                      <div class="size-40 rounded-full">
+              <div className="pt-30">
+                <div className="row justify-between">
+                  <div className="col-auto">
+                    <div className="d-flex items-center">
+                      <div className="size-40 rounded-full">
                         <img
                           src="img/reviews/avatars/1.png"
                           alt="image"
-                          class="img-cover"
+                          className="img-cover"
                         />
                       </div>
 
-                      <div class="text-16 fw-500 ml-20">Ali Tufan</div>
+                      <div className="text-16 fw-500 ml-20">Ali Tufan</div>
                     </div>
                   </div>
 
-                  <div class="col-auto">
-                    <div class="text-14 text-light-2">April 2023</div>
+                  <div className="col-auto">
+                    <div className="text-14 text-light-2">April 2023</div>
                   </div>
                 </div>
 
-                <div class="d-flex items-center mt-15">
-                  <div class="d-flex x-gap-5">
-                    <i class="icon-star text-yellow-2 text-10"></i>
+                <div className="d-flex items-center mt-15">
+                  <div className="d-flex x-gap-5">
+                    <i className="icon-star text-yellow-2 text-10"></i>
 
-                    <i class="icon-star text-yellow-2 text-10"></i>
+                    <i className="icon-star text-yellow-2 text-10"></i>
 
-                    <i class="icon-star text-yellow-2 text-10"></i>
+                    <i className="icon-star text-yellow-2 text-10"></i>
 
-                    <i class="icon-star text-yellow-2 text-10"></i>
+                    <i className="icon-star text-yellow-2 text-10"></i>
 
-                    <i class="icon-star text-yellow-2 text-10"></i>
+                    <i className="icon-star text-yellow-2 text-10"></i>
                   </div>
-                  <div class="text-16 fw-500 ml-10">
+                  <div className="text-16 fw-500 ml-10">
                     Take this tour! Its fantastic!
                   </div>
                 </div>
 
-                <p class="mt-10">
+                <p className="mt-10">
                   Great for 4-5 hours to explore. Really a lot to see and tons
                   of photo spots. Even have a passport for you to collect all
                   the stamps as a souvenir. Must see for a Harry Potter fan.
                 </p>
 
-                <div class="row x-gap-20 y-gap-20 pt-20">
-                  <div class="col-auto">
-                    <div class="size-130">
+                <div className="row x-gap-20 y-gap-20 pt-20">
+                  <div className="col-auto">
+                    <div className="size-130">
                       <img
                         src="img/reviews/1/1.png"
                         alt="image"
-                        class="img-cover rounded-12"
+                        className="img-cover rounded-12"
                       />
                     </div>
                   </div>
 
-                  <div class="col-auto">
-                    <div class="size-130">
+                  <div className="col-auto">
+                    <div className="size-130">
                       <img
                         src="img/reviews/1/2.png"
                         alt="image"
-                        class="img-cover rounded-12"
+                        className="img-cover rounded-12"
                       />
                     </div>
                   </div>
 
-                  <div class="col-auto">
-                    <div class="size-130">
+                  <div className="col-auto">
+                    <div className="size-130">
                       <img
                         src="img/reviews/1/3.png"
                         alt="image"
-                        class="img-cover rounded-12"
+                        className="img-cover rounded-12"
                       />
                     </div>
                   </div>
                 </div>
 
-                <div class="d-flex x-gap-30 items-center mt-20">
+                <div className="d-flex x-gap-30 items-center mt-20">
                   <div>
-                    <a href="#" class="d-flex items-center">
-                      <i class="icon-like text-16 mr-10"></i>
+                    <a href="#" className="d-flex items-center">
+                      <i className="icon-like text-16 mr-10"></i>
                       Helpful
                     </a>
                   </div>
                   <div>
-                    <a href="#" class="d-flex items-center">
-                      <i class="icon-dislike text-16 mr-10"></i>
+                    <a href="#" className="d-flex items-center">
+                      <i className="icon-dislike text-16 mr-10"></i>
                       Not helpful
                     </a>
                   </div>
                 </div>
               </div>
 
-              <button class="button -md -outline-accent-1 text-accent-1 mt-30">
+              <button className="button -md -outline-accent-1 text-accent-1 mt-30">
                 See more reviews
-                <i class="icon-arrow-top-right text-16 ml-10"></i>
+                <i className="icon-arrow-top-right text-16 ml-10"></i>
               </button>
 
-              <h2 class="text-30 pt-60">Leave a Reply</h2>
-              <p class="mt-30">
+              <h2 className="text-30 pt-60">Leave a Reply</h2>
+              <p className="mt-30">
                 Your email address will not be published. Required fields are
                 marked *
               </p>
 
-              <div class="reviewsGrid pt-30">
-                <div class="reviewsGrid__item">
+              <div className="reviewsGrid pt-30">
+                <div className="reviewsGrid__item">
                   Location
-                  <div class="d-flex x-gap-5 pl-20">
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                  <div className="d-flex x-gap-5 pl-20">
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
                   </div>
                 </div>
 
-                <div class="reviewsGrid__item">
+                <div className="reviewsGrid__item">
                   Amenities
-                  <div class="d-flex x-gap-5 pl-20">
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                  <div className="d-flex x-gap-5 pl-20">
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
                   </div>
                 </div>
 
-                <div class="reviewsGrid__item">
+                <div className="reviewsGrid__item">
                   Food
-                  <div class="d-flex x-gap-5 pl-20">
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                  <div className="d-flex x-gap-5 pl-20">
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
                   </div>
                 </div>
 
-                <div class="reviewsGrid__item">
+                <div className="reviewsGrid__item">
                   Room
-                  <div class="d-flex x-gap-5 pl-20">
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                  <div className="d-flex x-gap-5 pl-20">
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
                   </div>
                 </div>
 
-                <div class="reviewsGrid__item">
+                <div className="reviewsGrid__item">
                   Price
-                  <div class="d-flex x-gap-5 pl-20">
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                  <div className="d-flex x-gap-5 pl-20">
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
                   </div>
                 </div>
 
-                <div class="reviewsGrid__item">
+                <div className="reviewsGrid__item">
                   Tour Operator
-                  <div class="d-flex x-gap-5 pl-20">
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                  <div className="d-flex x-gap-5 pl-20">
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
 
-                    <i class="icon-star text-10 text-yellow-2"></i>
+                    <i className="icon-star text-10 text-yellow-2"></i>
                   </div>
                 </div>
               </div>
 
-              <div class="contactForm y-gap-30 pt-30">
-                <div class="row y-gap-30">
-                  <div class="col-md-6">
-                    <div class="form-input ">
+              <div className="contactForm y-gap-30 pt-30">
+                <div className="row y-gap-30">
+                  <div className="col-md-6">
+                    <div className="form-input ">
                       <input type="text" required />
-                      <label class="lh-1 text-16 text-light-1">Name</label>
+                      <label className="lh-1 text-16 text-light-1">Name</label>
                     </div>
                   </div>
 
-                  <div class="col-md-6">
-                    <div class="form-input ">
+                  <div className="col-md-6">
+                    <div className="form-input ">
                       <input type="email" required />
-                      <label class="lh-1 text-16 text-light-1">Email</label>
+                      <label className="lh-1 text-16 text-light-1">Email</label>
                     </div>
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="col-12">
-                    <div class="form-input ">
+                <div className="row">
+                  <div className="col-12">
+                    <div className="form-input ">
                       <input type="text" required />
-                      <label class="lh-1 text-16 text-light-1">Title</label>
+                      <label className="lh-1 text-16 text-light-1">Title</label>
                     </div>
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="col-12">
-                    <div class="form-input ">
+                <div className="row">
+                  <div className="col-12">
+                    <div className="form-input ">
                       <textarea required rows="5"></textarea>
-                      <label class="lh-1 text-16 text-light-1">Comment</label>
+                      <label className="lh-1 text-16 text-light-1">
+                        Comment
+                      </label>
                     </div>
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="col-12">
-                    <button class="button -md -dark-1 bg-accent-1 text-white">
+                <div className="row">
+                  <div className="col-12">
+                    <button className="button -md -dark-1 bg-accent-1 text-white">
                       Post Comment
-                      <i class="icon-arrow-top-right text-16 ml-10"></i>
+                      <i className="icon-arrow-top-right text-16 ml-10"></i>
                     </button>
                   </div>
                 </div>

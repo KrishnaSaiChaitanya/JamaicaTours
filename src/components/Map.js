@@ -194,7 +194,7 @@ const GoogleMapsComponent = () => {
         const content = link ? '<a href="' + link + '">' + text + "</a>" : text;
 
         return (
-          '<div class="google-map-infowindow-content">' + content + "</div>"
+          '<div className="google-map-infowindow-content">' + content + "</div>"
         );
       }
     };
